@@ -4,10 +4,14 @@ import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
 import ThemeLogo from '@/components/ThemeLogo'
 import { Analytics } from '@vercel/analytics/next'
+import { type Metadata } from 'next'
 
-export const metadata = {
-  // Define your metadata here
-  // For more information on metadata API, see: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
+export const metadata: Metadata = {
+  title: {
+    template: '%s | PicWe',
+    default: 'PicWe',
+  },
+  description: '',
 }
 
 // const banner = <Banner storageKey="some-key">Nextra 4.0 is released 🎉</Banner>
