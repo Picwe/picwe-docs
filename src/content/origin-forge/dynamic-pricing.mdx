@@ -35,51 +35,23 @@ The **market premium** reflects current demand. When demand is high, premium is 
 
 When you forge tokens:
 
-1. Your $WEUSD enters the reserve pool
+1. Your WEUSD enters the reserve pool
 2. New tokens are minted for you
 3. The reserve-to-supply ratio changes
 4. **Both current price and floor price tend to increase**
 
-```
-Before Forge:
-  Reserve: $100,000
-  Supply: 100,000 tokens
-  Current Price: $1.20
-
-You Forge with $10,000
-  → You receive ~7,500 tokens
-  → Reserve becomes: $110,000
-  → Supply becomes: 107,500 tokens
-
-After Forge:
-  Current Price: $1.28 (+6.7%)
-```
+![Forge Impact](/images/origin-forge/forge-impact.svg)
 
 ### Melting (Selling) → Price Goes Down
 
 When you melt tokens:
 
 1. Your tokens are burned
-2. You receive $WEUSD from the reserve
+2. You receive WEUSD from the reserve
 3. The reserve-to-supply ratio adjusts
 4. **Current price decreases, but floor stays protected**
 
-```
-Before Melt:
-  Reserve: $100,000
-  Supply: 100,000 tokens
-  Current Price: $1.20
-  Floor Price: $0.85
-
-You Melt 10,000 tokens
-  → You receive $11,500
-  → Reserve becomes: $88,500
-  → Supply becomes: 90,000 tokens
-
-After Melt:
-  Current Price: $1.15 (-4.2%)
-  Floor Price: $0.85 (unchanged!)
-```
+![Melt Impact](/images/origin-forge/melt-impact.svg)
 
 ---
 
@@ -184,7 +156,7 @@ You can always verify the current price through the smart contract:
 |----------|---------|
 | `getCurrentPrice()` | Current forge/melt price |
 | `getFloorPrice()` | Guaranteed minimum |
-| `getReserve()` | Total $WEUSD in pool |
+| `getReserve()` | Total WEUSD in pool |
 | `getTotalSupply()` | Circulating token supply |
 
 ---

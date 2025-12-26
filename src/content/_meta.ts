@@ -13,13 +13,13 @@ const meta = {
     },
   },
 
-  // ========== $WEUSD ==========
+  // ========== WEUSD ==========
   _weusd: {
-    title: '$WEUSD',
+    title: 'WEUSD',
     type: 'separator',
   },
   'what-is-weusd': {
-    title: 'What is $WEUSD?',
+    title: 'What is WEUSD?',
     theme: {
       breadcrumb: false,
     },

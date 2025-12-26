@@ -12,15 +12,34 @@ Structured RWA investments with risk-based matching
 
 ## Overview
 
-The Invest Module offers structured investment products for users seeking stable, predictable returns from low-to-medium risk RWAs. Unlike trading on Origin Forge, the Invest Module provides fixed-term investments with defined APY.
+The Invest Module is an **independent investment platform** that offers structured investment products for users seeking stable, predictable returns from **low-risk RWAs (R1-R2)**. 
+
+**Key Distinctions:**
+- **Independent Platform** — Not limited to Origin Forge assets; accepts RWAs from various institutional partners
+- **Focus on R1-R2 Assets** — Primarily targets very low to low risk assets
+- **Fixed-Term Investments** — Provides defined APY with lock-up periods
+- **Institutional Partnerships** — Works with compliant institutions like **DigiFT** for assets such as US Treasury bonds, corporate bonds, stocks, and other regulated securities
 
 ---
 
 ## Key Features
 
-### 1. Risk-Based Classification
+### 1. Multi-Source Asset Platform
 
-All RWAs are classified into five risk levels (R1-R5):
+The Invest Module accepts RWAs from multiple sources:
+- **Origin Forge Assets** — RWA tokens minted through Origin Forge protocol
+- **Institutional Partners** — Assets from compliant institutions like **DigiFT**
+  - US Treasury bonds
+  - Corporate bonds
+  - Stocks and equities
+  - Other regulated securities
+- **Third-Party Issuers** — Other verified RWA issuers
+
+**Current Partner:** [DigiFT](https://digift.com) — A compliant digital asset platform providing tokenized traditional securities.
+
+### 2. Risk-Based Classification
+
+The Invest Module focuses on **R1 and R2 assets** (very low to low risk). While RWAs are classified into five risk levels (R1-R5), the Invest Module primarily serves conservative investors seeking stable returns:
 
 ![Risk vs. Return Profile](/images/invest/risk-return-chart.svg)
 
@@ -34,7 +53,7 @@ All RWAs are classified into five risk levels (R1-R5):
 
 [Learn more about Risk Grading →](/invest/risk-grading)
 
-### 2. Investor Profile Matching
+### 3. Investor Profile Matching
 
 Investors are matched to appropriate assets based on their profile (C1-C5):
 
@@ -48,7 +67,7 @@ Investors are matched to appropriate assets based on their profile (C1-C5):
 
 [Learn more about Investor Profiles →](/invest/investor-profiles)
 
-### 3. Flexible Terms
+### 4. Flexible Terms
 
 Investment periods range from short to long term:
 
@@ -69,7 +88,7 @@ Investment periods range from short to long term:
 ![Investment Lifecycle](/images/invest/invest-process.svg)
 
 1. **Select Asset** — Choose from available RWA investments
-2. **Deposit $WEUSD** — Commit funds for the term
+2. **Deposit WEUSD** — Commit funds for the term
 3. **Lock-up Period** — Funds invested in underlying RWA
 4. **Receive Returns** — Principal + APY at maturity
 
@@ -79,7 +98,7 @@ Investment periods range from short to long term:
 ```solidity
 function invest(
     uint256 assetId, // Asset identifier
-    uint256 amount   // $WEUSD amount (6 decimals)
+    uint256 amount   // WEUSD amount (6 decimals)
 ) external returns (
     uint256 investmentId // Unique investment ID
 )
@@ -169,7 +188,7 @@ import { Table } from 'nextra/components'
 
 ### Before Investing
 
-1. **Get $WEUSD** — [Mint](/mint-and-redeem) with USDC
+1. **Get WEUSD** — [Mint](/mint-and-redeem) with USDC
 2. **Approve Spending** — Authorize InvestmentPool contract
 3. **Check Limits** — Verify min/max amounts
 4. **Review Terms** — Understand lock-up and APY

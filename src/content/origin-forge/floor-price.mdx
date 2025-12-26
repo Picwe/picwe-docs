@@ -23,7 +23,8 @@ Origin Forge has two key prices that work together:
 | **Floor Price** | Guaranteed minimum, backed by reserves | Only goes up |
 | **Current Price** | Market price, driven by demand | Fluctuates above floor |
 
-![Floor Price Behavior](/images/origin-forge/price-behavior.svg)
+![Floor Price Behavior](/images/origin-forge/floor_mechanism.svg)
+
 
 **Key insight:** Current price can go up or down, but it can never fall below the floor.
 
@@ -65,17 +66,7 @@ When enough buying activity occurs, the protocol automatically:
 
 ### Why Does This Work?
 
-```
-Before Raise:
-├── PSF: $300,000 (30%)  ← Price premium support
-└── FSF: $700,000 (70%)  ← Floor backing
-    Floor = $0.70 per token
-
-After Raise:
-├── PSF: $200,000 (20%)  ← Reduced premium
-└── FSF: $800,000 (80%)  ← Increased floor backing
-    Floor = $0.80 per token ✓ Permanent increase!
-```
+![Raise Mechanism](/images/origin-forge/raise-mechanism.svg)
 
 ### Key Properties
 
@@ -92,7 +83,7 @@ After Raise:
 
 When you forge (buy) tokens:
 
-1. **Your $WEUSD enters the reserve pool**
+1. **Your WEUSD enters the reserve pool**
 2. **New tokens are minted for you**
 3. **If threshold reached → Raise triggers**
 4. **Floor price increases for everyone**
@@ -107,7 +98,7 @@ This creates a positive feedback loop:
 
 When you melt (sell) tokens:
 
-1. **You receive at least floor price in $WEUSD**
+1. **You receive at least floor price in WEUSD**
 2. **Your tokens are burned**
 3. **Reserve decreases proportionally**
 4. **Floor price stays the same or higher**
@@ -118,9 +109,9 @@ When you melt (sell) tokens:
 
 ## Comparison: With vs Without Floor
 
-### Traditional Token
-
 ![Token Comparison](/images/origin-forge/token-comparison.svg)
+
+### Traditional Token
 
 - Price can drop to zero
 - No guaranteed floor
@@ -203,6 +194,6 @@ When you melt (sell) tokens:
 | Floor Basis | Real reserves in smart contract |
 | Floor Control | Immutable, no admin override |
 | Floor Access | Anyone can melt at floor |
-| Floor Security | 100% backed by locked $WEUSD |
+| Floor Security | 100% backed by locked WEUSD |
 
 The floor price mechanism transforms RWA tokens from speculative assets into **value-protected instruments**, providing security that traditional markets cannot offer.

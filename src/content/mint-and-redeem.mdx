@@ -1,18 +1,18 @@
 # Mint & Redeem
 
 <div style={{ color: 'rgb(110,110,100)', fontSize: '1.125rem', marginTop: '0.5rem' }}>
-Convert between USDC and $WEUSD at 1:1 ratio
+Convert between USDC and WEUSD at 1:1 ratio
 </div>
 
 ---
 
 ## Overview
 
-$WEUSD can be minted and redeemed at a fixed 1:1 ratio with USDC. This ensures price stability and full collateralization.
+WEUSD can be minted and redeemed at a fixed 1:1 ratio with USDC. This ensures price stability and full collateralization.
 
 ---
 
-## Minting $WEUSD
+## Minting WEUSD
 
 ### Process
 
@@ -20,14 +20,14 @@ $WEUSD can be minted and redeemed at a fixed 1:1 ratio with USDC. This ensures p
 2. **Select Network** — Choose your preferred chain (BSC, Base, etc.)
 3. **Approve USDC** — Authorize the Mint contract to spend your USDC
 4. **Mint** — Specify amount and confirm transaction
-5. **Receive $WEUSD** — Tokens arrive in your wallet
+5. **Receive WEUSD** — Tokens arrive in your wallet
 
 ### What Happens On-Chain
 
 ```
 You: Send USDC → Mint Contract
 Mint Contract: Lock USDC in reserve
-Mint Contract: Mint equal $WEUSD → You
+Mint Contract: Mint equal WEUSD → You
 ```
 
 ### Requirements
@@ -38,21 +38,21 @@ Mint Contract: Mint equal $WEUSD → You
 
 ---
 
-## Redeeming $WEUSD
+## Redeeming WEUSD
 
 ### Process
 
 1. **Connect Wallet**
-2. **Select Network** — Must have $WEUSD on this network
-3. **Approve $WEUSD** — Authorize the Mint contract
+2. **Select Network** — Must have WEUSD on this network
+3. **Approve WEUSD** — Authorize the Mint contract
 4. **Redeem** — Specify amount and confirm
 5. **Receive USDC** — Tokens arrive in your wallet
 
 ### What Happens On-Chain
 
 ```
-You: Send $WEUSD → Mint Contract
-Mint Contract: Burn $WEUSD
+You: Send WEUSD → Mint Contract
+Mint Contract: Burn WEUSD
 Mint Contract: Release USDC from reserve → You
 ```
 
@@ -104,13 +104,13 @@ import { Table } from 'nextra/components'
 | Mint | 0% |
 | Redeem | 0% |
 
-Only network gas fees apply. PicWe does not charge for minting or redeeming $WEUSD.
+Only network gas fees apply. PicWe does not charge for minting or redeeming WEUSD.
 
 ---
 
 ## Important Notes
 
-- **1:1 Ratio** — Always mint/redeem at exactly 1 USDC = 1 $WEUSD
+- **1:1 Ratio** — Always mint/redeem at exactly 1 USDC = 1 WEUSD
 - **No Slippage** — Fixed rate, no price impact
 - **Instant** — Transactions complete in seconds
 - **Reversible** — Redeem anytime, no lock-up period
@@ -119,6 +119,6 @@ Only network gas fees apply. PicWe does not charge for minting or redeeming $WEU
 
 ## Next Steps
 
-- [Cross-Chain Transfer](/cross-chain-transfer) — Move $WEUSD to other networks
-- [IRO](/iro) — Use $WEUSD to participate in RWA offerings
+- [Cross-Chain Transfer](/cross-chain-transfer) — Move WEUSD to other networks
+- [IRO](/iro) — Use WEUSD to participate in RWA offerings
 

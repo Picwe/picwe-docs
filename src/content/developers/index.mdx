@@ -41,12 +41,12 @@ See [API Reference](/developers/api-reference) for function signatures and param
 
 ## Core Contracts
 
-### $WEUSD System
+### WEUSD System
 
 | Contract | Purpose |
 |----------|---------|
 | WEUSD | ERC-20 stablecoin token |
-| MintRedeem | Mint/redeem $WEUSD with USDC |
+| MintRedeem | Mint/redeem WEUSD with USDC |
 | CrossChain | Cross-chain transfer operations |
 
 ### RWA Platform
@@ -71,20 +71,20 @@ See [API Reference](/developers/api-reference) for function signatures and param
 
 ## Integration Examples
 
-### Minting $WEUSD
+### Minting WEUSD
 
 ```solidity
 // 1. Approve USDC spending
 IERC20(usdcAddress).approve(mintRedeemAddress, amount);
 
-// 2. Mint $WEUSD
+// 2. Mint WEUSD
 IMintRedeem(mintRedeemAddress).mint(amount);
 ```
 
 ### Forging RWA Tokens
 
 ```solidity
-// 1. Approve $WEUSD spending
+// 1. Approve WEUSD spending
 IERC20(weusdAddress).approve(marketAddress, amount);
 
 // 2. Forge tokens
@@ -98,7 +98,7 @@ IERC20(weusdAddress).approve(marketAddress, amount);
 ### Participating in IRO
 
 ```solidity
-// 1. Approve $WEUSD spending
+// 1. Approve WEUSD spending
 IERC20(weusdAddress).approve(glaAddress, amount);
 
 // 2. Subscribe (during public phase)
@@ -111,7 +111,7 @@ IGLA(glaAddress).claim();
 ### Investing via Module
 
 ```solidity
-// 1. Approve $WEUSD to InvestmentPool
+// 1. Approve WEUSD to InvestmentPool
 IERC20(weusdAddress).approve(investmentPoolAddress, amount);
 
 // 2. Invest
@@ -152,7 +152,7 @@ Important decimal information:
 
 | Token | Decimals |
 |-------|----------|
-| $WEUSD | 6 |
+| WEUSD | 6 |
 | USDC (BSC) | 18 |
 | USDC (Base/Arb) | 6 |
 | RWA Tokens | 18 |

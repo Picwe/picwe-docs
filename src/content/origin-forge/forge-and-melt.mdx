@@ -12,8 +12,8 @@ Origin Forge has exactly two operations:
 
 | Operation | Action | Result |
 |-----------|--------|--------|
-| **Forge** | Deposit $WEUSD | Mint new RWA tokens |
-| **Melt** | Burn RWA tokens | Receive $WEUSD |
+| **Forge** | Deposit WEUSD | Mint new RWA tokens |
+| **Melt** | Burn RWA tokens | Receive WEUSD |
 
 Both operations execute at the current algorithmically-determined price.
 
@@ -23,11 +23,11 @@ Both operations execute at the current algorithmically-determined price.
 
 ### What Happens
 
-1. You send $WEUSD to Origin Forge
+1. You send WEUSD to Origin Forge
 2. Protocol calculates current price
 3. New RWA tokens are minted
 4. Tokens sent to your wallet
-5. $WEUSD added to protocol reserve
+5. WEUSD added to protocol reserve
 
 ### Visual Flow
 
@@ -37,8 +37,8 @@ Both operations execute at the current algorithmically-determined price.
 
 ```solidity
 function forge(
-    address token,      // Stablecoin address ($WEUSD)
-    uint256 tokenWorth, // Amount of $WEUSD to spend
+    address token,      // Stablecoin address (WEUSD)
+    uint256 tokenWorth, // Amount of WEUSD to spend
     uint256 desired     // Minimum RWA tokens expected
 ) external returns (
     uint256 amount,     // Actual tokens minted
@@ -50,7 +50,7 @@ function forge(
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `token` | address | Stablecoin to use ($WEUSD or USDC) |
+| `token` | address | Stablecoin to use (WEUSD or USDC) |
 | `tokenWorth` | uint256 | Amount to spend (6 decimals) |
 | `desired` | uint256 | Minimum tokens expected (slippage protection) |
 
@@ -64,7 +64,7 @@ function forge(
 ### Requirements
 
 - Market must be initialized (post-IRO)
-- Approve $WEUSD spending before calling
+- Approve WEUSD spending before calling
 - Amount must meet minimum thresholds
 
 ---
@@ -76,8 +76,8 @@ function forge(
 1. You send RWA tokens to Origin Forge
 2. Protocol calculates current price
 3. Tokens are burned (destroyed)
-4. $WEUSD released from reserve
-5. $WEUSD sent to your wallet
+4. WEUSD released from reserve
+5. WEUSD sent to your wallet
 
 ### Visual Flow
 
@@ -121,23 +121,17 @@ function melt(
 
 ## Price Impact
 
+![Price Impact Flow](/images/origin-forge/price-impact-flow.svg)
+
 ### Forging Increases Price
 
-```
-More forging → More reserve → Higher current price → Possible Raise → Higher floor
-```
-
 When you forge:
-- Reserve grows (your $WEUSD enters the pool)
+- Reserve grows (your WEUSD enters the pool)
 - Supply grows (new tokens minted)
 - Current price increases
 - **If threshold reached:** Raise triggers, floor increases permanently
 
 ### Melting Decreases Price
-
-```
-More melting → Less reserve → Lower current price → Floor unchanged
-```
 
 When you melt:
 - Reserve decreases (proportionally)
@@ -170,7 +164,7 @@ Set `desired` to the minimum tokens you'll accept:
 
 ### For Melting
 
-Set `desired` to the minimum $WEUSD you'll accept:
+Set `desired` to the minimum WEUSD you'll accept:
 - Guarantees at least floor price
 - Protects against rapid price drops
 - Recommended: 0.5-1% below expected amount

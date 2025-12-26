@@ -14,11 +14,11 @@ Purchase RWA tokens during whitelist phase.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `amount` | uint256 | $WEUSD amount (6 decimals) |
+| `amount` | uint256 | WEUSD amount (6 decimals) |
 
 **Requirements:**
 - Wallet must be on whitelist
-- Must approve $WEUSD spending first
+- Must approve WEUSD spending first
 - Must be in whitelist phase
 
 ---
@@ -29,10 +29,10 @@ Purchase RWA tokens during public offering phase.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `amount` | uint256 | $WEUSD amount (6 decimals) |
+| `amount` | uint256 | WEUSD amount (6 decimals) |
 
 **Requirements:**
-- Must approve $WEUSD spending first
+- Must approve WEUSD spending first
 - Must be in public offering phase
 
 ---
@@ -49,7 +49,7 @@ Claim purchased RWA tokens after market initialization.
 
 ### `withdraw()`
 
-Withdraw $WEUSD investment during unlock phase.
+Withdraw WEUSD investment during unlock phase.
 
 **Requirements:**
 - Market must be in unlock phase
@@ -65,7 +65,7 @@ Forge (mint) RWA tokens by depositing stablecoins.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `token` | address | Stablecoin address ($WEUSD or USDC) |
+| `token` | address | Stablecoin address (WEUSD or USDC) |
 | `tokenWorth` | uint256 | Amount of stablecoin to spend |
 | `desired` | uint256 | Minimum RWA tokens expected (slippage protection) |
 
@@ -114,14 +114,14 @@ Invest in a structured RWA asset.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `assetId` | uint256 | Asset identifier |
-| `amount` | uint256 | $WEUSD amount (6 decimals) |
+| `amount` | uint256 | WEUSD amount (6 decimals) |
 
 | Return | Type | Description |
 |--------|------|-------------|
 | `investmentId` | uint256 | Unique investment identifier |
 
 **Requirements:**
-- Must approve $WEUSD to InvestmentPool
+- Must approve WEUSD to InvestmentPool
 - Asset must be active
 - Amount must be within min/max limits
 
@@ -154,7 +154,7 @@ Redeem a matured investment.
 |----------|---------|-------------|
 | `getCurrentPrice()` | uint256 | Current forge/melt price |
 | `getFloorPrice()` | uint256 | Minimum guaranteed price |
-| `getReserve()` | uint256 | Total $WEUSD in forge |
+| `getReserve()` | uint256 | Total WEUSD in forge |
 | `totalSupply()` | uint256 | Circulating RWA tokens |
 
 ### InvestmentManager
@@ -173,7 +173,7 @@ Redeem a matured investment.
 
 | Token | Decimals | Example |
 |-------|----------|---------|
-| $WEUSD | 6 | 1 WEUSD = 1000000 |
+| WEUSD | 6 | 1 WEUSD = 1000000 |
 | USDC (BSC) | 18 | 1 USDC = 1e18 |
 | USDC (Base/Arb) | 6 | 1 USDC = 1000000 |
 | RWA Tokens | 18 | 1 RWA = 1e18 |
