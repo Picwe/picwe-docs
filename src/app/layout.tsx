@@ -18,17 +18,12 @@ export const metadata: Metadata = {
 const navbar = <Navbar logo={<ThemeLogo lightSrc="/logo-light-use.png" darkSrc="/logo-dark-use.png" alt="Logo" width={100} height={100} />} />
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  let pageMap
+  let pageMap: any[] = []
   try {
-    pageMap = await getPageMap()
+    const result = await getPageMap()
+    pageMap = Array.isArray(result) ? result : []
   } catch (error) {
     console.error('Error getting pageMap:', error)
-    pageMap = []
-  }
-  
-  // Ensure pageMap is an array
-  if (!Array.isArray(pageMap)) {
-    console.warn('pageMap is not an array, defaulting to empty array')
     pageMap = []
   }
   
