@@ -5,9 +5,6 @@
     </marker>
   </defs>
 
-  <!-- Background -->
-  <rect width="700" height="400" fill="#f8fafc" rx="10" ry="10"/>
-
   <!-- Title -->
   <text x="350" y="30" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Risk-Profile Matching Matrix</text>
 

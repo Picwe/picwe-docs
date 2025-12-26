@@ -5,9 +5,6 @@
     </marker>
   </defs>
 
-  <!-- Background -->
-  <rect width="800" height="200" fill="#f8fafc" rx="10" ry="10"/>
-
   <!-- Phase 1: Whitelist -->
   <g transform="translate(50, 75)">
     <rect width="140" height="60" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>

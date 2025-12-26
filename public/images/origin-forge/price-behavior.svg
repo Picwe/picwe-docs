@@ -9,9 +9,6 @@
     </marker>
   </defs>
 
-  <!-- Background -->
-  <rect width="800" height="400" fill="#f8fafc" rx="10" ry="10"/>
-
   <!-- Axes -->
   <line x1="50" y1="350" x2="750" y2="350" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="50" y1="350" x2="50" y2="50" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
