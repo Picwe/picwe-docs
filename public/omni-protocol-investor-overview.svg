@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 150 1200 500" style="font-family: 'Inter', system-ui, -apple-system, sans-serif;">
+    <!-- Definitions for gradients, filters, and markers -->
+    <defs>
+        <!-- Gradients -->
+        <linearGradient id="grad-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="grad-flow" x1="0%" y1="50%" x2="100%" y2="50%">
+            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.2" />
+            <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.5" />
+            <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.2" />
+        </linearGradient>
+        <linearGradient id="grad-core" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#1e293b;stop-opacity:0.95" />
+            <stop offset="100%" style="stop-color:#0f172a;stop-opacity:0.95" />
+        </linearGradient>
+        <linearGradient id="grad-highlight" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="grad-token" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+        </linearGradient>
+
+        <!-- Filters -->
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+        </filter>
+        <filter id="neon" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+
+        <!-- Markers -->
+        <marker id="arrow-active" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6" />
+        </marker>
+        <marker id="arrow-settle" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L9,3 z" fill="#10b981" />
+        </marker>
+    </defs>
+
+    <!-- Background Grid (removed for transparency) -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1"/>
+    </pattern>
+
+    <!-- Connecting Pipes (Background Layer) -->
+    <path d="M120,250 C250,250 250,300 350,300" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4,4" opacity="0.5">
+        <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1s" repeatCount="indefinite" />
+    </path>
+    <path d="M120,330 C250,330 250,330 350,330" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4" opacity="0.5">
+        <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1.2s" repeatCount="indefinite" />
+    </path>
+    <path d="M120,410 C250,410 250,360 350,360" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="4,4" opacity="0.5">
+        <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1.5s" repeatCount="indefinite" />
+    </path>
+    <path d="M120,490 C250,490 250,390 350,390" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,4" opacity="0.5">
+        <animate attributeName="stroke-dashoffset" from="8" to="0" dur="1.3s" repeatCount="indefinite" />
+    </path>
+
+    <!-- ZONE 1: INPUT (Source Chains) -->
+    <g transform="translate(60, 250)">
+        <text x="30" y="-30" text-anchor="middle" fill="#94a3b8" font-size="14" font-weight="bold">SOURCE CHAINS</text>
+        
+        <!-- Input Nodes -->
+        <g transform="translate(0, 0)">
+            <circle cx="30" cy="0" r="25" fill="#1e293b" stroke="#3b82f6" stroke-width="2" />
+            <text x="30" y="5" text-anchor="middle" fill="white" font-size="10">Arbitrum</text>
+        </g>
+        <g transform="translate(0, 80)">
+            <circle cx="30" cy="0" r="25" fill="#1e293b" stroke="#ef4444" stroke-width="2" />
+            <text x="30" y="5" text-anchor="middle" fill="white" font-size="10">Optimism</text>
+        </g>
+        <g transform="translate(0, 160)">
+            <circle cx="30" cy="0" r="25" fill="#1e293b" stroke="#8b5cf6" stroke-width="2" />
+            <text x="30" y="5" text-anchor="middle" fill="white" font-size="10">Polygon</text>
+        </g>
+        <g transform="translate(0, 240)">
+            <circle cx="30" cy="0" r="25" fill="#1e293b" stroke="#f59e0b" stroke-width="2" />
+            <text x="30" y="5" text-anchor="middle" fill="white" font-size="10">Base</text>
+        </g>
+    </g>
+
+    <!-- ZONE 2: THE OMNI ENGINE (Complex) -->
+    <g transform="translate(350, 180)" filter="url(#shadow)">
+        <!-- Container Frame -->
+        <rect x="0" y="0" width="550" height="420" rx="15" fill="url(#grad-core)" stroke="#475569" stroke-width="1" />
+        <rect x="0" y="0" width="550" height="420" rx="15" fill="none" stroke="url(#grad-highlight)" stroke-width="2" opacity="0.5" />
+        
+        <!-- Header -->
+        <rect x="0" y="0" width="550" height="36" rx="15" fill="#1e293b" opacity="0.8" />
+        <path d="M0,36 L550,36" stroke="#334155" stroke-width="1" />
+        <text x="275" y="24" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold" letter-spacing="1">PicWe CORE ENGINE</text>
+
+        <!-- Complex Internal Architecture -->
+        
+        <!-- 1. Input Processor (Aggregator) -->
+        <g transform="translate(20, 60)">
+            <rect x="0" y="0" width="510" height="60" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1" stroke-dasharray="2,2" />
+            <text x="255" y="20" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="bold">LIQUIDITY AGGREGATION &amp; INTENT PARSING</text>
+            <!-- Sub-blocks -->
+            <rect x="20" y="30" width="140" height="20" rx="4" fill="#334155" />
+            <text x="90" y="44" text-anchor="middle" fill="#cbd5e1" font-size="9">Path Optimizer</text>
+            <rect x="185" y="30" width="140" height="20" rx="4" fill="#334155" />
+            <text x="255" y="44" text-anchor="middle" fill="#cbd5e1" font-size="9">Intent Decoder</text>
+            <rect x="350" y="30" width="140" height="20" rx="4" fill="#334155" />
+            <text x="420" y="44" text-anchor="middle" fill="#cbd5e1" font-size="9">Gas Estimator</text>
+        </g>
+
+        <!-- Downward Arrows -->
+        <path d="M275,120 L275,140" stroke="#64748b" stroke-width="2" marker-end="url(#arrow-active)" />
+
+        <!-- 2. Logic Layer (Oracles & Risk) -->
+        <g transform="translate(20, 140)">
+            <rect x="0" y="0" width="240" height="90" rx="6" fill="#1e293b" stroke="#64748b" />
+            <text x="120" y="20" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="bold">KEEPER NETWORK</text>
+            <path d="M20,35 H220" stroke="#334155" stroke-width="1" />
+            <!-- Code Lines -->
+            <line x1="30" y1="50" x2="150" y2="50" stroke="#475569" stroke-width="2" />
+            <line x1="30" y1="65" x2="180" y2="65" stroke="#475569" stroke-width="2" />
+            <line x1="30" y1="80" x2="120" y2="80" stroke="#475569" stroke-width="2" />
+            <circle cx="210" cy="65" r="10" fill="#a78bfa" opacity="0.5">
+                <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
+            </circle>
+        </g>
+
+        <g transform="translate(290, 140)">
+             <rect x="0" y="0" width="240" height="90" rx="6" fill="#1e293b" stroke="#64748b" />
+            <text x="120" y="20" text-anchor="middle" fill="#f472b6" font-size="11" font-weight="bold">ZK-PROOF VERIFIER</text>
+             <path d="M20,35 H220" stroke="#334155" stroke-width="1" />
+             <!-- Matrix effect -->
+             <text x="40" y="55" fill="#475569" font-family="monospace" font-size="8">0x8a...3f</text>
+             <text x="40" y="70" fill="#475569" font-family="monospace" font-size="8">proof.v</text>
+             <text x="140" y="55" fill="#475569" font-family="monospace" font-size="8">valid: true</text>
+             <circle cx="210" cy="65" r="10" fill="#f472b6" opacity="0.5">
+                 <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite" />
+             </circle>
+        </g>
+
+        <!-- Downward Arrows -->
+        <path d="M140,230 L140,250" stroke="#64748b" stroke-width="2" />
+        <path d="M410,230 L410,250" stroke="#64748b" stroke-width="2" />
+        <path d="M140,250 L410,250 L275,260" fill="none" stroke="#64748b" stroke-width="2" />
+
+        <!-- 3. Core Engine (WeUSD Matrix) -->
+        <g transform="translate(20, 260)">
+            <rect x="0" y="0" width="510" height="140" rx="6" fill="#0f172a" stroke="#3b82f6" stroke-width="2" />
+            <text x="255" y="25" text-anchor="middle" fill="#3b82f6" font-size="12" font-weight="bold">CROSS-CHAIN LIQUIDITY MATRIX</text>
+            
+            <!-- Matrix Visual -->
+            <g transform="translate(65, 50)">
+                <!-- Circles -->
+                <circle cx="40" cy="30" r="22" fill="#1e293b" stroke="#94a3b8" />
+                <text x="40" y="34" text-anchor="middle" fill="white" font-size="10">ETH</text>
+
+                <circle cx="190" cy="30" r="28" fill="#1e293b" stroke="#fff" stroke-width="2" filter="url(#glow)" />
+                <text x="190" y="34" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Bridge USD</text>
+
+                <circle cx="340" cy="30" r="22" fill="#1e293b" stroke="#f59e0b" />
+                <text x="340" y="34" text-anchor="middle" fill="white" font-size="10">ARB</text>
+
+                <!-- Connecting Flow -->
+                <path d="M70,30 L155,30" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-settle)">
+                     <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="2s" repeatCount="indefinite" />
+                </path>
+                <path d="M225,30 L310,30" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-settle)">
+                    <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="2s" repeatCount="indefinite" />
+                </path>
+                
+                <!-- Feedback Loop -->
+                <path d="M340,55 Q340,90 190,90 Q40,90 40,55" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,4" opacity="0.6" />
+                <text x="190" y="80" text-anchor="middle" fill="#f59e0b" font-size="9">Auto-Arbitrage Cycle</text>
+            </g>
+        </g>
+    </g>
+
+    <!-- ZONE 3: OUTPUT (RWA Assets) -->
+    <g transform="translate(980, 280)">
+        <text x="50" y="-30" text-anchor="middle" fill="#94a3b8" font-size="14" font-weight="bold">RWA ASSETS</text>
+        
+        <!-- Glowing RWA Tokens -->
+        <g transform="translate(0, 20)">
+            <!-- Back Token -->
+             <circle cx="70" cy="40" r="35" fill="#1e293b" stroke="#fbbf24" stroke-width="1" opacity="0.6" />
+            
+            <!-- Mid Token -->
+             <circle cx="30" cy="40" r="35" fill="#1e293b" stroke="#fbbf24" stroke-width="1" opacity="0.8" />
+             
+            <!-- Front Token -->
+            <circle cx="50" cy="70" r="45" fill="#1e293b" stroke="url(#grad-token)" stroke-width="3" filter="url(#glow)" />
+            <circle cx="50" cy="70" r="36" fill="none" stroke="#fbbf24" stroke-width="1" stroke-dasharray="2,2" />
+            <text x="50" y="75" text-anchor="middle" fill="#fbbf24" font-size="20" font-weight="bold">RWA</text>
+            
+            <!-- Sparkles -->
+            <path d="M10,20 L15,20 M12.5,17.5 L12.5,22.5" stroke="#fff" stroke-width="2" opacity="0.8">
+                 <animateTransform attributeName="transform" type="scale" values="0;1;0" dur="2s" repeatCount="indefinite" />
+            </path>
+             <path d="M90,10 L95,10 M92.5,7.5 L92.5,12.5" stroke="#fff" stroke-width="2" opacity="0.8">
+                 <animateTransform attributeName="transform" type="scale" values="0;1;0" dur="3s" repeatCount="indefinite" />
+            </path>
+        </g>
+    </g>
+
+    <!-- Main Output Arrow -->
+    <path d="M900,390 L960,390" stroke="#10b981" stroke-width="6" marker-end="url(#arrow-settle)" filter="url(#glow)" />
+    <text x="930" y="370" text-anchor="middle" fill="#10b981" font-size="12" font-weight="bold">SETTLEMENT</text>
+
+</svg>

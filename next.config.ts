@@ -8,9 +8,7 @@ const nextConfig: NextConfig = {
 
 // Set up Nextra with its configuration
 const withNextra = nextra({
-  // ... Add Nextra-specific options here
   search: true,
-  // contentDirBasePath: '/docs', // Or even nested e.g. `/docs/advanced`
 })
 
 // Export the final Next.js config with Nextra included

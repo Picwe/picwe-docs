@@ -1,0 +1,144 @@
+---
+asIndexPage: true
+---
+
+# Origin Forge
+
+<div style={{ color: 'rgb(110,110,100)', fontSize: '1.125rem', marginTop: '0.5rem' }}>
+A revolutionary token minting protocol — where tokens are born, not traded
+</div>
+
+---
+
+## We Are Not an Exchange
+
+> **Origin Forge is the birthplace of tokens, not a marketplace.**
+
+Traditional token trading involves buying from and selling to other users through liquidity pools. Origin Forge is fundamentally different:
+
+- **You don't buy tokens** — you **forge** them into existence
+- **You don't sell tokens** — you **melt** them back into WEUSD
+- **Tokens are minted on demand**, not pre-allocated
+
+---
+
+## The Paradigm Shift
+
+| Aspect | Traditional DEX | Origin Forge |
+|--------|----------------|--------------|
+| **Nature** | Secondary market (swapping) | Primary market (minting) |
+| **Token Source** | Buy from pool/users | Mint new tokens |
+| **Token Exit** | Sell to pool/users | Burn to protocol |
+| **Liquidity** | Depends on LPs | Always infinite |
+| **Price Floor** | Can go to zero | Guaranteed minimum |
+| **Price Discovery** | Pool ratio (x\*y=k) | Reserve-backed curve |
+
+```
+Traditional:  Fixed Supply → Market Trading → Price Discovery
+Origin Forge: Market Demand → Mint at Price → Value Backed
+```
+
+---
+
+## How It Works
+
+### Two Operations
+
+| Operation | Action | Description |
+|-----------|--------|-------------|
+| **Forge** | Mint | Deposit WEUSD → Receive newly minted RWA tokens |
+| **Melt** | Burn | Return RWA tokens → Receive WEUSD from reserve |
+
+### The Reserve Pool
+
+Every forge deposits WEUSD into a **reserve pool**. This pool backs the value of all tokens:
+
+![Forge and Melt Flow](/images/origin-forge/forge-melt-flow.svg)
+
+---
+
+## Two Key Prices
+
+Every RWA token in Origin Forge has two prices:
+
+| Price | Description | Behavior |
+|-------|-------------|----------|
+| **Current Price** | What you pay/receive when forging/melting | Fluctuates with activity |
+| **Floor Price** | Guaranteed minimum value | Only goes up, never down |
+
+![Price Behavior](/images/origin-forge/price-behavior.svg)
+
+**The key insight:** Current price can fluctuate, but can **never drop below the floor**.
+
+---
+
+## The Floor Only Goes Up
+
+This is the magic of Origin Forge:
+
+### How?
+
+1. **Forging adds to reserves** — More backing for all tokens
+2. **Fees accumulate** — Transaction fees grow the reserve
+3. **Raise mechanism triggers** — Protocol automatically locks in gains
+
+### Why This Matters
+
+| Traditional Token | Origin Forge Token |
+|-------------------|-------------------|
+| Can drop to zero | Has guaranteed floor |
+| No backing | 100% reserve backed |
+| Total loss possible | Downside limited |
+
+---
+
+## Why Origin Forge?
+
+### For Token Holders
+
+| Benefit | Description |
+|---------|-------------|
+| ✅ **Infinite Liquidity** | Forge or melt anytime, any amount |
+| ✅ **Value Protection** | Floor price guarantees minimum value |
+| ✅ **Fair Pricing** | Same algorithm for everyone |
+| ✅ **Transparent** | All reserves verifiable on-chain |
+
+### For RWA Issuers
+
+| Benefit | Description |
+|---------|-------------|
+| ✅ **No Initial Liquidity** | Protocol provides infinite liquidity |
+| ✅ **Fair Launch** | Everyone forges by same rules |
+| ✅ **Anti-Rug** | Cannot dump below floor |
+| ✅ **Value Accrual** | Activity increases floor for all holders |
+
+---
+
+## Integration with Markets
+
+Forged tokens are **standard ERC-20** and work everywhere:
+
+![Market Integration](/images/origin-forge/market-integration.svg)
+
+**Origin Forge handles minting. Secondary markets are optional.**
+
+---
+
+## Quick Summary
+
+| Concept | Traditional | Origin Forge |
+|---------|-------------|--------------|
+| Get tokens | Buy from others | Forge (mint) new tokens |
+| Exit tokens | Sell to others | Melt (burn) back to WEUSD |
+| Liquidity | Depends on market | Always available |
+| Minimum value | None | Floor price (guaranteed) |
+| Floor direction | N/A | Only increases |
+
+---
+
+## Next Steps
+
+- [Forge & Melt](/origin-forge/forge-and-melt) — Learn how to forge and melt tokens
+- [Dynamic Pricing](/origin-forge/dynamic-pricing) — Understand how prices are calculated
+- [Floor Price Protection](/origin-forge/floor-price) — Deep dive into the floor mechanism
+

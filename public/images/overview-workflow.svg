@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="500" fill="#f8fafc" rx="10" ry="10"/>
+
+  <!-- Top: IRO -->
+  <rect x="150" y="50" width="400" height="100" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="350" y="80" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1d4ed8" text-anchor="middle">IRO</text>
+  <text x="350" y="105" font-family="sans-serif" font-size="16" fill="#3b82f6" text-anchor="middle">Initial RWA Offering</text>
+  <text x="350" y="130" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="middle">(Whitelist → Public → Distribution)</text>
+
+  <!-- Arrow 1 -->
+  <line x1="350" y1="150" x2="350" y2="200" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="360" y="180" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="start">Market Initialization</text>
+
+  <!-- Middle: Origin Forge -->
+  <rect x="150" y="200" width="400" height="100" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="350" y="230" font-family="sans-serif" font-size="20" font-weight="bold" fill="#15803d" text-anchor="middle">Origin Forge</text>
+  <text x="350" y="255" font-family="sans-serif" font-size="16" fill="#22c55e" text-anchor="middle">Minting Protocol</text>
+  <text x="350" y="280" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="middle">(Forge ⇄ Melt, Floor Price)</text>
+
+  <!-- Arrow 2 -->
+  <line x1="350" y1="300" x2="350" y2="340" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="360" y="320" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="start">Tokens Flow Out</text>
+
+  <!-- Divider Line -->
+  <line x1="100" y1="340" x2="600" y2="340" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="5,5"/>
+
+  <!-- Bottom: Secondary Markets -->
+  <!-- CEX -->
+  <rect x="50" y="360" width="150" height="100" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="125" y="390" font-family="sans-serif" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">CEX</text>
+  <text x="125" y="420" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Centralized</text>
+  <text x="125" y="440" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Exchanges</text>
+
+  <!-- DEX -->
+  <rect x="275" y="360" width="150" height="100" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="350" y="390" font-family="sans-serif" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">DEX</text>
+  <text x="350" y="420" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Uniswap</text>
+  <text x="350" y="440" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="middle">etc.</text>
+
+  <!-- DeFi -->
+  <rect x="500" y="360" width="150" height="100" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="575" y="390" font-family="sans-serif" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">DeFi</text>
+  <text x="575" y="420" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Staking</text>
+  <text x="575" y="440" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Lending</text>
+
+  <!-- Arrows from Origin Forge to Markets -->
+  <line x1="350" y1="340" x2="125" y2="360" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="350" y1="340" x2="350" y2="360" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="350" y1="340" x2="575" y2="360" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+</svg>

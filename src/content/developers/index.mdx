@@ -1,0 +1,212 @@
+---
+asIndexPage: true
+---
+
+# Developer Guide
+
+<div style={{ color: 'rgb(110,110,100)', fontSize: '1.125rem', marginTop: '0.5rem' }}>
+Build on PicWe's RWA infrastructure
+</div>
+
+---
+
+## Overview
+
+PicWe provides a comprehensive smart contract infrastructure for RWA capital markets. This guide helps developers integrate with our platform.
+
+---
+
+## Quick Start
+
+### 1. Choose Your Network
+
+| Network | Chain ID | RPC |
+|---------|----------|-----|
+| BSC Mainnet | 56 | https://bsc-dataseed.binance.org |
+| Base Mainnet | 8453 | https://mainnet.base.org |
+| Arbitrum One | 42161 | https://arb1.arbitrum.io/rpc |
+| HashKey Chain | 177 | https://mainnet.hsk.xyz |
+| Plume Chain | 98865 | https://rpc.plume.org |
+| Movement | — | Check Movement docs |
+
+### 2. Get Contract Addresses
+
+See [Contract Addresses](/developers/contracts) for all deployed contracts.
+
+### 3. Review API Reference
+
+See [API Reference](/developers/api-reference) for function signatures and parameters.
+
+---
+
+## Core Contracts
+
+### WEUSD System
+
+| Contract | Purpose |
+|----------|---------|
+| WEUSD | ERC-20 stablecoin token |
+| MintRedeem | Mint/redeem WEUSD with USDC |
+| CrossChain | Cross-chain transfer operations |
+
+### RWA Platform
+
+| Contract | Purpose |
+|----------|---------|
+| RWALaunchpad | Factory for creating IRO/Market pairs |
+| GenesisLaunchAuction (GLA) | IRO subscription management |
+| Market | Origin Forge operations (forge/melt) |
+
+### Invest Module
+
+| Contract | Purpose |
+|----------|---------|
+| InvestmentManager | Investment lifecycle management |
+| InvestmentPool | Investment fund custody |
+| RedemptionPool | Redemption fund custody |
+| AssetRegistry | Asset configuration storage |
+| SystemParameters | Global parameters |
+
+---
+
+## Integration Examples
+
+### Minting WEUSD
+
+```solidity
+// 1. Approve USDC spending
+IERC20(usdcAddress).approve(mintRedeemAddress, amount);
+
+// 2. Mint WEUSD
+IMintRedeem(mintRedeemAddress).mint(amount);
+```
+
+### Forging RWA Tokens
+
+```solidity
+// 1. Approve WEUSD spending
+IERC20(weusdAddress).approve(marketAddress, amount);
+
+// 2. Forge tokens
+(uint256 tokens, uint256 fee) = IMarket(marketAddress).forge(
+    weusdAddress,  // token
+    amount,        // tokenWorth
+    minExpected    // desired (slippage protection)
+);
+```
+
+### Participating in IRO
+
+```solidity
+// 1. Approve WEUSD spending
+IERC20(weusdAddress).approve(glaAddress, amount);
+
+// 2. Subscribe (during public phase)
+IGLA(glaAddress).publicOfferingBuy(amount);
+
+// 3. Claim tokens (after market initialization)
+IGLA(glaAddress).claim();
+```
+
+### Investing via Module
+
+```solidity
+// 1. Approve WEUSD to InvestmentPool
+IERC20(weusdAddress).approve(investmentPoolAddress, amount);
+
+// 2. Invest
+uint256 investmentId = IInvestmentManager(managerAddress).invest(
+    assetId,
+    amount
+);
+
+// 3. Redeem at maturity
+uint256 profit = IInvestmentManager(managerAddress).redeem(investmentId);
+```
+
+---
+
+## Recommended Tools
+
+### Web3 Libraries
+
+| Library | Language | Link |
+|---------|----------|------|
+| ethers.js | JavaScript/TypeScript | ethers.org |
+| viem | TypeScript | viem.sh |
+| web3.py | Python | web3py.readthedocs.io |
+
+### Development Frameworks
+
+| Framework | Purpose |
+|-----------|---------|
+| Hardhat | Development & testing |
+| Foundry | Fast compilation & testing |
+| Remix | Quick prototyping |
+
+---
+
+## Token Decimals
+
+Important decimal information:
+
+| Token | Decimals |
+|-------|----------|
+| WEUSD | 6 |
+| USDC (BSC) | 18 |
+| USDC (Base/Arb) | 6 |
+| RWA Tokens | 18 |
+
+Always check decimals before calculations!
+
+---
+
+## Best Practices
+
+### 1. Always Approve First
+
+Token transfers require prior approval:
+```solidity
+token.approve(spender, amount);
+```
+
+### 2. Use Slippage Protection
+
+For forge/melt operations, set `desired` parameter:
+```solidity
+// Set to 99% of expected (1% slippage tolerance)
+uint256 desired = expectedAmount * 99 / 100;
+```
+
+### 3. Check Contract States
+
+Verify conditions before transactions:
+- Market initialized?
+- Contract paused?
+- User whitelisted?
+
+### 4. Handle Reverts
+
+Common revert reasons:
+- Insufficient balance
+- Approval not granted
+- Slippage exceeded
+- Market not active
+
+---
+
+## Resources
+
+- [Contract Addresses](/developers/contracts) — All deployed contracts
+- [API Reference](/developers/api-reference) — Function signatures
+- [Security](/developers/security) — Security information
+
+---
+
+## Support
+
+Need help?
+- Check [FAQ](/faq)
+- Contact [Support](/support)
+- Join our developer Discord
+

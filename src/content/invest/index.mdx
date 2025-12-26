@@ -1,0 +1,217 @@
+---
+asIndexPage: true
+---
+
+# Invest Module
+
+<div style={{ color: 'rgb(110,110,100)', fontSize: '1.125rem', marginTop: '0.5rem' }}>
+Structured RWA investments with risk-based matching
+</div>
+
+---
+
+## Overview
+
+The Invest Module is an **independent investment platform** that offers structured investment products for users seeking stable, predictable returns from **low-risk RWAs (R1-R2)**. 
+
+**Key Distinctions:**
+- **Independent Platform** — Not limited to Origin Forge assets; accepts RWAs from various institutional partners
+- **Focus on R1-R2 Assets** — Primarily targets very low to low risk assets
+- **Fixed-Term Investments** — Provides defined APY with lock-up periods
+- **Institutional Partnerships** — Works with compliant institutions like **DigiFT** for assets such as US Treasury bonds, corporate bonds, stocks, and other regulated securities
+
+---
+
+## Key Features
+
+### 1. Multi-Source Asset Platform
+
+The Invest Module accepts RWAs from multiple sources:
+- **Origin Forge Assets** — RWA tokens minted through Origin Forge protocol
+- **Institutional Partners** — Assets from compliant institutions like **DigiFT**
+  - US Treasury bonds
+  - Corporate bonds
+  - Stocks and equities
+  - Other regulated securities
+- **Third-Party Issuers** — Other verified RWA issuers
+
+**Current Partner:** [DigiFT](https://www.digift.io/) — A compliant digital asset platform providing tokenized traditional securities.
+
+### 2. Risk-Based Classification
+
+The Invest Module focuses on **R1 and R2 assets** (very low to low risk). While RWAs are classified into five risk levels (R1-R5), the Invest Module primarily serves conservative investors seeking stable returns:
+
+![Risk vs. Return Profile](/images/invest/risk-return-chart.svg)
+
+| Level | Risk | Typical Assets |
+|-------|------|----------------|
+| R1 | Very Low | Government bonds, treasury bills |
+| R2 | Low | Corporate bonds, secured lending |
+| R3 | Medium | Real estate, revenue shares |
+| R4 | High | Growth equity, venture |
+| R5 | Very High | Speculative, early-stage |
+
+[Learn more about Risk Grading →](/invest/risk-grading)
+
+### 3. Investor Profile Matching
+
+Investors are matched to appropriate assets based on their profile (C1-C5):
+
+| Profile | Suitable Risk Levels | Focus |
+|---------|---------------------|-------|
+| C1 | R1 only | Capital preservation |
+| C2 | R1-R2 | Stable income |
+| C3 | R1-R3 | Balanced growth |
+| C4 | R1-R4 | Growth oriented |
+| C5 | R1-R5 | Maximum returns |
+
+[Learn more about Investor Profiles →](/invest/investor-profiles)
+
+### 4. Flexible Terms
+
+Investment periods range from short to long term:
+
+| Term | Duration | Typical APY Range |
+|------|----------|-------------------|
+| Short | 1-4 weeks | 3-6% |
+| Medium | 1-3 months | 5-10% |
+| Long | 6-12 months | 8-15% |
+
+*APY varies by asset and market conditions.*
+
+---
+
+## How It Works
+
+### Investment Flow
+
+![Investment Lifecycle](/images/invest/invest-process.svg)
+
+1. **Select Asset** — Choose from available RWA investments
+2. **Deposit WEUSD** — Commit funds for the term
+3. **Lock-up Period** — Funds invested in underlying RWA
+4. **Receive Returns** — Principal + APY at maturity
+
+### Contract Interface
+
+**Invest:**
+```solidity
+function invest(
+    uint256 assetId, // Asset identifier
+    uint256 amount   // WEUSD amount (6 decimals)
+) external returns (
+    uint256 investmentId // Unique investment ID
+)
+```
+
+**Redeem:**
+```solidity
+function redeem(
+    uint256 investmentId // Investment to redeem
+) external returns (
+    uint256 profit // Profit received
+)
+```
+
+---
+
+## Investment Parameters
+
+| Parameter | Description |
+|-----------|-------------|
+| **Asset ID** | Identifier for the RWA investment |
+| **Minimum** | Minimum investment amount |
+| **Maximum** | Maximum investment per wallet |
+| **APY** | Annual percentage yield |
+| **Term** | Lock-up duration |
+| **Status** | Active, Paused, or Closed |
+
+---
+
+## Contract Addresses
+
+import { Table } from 'nextra/components'
+
+### BSC Mainnet
+
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>Contract</Table.Th>
+      <Table.Th>Address</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td>InvestmentManager</Table.Td>
+      <Table.Td>`0x50076593F9E66b37fC4Bc4342E92A033b28da0a6`</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>InvestmentPool</Table.Td>
+      <Table.Td>`0x50076593F9E66b37fC4Bc4342E92A033b28da0a6`</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>RedemptionPool</Table.Td>
+      <Table.Td>`0x50076593F9E66b37fC4Bc4342E92A033b28da0a6`</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>
+
+### Base Mainnet
+
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>Contract</Table.Th>
+      <Table.Th>Address</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td>InvestmentManager</Table.Td>
+      <Table.Td>`0x6Ec63400f33D8A5331dbaF2336ADcC1f455908a8`</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>InvestmentPool</Table.Td>
+      <Table.Td>`0xF9Af57B0c505339cE06A6C9E9380fA9741f9aD32`</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>RedemptionPool</Table.Td>
+      <Table.Td>`0x8851F650A3a43158b8F9cD6416580B37075C4D69`</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>
+
+---
+
+## Requirements
+
+### Before Investing
+
+1. **Get WEUSD** — [Mint](/mint-and-redeem) with USDC
+2. **Approve Spending** — Authorize InvestmentPool contract
+3. **Check Limits** — Verify min/max amounts
+4. **Review Terms** — Understand lock-up and APY
+
+### Redemption Rules
+
+- Investment must reach maturity
+- Call `redeem()` with investment ID
+- Receive principal + accumulated profit
+
+---
+
+## Important Notes
+
+- **Lock-up** — Funds cannot be withdrawn before maturity
+- **APY** — Returns are fixed at investment time
+- **Matching** — Only invest in assets matching your risk profile
+- **Minimums** — Each asset has minimum investment requirements
+
+---
+
+## Next Steps
+
+- [Risk Grading](/invest/risk-grading) — Understand R1-R5 classification
+- [Investor Profiles](/invest/investor-profiles) — Find your risk profile
+

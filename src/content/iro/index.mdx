@@ -1,0 +1,140 @@
+---
+asIndexPage: true
+---
+
+# IRO — Initial RWA Offering
+
+<div style={{ color: 'rgb(110,110,100)', fontSize: '1.125rem', marginTop: '0.5rem' }}>
+Permissionless framework for launching tokenized real-world assets
+</div>
+
+---
+
+## What is IRO?
+
+**Initial RWA Offering (IRO)** is PicWe's standardized framework for issuing tokenized real-world assets. Think of it as an "IPO for RWAs" — but fully decentralized, permissionless, and powered by smart contracts.
+
+---
+
+## Key Features
+
+### 1. Smart Contract Automation
+
+- Token minting fully automated
+- No manual intervention for standard operations
+- All parameters transparent and verifiable on-chain
+
+### 2. Phased Distribution
+
+| Phase | Access | Description |
+|-------|--------|-------------|
+| Whitelist | Invited | Early access with potential benefits |
+| Public | Everyone | Open subscription until cap reached |
+| Trading | Everyone | Origin Forge market launches |
+
+### 3. Treasury Pool Mechanism
+
+Every RWA token is backed by a treasury pool:
+
+**Sources:**
+- Initial fundraising proceeds
+- Trading fees from Origin Forge
+- APY distributions
+- Additional capital injections
+
+**Management:**
+- Automated allocation via smart contracts
+- Transparent on-chain tracking
+- Supports floor price calculations
+
+### 4. Floor Price Protection
+
+```
+Floor Price = Treasury Assets ÷ Circulating Supply
+```
+
+This mechanism guarantees a minimum value for RWA tokens:
+- **Buy** → Mint new tokens, add funds to treasury
+- **Sell** → Burn tokens, maintain treasury value
+- **Result** → Floor price can only rise, never fall
+
+---
+
+## IRO Lifecycle
+
+![IRO Launch Lifecycle](/images/iro/iro-phases.svg)
+
+### Phase 1: Whitelist
+
+- Exclusive access for whitelisted wallets
+- May offer better pricing or allocation
+- Limited duration
+
+### Phase 2: Public Offering
+
+- Open to all participants
+- Per-wallet subscription limits
+- Continues until funding cap reached
+
+### Phase 3: Market Launch
+
+- RWA tokens become claimable
+- Origin Forge market initializes
+- Continuous trading begins
+
+### Phase 4: Ongoing Operations
+
+- APY returns distributed per smart contract terms
+- Trading on Origin Forge
+- Treasury accumulates value
+- Floor price adjusts upward
+
+---
+
+## For Investors
+
+### How to Participate
+
+1. **Get WEUSD** — [Mint](/mint-and-redeem) with USDC
+2. **Find IRO** — Browse active offerings on PicWe
+3. **Subscribe** — During whitelist (if eligible) or public phase
+4. **Claim** — After market initialization
+5. **Hold or Trade** — Receive APY or trade on Origin Forge
+
+### Contract Functions
+
+**During Whitelist Phase:**
+```solidity
+function whitelistBuy(uint256 amount) external
+```
+- Requires wallet on whitelist
+- Approve WEUSD first
+
+**During Public Offering:**
+```solidity
+function publicOfferingBuy(uint256 amount) external
+```
+- Open to all
+- Approve WEUSD first
+
+**After Market Launch:**
+```solidity
+function claim() external
+```
+- Transfers your RWA tokens
+- Call once market is initialized
+
+---
+
+## For Issuers
+
+Ready to launch your RWA? See the [Launch Guide](/iro/launch-guide) for step-by-step instructions.
+
+---
+
+## Important Notes
+
+- **Review Process** — Currently, IROs undergo review before launch. Full permissionless issuance coming soon.
+- **Regulatory Compliance** — Issuers must ensure compliance with applicable regulations.
+- **Risk Disclosure** — RWA tokens are subject to market conditions. Floor price provides downside protection but does not guarantee returns.
+

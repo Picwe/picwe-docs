@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f8fafc" rx="10" ry="10"/>
+
+  <!-- Axes -->
+  <line x1="50" y1="350" x2="550" y2="350" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="50" y1="350" x2="50" y2="50" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <text x="550" y="380" font-family="sans-serif" font-size="14" fill="#64748b" text-anchor="end">Supply</text>
+  <text x="40" y="40" font-family="sans-serif" font-size="14" fill="#64748b" text-anchor="end">Price</text>
+
+  <!-- Curve Segments: Increased Curvature (Steeper) -->
+  <!-- Start Point moved lower-left: (100, 310) -->
+  <!-- End Point moved upper-right: (300, 150) -->
+  <!-- This creates a much steeper arc -->
+
+  <!-- Segment 1: Start to Purchase Start -->
+  <path d="M50 340 Q75 330 100 310" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Segment 2: Purchase Segment (Highlighted) - Much Steeper Curve -->
+  <!-- Control point pulled bottom-right to create "belly" below linear line -->
+  <path d="M100 310 Q220 290 300 150" fill="none" stroke="#3b82f6" stroke-width="4"/>
+  
+  <!-- Segment 3: Purchase End to Infinity -->
+  <path d="M300 150 Q400 50 550 30" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Points -->
+  <circle cx="100" cy="310" r="5" fill="#3b82f6"/>
+  <circle cx="300" cy="150" r="5" fill="#3b82f6"/>
+
+  <!-- Annotations -->
+  <line x1="100" y1="310" x2="230" y2="310" stroke="#64748b" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="240" y="315" font-family="sans-serif" font-size="12" fill="#64748b">Start Price ($1.20)</text>
+
+  <line x1="300" y1="150" x2="430" y2="150" stroke="#64748b" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="440" y="155" font-family="sans-serif" font-size="12" fill="#64748b">End Price ($1.50)</text>
+
+  <!-- Avg Price Line (Linear average) - Straight line between points -->
+  <line x1="100" y1="310" x2="300" y2="150" stroke="#ef4444" stroke-width="2" stroke-dasharray="2,2"/>
+  
+  <!-- Avg Price Label - Positioned to show gap clearly -->
+  <text x="140" y="220" font-family="sans-serif" font-size="12" fill="#ef4444" font-weight="bold">Avg Price ($1.35)</text>
+  <!-- Connector pointing to the gap -->
+  <line x1="180" y1="225" x2="200" y2="230" stroke="#ef4444" stroke-width="1" stroke-dasharray="1,1"/>
+
+  <text x="300" y="30" font-family="sans-serif" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">Slippage / Price Impact</text>
+  <text x="300" y="370" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Buying large amounts moves the price up along the curve</text>
+</svg>

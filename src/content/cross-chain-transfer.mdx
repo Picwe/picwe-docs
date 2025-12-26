@@ -1,0 +1,160 @@
+# Cross-Chain Transfer
+
+<div style={{ color: 'rgb(110,110,100)', fontSize: '1.125rem', marginTop: '0.5rem' }}>
+Move WEUSD seamlessly across blockchains
+</div>
+
+---
+
+## Overview
+
+WEUSD is designed for native cross-chain operations. Transfer your WEUSD between supported networks without using external bridges or wrapped tokens.
+
+---
+
+## Architecture
+
+![Cross-Chain Architecture](/omni-protocol-investor-overview.svg)
+
+### Self-Balancing Mechanism
+
+PicWe's cross-chain infrastructure uses a self-balancing system:
+
+1. **Unified Liquidity** — WEUSD reserves are managed across all chains
+2. **Automatic Rebalancing** — The protocol adjusts reserves based on demand
+3. **No Bridge Risks** — Direct protocol-level transfers, not third-party bridges
+
+---
+
+## How It Works
+
+### Transfer Process
+
+![Cross-Chain Transfer Flow](/images/cross-chain-transfer-flow.svg)
+
+1. **Initiate** — Request transfer on source chain
+2. **Lock** — WEUSD locked in source chain contract
+3. **Verify** — Cross-chain message verified
+4. **Release** — WEUSD minted/released on target chain
+
+### Execution Time
+
+| Route | Typical Time |
+|-------|--------------|
+| EVM ↔ EVM | 1-5 minutes |
+| EVM ↔ Movement | 5-15 minutes |
+
+---
+
+## Supported Routes
+
+### From/To Any Network
+
+<div style={{ overflowX: 'auto' }}>
+
+| From ↓ To → | BSC | Base | Arbitrum | HashKey | Plume | Movement |
+|-------------|-----|------|----------|---------|-------|----------|
+| BSC | — | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Base | ✅ | — | ✅ | ✅ | ✅ | ✅ |
+| Arbitrum | ✅ | ✅ | — | ✅ | ✅ | ✅ |
+| HashKey | ✅ | ✅ | ✅ | — | ✅ | ✅ |
+| Plume | ✅ | ✅ | ✅ | ✅ | — | ✅ |
+| Movement | ✅ | ✅ | ✅ | ✅ | ✅ | — |
+
+</div>
+
+---
+
+## Contract Addresses
+
+import { Table } from 'nextra/components'
+
+### Cross-Chain Contracts
+
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>Network</Table.Th>
+      <Table.Th>Contract Address</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td>BSC Mainnet</Table.Td>
+      <Table.Td>`0x4b3495391ebB170aF31185AeD7bB4dfa903Ed1Fd`</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Base Mainnet</Table.Td>
+      <Table.Td>`0x4b3495391ebB170aF31185AeD7bB4dfa903Ed1Fd`</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Arbitrum One</Table.Td>
+      <Table.Td>`0x4b3495391ebB170aF31185AeD7bB4dfa903Ed1Fd`</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>HashKey Chain</Table.Td>
+      <Table.Td>`0x4b3495391ebB170aF31185AeD7bB4dfa903Ed1Fd`</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Plume Chain</Table.Td>
+      <Table.Td>`0x4b3495391ebB170aF31185AeD7bB4dfa903Ed1Fd`</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Movement</Table.Td>
+      <Table.Td>`0xf39c2674014dc3b3af9fd77f31ac69aa9398d8031f2c13a73fccbaca65641ff6`</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>
+
+---
+
+## Fees
+
+| Component | Fee |
+|-----------|-----|
+| Protocol Fee | 0% |
+| Gas (Source Chain) | Variable |
+| Gas (Target Chain) | Included |
+
+Cross-chain transfers only require gas fees on the source chain.
+
+---
+
+## Use Cases
+
+### RWA Purchases
+
+1. Hold USDC on Arbitrum
+2. Mint WEUSD on Arbitrum
+3. Transfer WEUSD to Base
+4. Participate in Base-based IRO
+
+### Portfolio Rebalancing
+
+Move WEUSD to chains with better opportunities:
+- Higher APY in Invest Module
+- New IRO launches
+- Different RWA offerings
+
+### Settlement
+
+Complete RWA transactions across chains:
+- Buy RWA on BSC, settle on Base
+- Cross-chain portfolio management
+
+---
+
+## Important Notes
+
+- **Same Token** — WEUSD is the same token on all chains, not a wrapped version
+- **No Slippage** — 1:1 transfer, no price impact
+- **Protocol Security** — Secured by PicWe's smart contracts, not external bridges
+- **Reversible** — Transfer back anytime
+
+---
+
+## Next Steps
+
+- [IRO](/iro) — Use WEUSD to participate in RWA offerings
+- [Origin Forge](/origin-forge) — Forge RWA tokens with WEUSD
+

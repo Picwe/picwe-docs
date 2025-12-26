@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" style="font-family: sans-serif;">
+  <defs>
+    <linearGradient id="positiveGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="negativeGradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#dc2626" stop-opacity="0.8"/>
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f8fafc" rx="10" ry="10"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Price Impact Flow</text>
+
+  <!-- Forging Flow Section -->
+  <g transform="translate(50, 70)">
+    <text x="0" y="0" font-size="16" font-weight="bold" fill="#1e293b">Forging Increases Price</text>
+    
+    <!-- Flow Boxes -->
+    <rect x="0" y="30" width="120" height="50" fill="url(#positiveGradient)" rx="5" stroke="#059669" stroke-width="2"/>
+    <text x="60" y="55" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">More</text>
+    <text x="60" y="70" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Forging</text>
+    
+    <path d="M 120 55 L 150 55" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <rect x="150" y="30" width="120" height="50" fill="url(#positiveGradient)" rx="5" stroke="#059669" stroke-width="2"/>
+    <text x="210" y="55" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">More</text>
+    <text x="210" y="70" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Reserve</text>
+    
+    <path d="M 270 55 L 300 55" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <rect x="300" y="30" width="120" height="50" fill="url(#positiveGradient)" rx="5" stroke="#059669" stroke-width="2"/>
+    <text x="360" y="55" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Higher</text>
+    <text x="360" y="70" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Current Price</text>
+    
+    <path d="M 420 55 L 450 55" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <rect x="450" y="30" width="120" height="50" fill="#fef3c7" rx="5" stroke="#f59e0b" stroke-width="2"/>
+    <text x="510" y="55" font-size="12" font-weight="bold" fill="#92400e" text-anchor="middle">Possible</text>
+    <text x="510" y="70" font-size="12" font-weight="bold" fill="#92400e" text-anchor="middle">Raise</text>
+    
+    <path d="M 570 55 L 600 55" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <rect x="600" y="30" width="120" height="50" fill="url(#positiveGradient)" rx="5" stroke="#059669" stroke-width="2"/>
+    <text x="660" y="55" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Higher</text>
+    <text x="660" y="70" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Floor</text>
+  </g>
+
+  <!-- Melting Flow Section -->
+  <g transform="translate(50, 200)">
+    <text x="0" y="0" font-size="16" font-weight="bold" fill="#1e293b">Melting Decreases Price</text>
+    
+    <!-- Flow Boxes -->
+    <rect x="0" y="30" width="120" height="50" fill="url(#negativeGradient)" rx="5" stroke="#dc2626" stroke-width="2"/>
+    <text x="60" y="55" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">More</text>
+    <text x="60" y="70" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Melting</text>
+    
+    <path d="M 120 55 L 150 55" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <rect x="150" y="30" width="120" height="50" fill="url(#negativeGradient)" rx="5" stroke="#dc2626" stroke-width="2"/>
+    <text x="210" y="55" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Less</text>
+    <text x="210" y="70" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Reserve</text>
+    
+    <path d="M 270 55 L 300 55" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <rect x="300" y="30" width="120" height="50" fill="url(#negativeGradient)" rx="5" stroke="#dc2626" stroke-width="2"/>
+    <text x="360" y="55" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Lower</text>
+    <text x="360" y="70" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Current Price</text>
+    
+    <path d="M 420 55 L 450 55" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <rect x="450" y="30" width="120" height="50" fill="#dcfce7" rx="5" stroke="#10b981" stroke-width="2"/>
+    <text x="510" y="55" font-size="12" font-weight="bold" fill="#065f46" text-anchor="middle">Floor</text>
+    <text x="510" y="70" font-size="12" font-weight="bold" fill="#065f46" text-anchor="middle">Unchanged</text>
+  </g>
+
+  <!-- Key Insight -->
+  <rect x="50" y="320" width="700" height="100" fill="#f1f5f9" stroke="#3b82f6" stroke-width="2" rx="5"/>
+  <text x="400" y="345" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">Key Insight</text>
+  <text x="400" y="370" font-size="14" fill="#475569" text-anchor="middle">Forging creates positive feedback: more activity → higher prices → possible floor increases</text>
+  <text x="400" y="390" font-size="14" fill="#475569" text-anchor="middle">Melting reduces current price but never lowers the floor, protecting all holders</text>
+</svg>
+

@@ -1,0 +1,172 @@
+# 投资模块
+
+<div style={{ color: 'rgb(110,110,100)', clear: 'both', fontSize: '1.125rem', marginTop: '1.25rem' }}>去中心化 RWA 投资基础设施</div>
+
+投资模块是 PicWe 管理代币化真实世界资产投资的核心基础设施。它提供完全自动化、基于智能合约的系统，用于投资 RWA 产品、跟踪收益和管理赎回。
+
+---
+
+## 架构概览
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                      投资模块架构                                │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌─────────────────┐    ┌─────────────────┐                    │
+│  │   资产注册表    │    │   系统参数      │                    │
+│  │  - 资产数据     │    │  - 全局配置     │                    │
+│  │  - 状态管理     │    │  - 费用设置     │                    │
+│  └────────┬────────┘    └────────┬────────┘                    │
+│           │                      │                              │
+│           └──────────┬───────────┘                              │
+│                      ▼                                          │
+│           ┌─────────────────────┐                               │
+│           │    投资管理器       │                               │
+│           │  - 核心逻辑         │                               │
+│           │  - 收益计算         │                               │
+│           │  - 用户跟踪         │                               │
+│           └──────────┬──────────┘                               │
+│                      │                                          │
+│           ┌──────────┴──────────┐                               │
+│           ▼                     ▼                               │
+│  ┌─────────────────┐   ┌─────────────────┐                     │
+│  │    投资池       │   │    赎回池       │                     │
+│  │  - 持有资金     │   │  - 处理赎回     │                     │
+│  │  - 管理流动     │   │                 │                     │
+│  └─────────────────┘   └─────────────────┘                     │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 合约地址 (BSC 主网)
+
+| 合约 | 地址 | 用途 |
+|------|------|------|
+| SystemParameters | `0xBF2464D0C539Fb3200FA69cd87224Bc1cc6e430A` | 全局配置 |
+| AssetRegistry | `0x6dD8c376ae7e46D7d16794c3416b440f5C9a44Da` | 资产管理 |
+| InvestmentPool | `0xF9Af57B0c505339cE06A6C9E9380fA9741f9aD32` | 资金托管 |
+| RedemptionPool | `0x8851F650A3a43158b8F9cD6416580B37075C4D69` | 赎回处理 |
+| InvestmentManager | `0x6Ec63400f33D8A5331dbaF2336ADcC1f455908a8` | 核心投资逻辑 |
+| InvestHelperSecure | `0x2105eB69819c648D5ceC7EB76C56D768C664b7ff` | 快速投资助手 |
+
+---
+
+## 投资流程
+
+### 对投资者
+
+1. **浏览资产**：查看可用的 RWA 投资机会
+2. **授权代币**：授予 $WEUSD 支出权限
+3. **执行投资**：使用资产 ID 和金额调用投资函数
+4. **跟踪头寸**：监控投资状态和累计收益
+5. **赎回**：锁定期结束后领取本金加收益
+
+### 投资生命周期
+
+```
+┌──────────┐     ┌──────────┐     ┌──────────┐     ┌──────────┐
+│  活跃    │────▶│ 累计收益 │────▶│  到期    │────▶│  已赎回  │
+│          │     │          │     │          │     │          │
+└──────────┘     └──────────┘     └──────────┘     └──────────┘
+     │                │                │                │
+     │                │                │                │
+   投资            持有期          可赎回          完成
+```
+
+---
+
+## 资产类型
+
+投资模块支持多种 RWA 类别：
+
+| 类别 | 描述 | 典型 APY | 锁定期 |
+|------|------|----------|--------|
+| 固定收益 | 债券、票据、债务工具 | 5-15% | 30-365 天 |
+| 房地产 | 房产支持的投资 | 8-12% | 90-365 天 |
+| 大宗商品 | 资源和商品挂钩资产 | 浮动 | 30-180 天 |
+| 收益分享 | 业务收益参与 | 浮动 | 60-365 天 |
+
+---
+
+## 核心函数
+
+### 投资
+
+创建新的投资头寸：
+
+```typescript
+const investmentManager = new ethers.Contract(
+  "0x6Ec63400f33D8A5331dbaF2336ADcC1f455908a8",
+  MANAGER_ABI,
+  signer
+);
+
+// 1. 授权 WeUSD 给 InvestmentPool
+const weusd = new ethers.Contract(WEUSD_ADDRESS, ERC20_ABI, signer);
+const amount = ethers.parseUnits("1000", 6); // 1000 WeUSD
+await weusd.approve(INVESTMENT_POOL_ADDRESS, amount);
+
+// 2. 执行投资
+const assetId = 1;
+const tx = await investmentManager.invest(assetId, amount);
+await tx.wait();
+```
+
+### 查询投资
+
+```typescript
+// 获取用户投资摘要
+const summary = await investmentManager.getUserInvestmentSummary(userAddress);
+console.log(`总投资: ${ethers.formatUnits(summary.totalInvestment, 6)} WeUSD`);
+console.log(`活跃投资数: ${summary.activeInvestmentCount}`);
+console.log(`总收益: ${ethers.formatUnits(summary.totalProfit, 6)} WeUSD`);
+
+// 获取详细投资列表
+const result = await investmentManager.getUserInvestmentsPaginated(userAddress, 0, 10);
+for (const inv of result.investments) {
+  console.log(`投资 #${inv.investmentId}: ${ethers.formatUnits(inv.amount, 6)} WeUSD`);
+  console.log(`  APY: ${Number(inv.apy) / 100}%`);
+  console.log(`  状态: ${['无效', '活跃', '已完成', '已取消'][inv.status]}`);
+}
+```
+
+### 赎回投资
+
+```typescript
+// 锁定期结束后赎回
+const tx = await investmentManager.redeem(investmentId);
+const receipt = await tx.wait();
+// 本金 + 收益返还给投资者
+```
+
+---
+
+## 风险考虑
+
+### 对投资者
+
+- **锁定期**：资金在投资到期前被锁定
+- **资产风险**：收益取决于底层资产表现
+- **智能合约风险**：交互涉及智能合约执行
+- **市场风险**：代币价值可能波动
+
+### 风险缓解
+
+- 所有投资由注册的 RWA 资产支持
+- 智能合约经过审计和实战检验
+- 所有头寸透明链上跟踪
+- 建议跨多个资产分散投资
+
+---
+
+## 集成
+
+详细 API 文档和代码示例请参阅：
+
+- [投资 API](/zh/investment-api) - 完整函数参考
+- [合约地址](/zh/picwe-protocol-api-contract-documentation) - 所有部署的合约
+- [IRO/GLA API](/zh/iro-gla-api) - 首次发行参与
+

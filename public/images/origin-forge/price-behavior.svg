@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="floorGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.05"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8fafc" rx="10" ry="10"/>
+
+  <!-- Axes -->
+  <line x1="50" y1="350" x2="750" y2="350" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="50" y1="350" x2="50" y2="50" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <text x="750" y="380" font-family="sans-serif" font-size="14" fill="#64748b" text-anchor="end">Time / Activity</text>
+  <text x="40" y="40" font-family="sans-serif" font-size="14" fill="#64748b" text-anchor="end">Price</text>
+
+  <!-- Floor Price Area -->
+  <path d="M50 350 L50 300 L150 300 L150 280 L280 280 L280 250 L450 250 L450 220 L600 220 L600 200 L750 200 L750 350 Z" fill="url(#floorGradient)" stroke="none"/>
+  
+  <!-- Floor Price Line -->
+  <path d="M50 300 L150 300 L150 280 L280 280 L280 250 L450 250 L450 220 L600 220 L600 200 L750 200" fill="none" stroke="#10b981" stroke-width="3" stroke-dasharray="0"/>
+
+  <!-- Current Price Line -->
+  <path d="M50 250 Q100 280 150 220 T280 180 T450 150 T600 120 T750 100" fill="none" stroke="#3b82f6" stroke-width="3"/>
+  
+  <!-- Legend: Placed at top to avoid overlapping with curves -->
+  <g transform="translate(550, 20)">
+    <!-- Current Price Legend -->
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#3b82f6" stroke-width="3"/>
+    <text x="40" y="4" font-family="sans-serif" font-size="14" fill="#3b82f6" font-weight="bold">Current Price</text>
+    <text x="40" y="18" font-family="sans-serif" font-size="12" fill="#64748b">(Market Driven)</text>
+    
+    <!-- Floor Price Legend -->
+    <line x1="0" y1="35" x2="30" y2="35" stroke="#10b981" stroke-width="3"/>
+    <text x="40" y="39" font-family="sans-serif" font-size="14" fill="#10b981" font-weight="bold">Floor Price</text>
+    <text x="40" y="53" font-family="sans-serif" font-size="12" fill="#64748b">(Only Goes Up)</text>
+  </g>
+
+  <!-- Annotations -->
+  <circle cx="150" cy="280" r="4" fill="#10b981"/>
+  <circle cx="280" cy="250" r="4" fill="#10b981"/>
+  <circle cx="450" cy="220" r="4" fill="#10b981"/>
+  <text x="300" y="240" font-family="sans-serif" font-size="12" fill="#10b981">Raise Event</text>
+</svg>

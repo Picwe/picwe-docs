@@ -1,6 +1,7 @@
 const meta = {
+  // ========== GETTING STARTED ==========
   index: {
-    title: 'PicWe Starter Guide',
+    title: 'Home',
     theme: {
       breadcrumb: false,
     },
@@ -11,106 +12,74 @@ const meta = {
       breadcrumb: false,
     },
   },
-  _: {
-    title: '$WEUSD',
+
+  // ========== WEUSD ==========
+  _weusd: {
+    title: 'WEUSD',
     type: 'separator',
   },
   'what-is-weusd': {
-    title: 'What is $WEUSD?',
+    title: 'What is WEUSD?',
     theme: {
       breadcrumb: false,
     },
   },
-  'minting-weusd': {
-    title: 'Minting $WEUSD: Your Gateway to Cross-Chain Liquidity',
+  'mint-and-redeem': {
+    title: 'Mint & Redeem',
     theme: {
       breadcrumb: false,
     },
   },
-  'bridge-weusd': {
-    title: 'Bridge $WEUSD: Seamless Cross-Chain Transfers',
+  'cross-chain-transfer': {
+    title: 'Cross-Chain Transfer',
     theme: {
       breadcrumb: false,
     },
   },
-  __: {
+
+  // ========== RWA PLATFORM ==========
+  _rwa: {
     title: 'RWA PLATFORM',
     type: 'separator',
   },
-  'picwe-rwa-platform': {
-    title: "PicWe's RWA Platform",
+  'rwa-introduction': {
+    title: 'Introduction',
     theme: {
       breadcrumb: false,
     },
   },
-  'core-features': {
-    title: 'Core Features of the PicWe RWA Platform',
-    theme: {
-      breadcrumb: false,
-    },
-  },
-  'invest-module': {
-    title: 'Invest Module',
-    theme: {
-      breadcrumb: false,
-    },
-  },
-  'iro-initial-rwa-offering': {
+  iro: {
     title: 'IRO - Initial RWA Offering',
     theme: {
       breadcrumb: false,
     },
   },
-  'platform-fee': {
-    title: 'Platform Fee',
+  'origin-forge': {
+    title: 'Origin Forge',
     theme: {
       breadcrumb: false,
     },
   },
-  ___: {
-    title: 'SEAMLESS SWAPPING',
+  invest: {
+    title: 'Invest Module',
+    theme: {
+      breadcrumb: false,
+    },
+  },
+  fees: {
+    title: 'Platform Fees',
+    theme: {
+      breadcrumb: false,
+    },
+  },
+
+  // ========== GOVERNANCE ==========
+  _governance: {
+    title: 'GOVERNANCE',
     type: 'separator',
   },
-  'omni-chain-swap': {
-    title: 'Omni-Chain Swap',
-    theme: {
-      breadcrumb: false,
-    },
-  },
-  'defi2.0': {
-    title: 'DeFi 2.0',
-    theme: {
-      breadcrumb: false,
-    },
-  },
-  ____: {
-    title: 'AI-POWERED INFRA',
-    type: 'separator',
-  },
-  'ai-blockchain-execution': {
-    title: 'AI Blockchain Execution',
-    theme: {
-      breadcrumb: false,
-    },
-  },
-  'power-ur-project-with-picwe': {
-    title: 'Power Your Project with PicWe',
-    theme: {
-      breadcrumb: false,
-    },
-  },
-  'phases-of-ai-powered-infrastructure': {
-    title: 'Phases of AI-Powered Infrastructure',
-    theme: {
-      breadcrumb: false,
-    },
-  },
-  _____: {
-    title: '$PIC',
-    type: 'separator',
-  },
-  'governance-with-pic': {
-    title: 'Governance with $PIC',
+  'pic-token': {
+    title: '$PIC Token',
     theme: {
       breadcrumb: false,
     },
@@ -121,21 +90,23 @@ const meta = {
       breadcrumb: false,
     },
   },
-  ______: {
+
+  // ========== DEVELOPERS ==========
+  _developers: {
     title: 'DEVELOPERS',
     type: 'separator',
   },
-  'picwe-protocol-api-contract-documentation': {
-    title: 'PicWe Protocol API & Contract Documentation',
+  developers: {
+    title: 'Developer Guide',
     theme: {
       breadcrumb: false,
     },
   },
-  'security-and-bug-bounty': {
-    title: 'Security and Bug Bounty',
-    theme: {
-      breadcrumb: false,
-    },
+
+  // ========== RESOURCES ==========
+  _resources: {
+    title: 'RESOURCES',
+    type: 'separator',
   },
   faq: {
     title: 'FAQ',
@@ -143,18 +114,8 @@ const meta = {
       breadcrumb: false,
     },
   },
-  _______: {
-    title: 'CONTACT US',
-    type: 'separator',
-  },
-  'customer-support': {
-    title: 'Customer Support',
-    theme: {
-      breadcrumb: false,
-    },
-  },
-  'connect-with-picwe': {
-    title: 'Connect with PicWe',
+  support: {
+    title: 'Support',
     theme: {
       breadcrumb: false,
     },

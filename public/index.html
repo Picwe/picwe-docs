@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeUSD Omni-Layer Protocol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #3b82f6, #9333ea);
+        }
+        .hero-bg {
+            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen text-slate-900">
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-24 lg:py-32 hero-bg">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight lg:text-6xl mb-6">
+                <span class="gradient-text">WeUSD Omni-Layer Protocol</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-slate-600 md:text-xl mb-10 leading-relaxed">
+                真正意义上的"任意链、任意代币"购买 RWA 资产。通过算法套利平衡，实现无缝跨链资产获取。
+            </p>
+        </div>
+    </section>
+
+    <!-- Core Value Proposition -->
+    <section class="py-16 bg-white border-y border-slate-200">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="rounded-xl border border-slate-200 bg-slate-50/50 p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="mb-4">
+                        <i data-lucide="zap" class="h-10 w-10 text-yellow-500"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">极速跨链</h3>
+                    <p class="text-sm text-slate-500 mb-4 font-mono">延迟 &lt; 15 秒</p>
+                    <p class="text-sm text-slate-600">相比传统桥接的 10-30 分钟，Omni-Layer 通过优化的消息总线实现秒级跨链。</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="rounded-xl border border-slate-200 bg-slate-50/50 p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="mb-4">
+                        <i data-lucide="layers" class="h-10 w-10 text-blue-500"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">极低滑点</h3>
+                    <p class="text-sm text-slate-500 mb-4 font-mono">&lt; 0.1% 滑点</p>
+                    <p class="text-sm text-slate-600">通过 RWA 抵押 + 套利平衡机制，解决流动性碎片化问题，确保存款价值。</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="rounded-xl border border-slate-200 bg-slate-50/50 p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="mb-4">
+                        <i data-lucide="shield" class="h-10 w-10 text-green-500"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">安全可靠</h3>
+                    <p class="text-sm text-slate-500 mb-4 font-mono">经济博弈 + 数学证明</p>
+                    <p class="text-sm text-slate-600">多层安全架构，不依赖单一信任假设，通过自平衡池保障资产安全。</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="rounded-xl border border-slate-200 bg-slate-50/50 p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="mb-4">
+                        <i data-lucide="coins" class="h-10 w-10 text-purple-500"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">高资本效率</h3>
+                    <p class="text-sm text-slate-500 mb-4 font-mono">&gt; 85% 利用率</p>
+                    <p class="text-sm text-slate-600">相比传统锁定资产模式 (&lt; 30%)，大幅提升资金利用效率和收益。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Architecture -->
+    <section class="py-24">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">系统架构总览</h2>
+                <p class="text-slate-500 mt-4 max-w-2xl mx-auto">
+                    Omni-Layer 采用分层架构设计，通过中继层、流动性聚合层和 RWA 抵押层协同工作，实现无缝跨链体验。
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-xl p-4 md:p-8 border border-slate-200 overflow-hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1000" class="w-full h-auto max-h-[800px] object-contain">
+  <defs>
+    <filter id="shadow-arch" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arrow-arch" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <style>
+    .box-arch { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 2; filter: url(#shadow-arch); }
+    .box-title-arch { font-family: sans-serif; font-weight: bold; font-size: 16px; fill: #1e293b; text-anchor: middle; }
+    .box-text-arch { font-family: sans-serif; font-size: 12px; fill: #475569; text-anchor: middle; }
+    .layer-bg-arch { fill: #f1f5f9; stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 5,5; }
+    .layer-title-arch { font-family: sans-serif; font-weight: bold; font-size: 18px; fill: #0f172a; text-anchor: middle; }
+    .arrow-arch { stroke: #64748b; stroke-width: 2; marker-end: url(#arrow-arch); fill: none; }
+    .box-text-left-arch { font-family: sans-serif; font-size: 12px; fill: #475569; text-anchor: start; }
+    .box-title-small-arch { font-family: sans-serif; font-weight: bold; font-size: 14px; fill: #1e293b; text-anchor: middle; }
+  </style>
+
+  <!-- User Interaction Layer -->
+  <rect x="50" y="50" width="1100" height="150" rx="10" class="layer-bg-arch" />
+  <text x="600" y="80" class="layer-title-arch">USER INTERACTION LAYER</text>
+
+  <g transform="translate(150, 100)">
+    <rect x="0" y="0" width="150" height="60" rx="5" class="box-arch" />
+    <text x="75" y="25" class="box-title-arch">Wallet</text>
+    <text x="75" y="45" class="box-text-arch">Connect</text>
+  </g>
+  <g transform="translate(400, 100)">
+    <rect x="0" y="0" width="150" height="60" rx="5" class="box-arch" />
+    <text x="75" y="25" class="box-title-arch">DApp</text>
+    <text x="75" y="45" class="box-text-arch">Frontend</text>
+  </g>
+  <g transform="translate(650, 100)">
+    <rect x="0" y="0" width="150" height="60" rx="5" class="box-arch" />
+    <text x="75" y="25" class="box-title-arch">SDK</text>
+    <text x="75" y="45" class="box-text-arch">Integrator</text>
+  </g>
+  <g transform="translate(900, 100)">
+    <rect x="0" y="0" width="150" height="60" rx="5" class="box-arch" />
+    <text x="75" y="25" class="box-title-arch">API</text>
+    <text x="75" y="45" class="box-text-arch">Gateway</text>
+  </g>
+
+  <!-- Arrows to next layer -->
+  <path d="M225,200 L225,250" class="arrow-arch" />
+  <path d="M475,200 L475,250" class="arrow-arch" />
+  <path d="M725,200 L725,250" class="arrow-arch" />
+  <path d="M975,200 L975,250" class="arrow-arch" />
+
+  <!-- Omni Relayer Layer -->
+  <rect x="50" y="250" width="1100" height="300" rx="10" class="layer-bg-arch" />
+  <text x="600" y="280" class="layer-title-arch">OMNI RELAYER LAYER (CORE)</text>
+
+  <!-- Intent Resolution Engine -->
+  <rect x="100" y="300" width="1000" height="90" rx="5" fill="#e2e8f0" stroke="#94a3b8" />
+  <text x="600" y="320" class="box-title-arch">Intent Resolution Engine</text>
+  
+  <g transform="translate(150, 330)">
+    <rect x="0" y="0" width="180" height="40" rx="3" fill="white" stroke="#cbd5e1" />
+    <text x="90" y="25" class="box-text-arch">Intent Parser</text>
+  </g>
+  <g transform="translate(380, 330)">
+    <rect x="0" y="0" width="180" height="40" rx="3" fill="white" stroke="#cbd5e1" />
+    <text x="90" y="25" class="box-text-arch">Path Optimizer</text>
+  </g>
+  <g transform="translate(610, 330)">
+    <rect x="0" y="0" width="180" height="40" rx="3" fill="white" stroke="#cbd5e1" />
+    <text x="90" y="25" class="box-text-arch">Price Oracle</text>
+  </g>
+  <g transform="translate(840, 330)">
+    <rect x="0" y="0" width="180" height="40" rx="3" fill="white" stroke="#cbd5e1" />
+    <text x="90" y="25" class="box-text-arch">Risk Assessor</text>
+  </g>
+
+  <!-- Cross-Chain Message Bus -->
+  <rect x="100" y="400" width="1000" height="60" rx="5" fill="#e2e8f0" stroke="#94a3b8" />
+  <text x="600" y="420" class="box-title-small-arch">Omni-Layer Cross-Chain Bridge</text>
+  <g transform="translate(150, 425)">
+    <text x="0" y="15" class="box-text-left-arch">Native Cross-Chain Infrastructure</text>
+  </g>
+
+  <!-- Arbitrage Keeper Network -->
+  <rect x="100" y="470" width="1000" height="60" rx="5" fill="#e2e8f0" stroke="#94a3b8" />
+  <text x="600" y="490" class="box-title-small-arch">Arbitrage Keeper Network</text>
+   <g transform="translate(150, 495)">
+    <text x="0" y="15" class="box-text-left-arch">Balance Monitor | MEV Protector | Flash Loan Arb | Profit Distributor</text>
+  </g>
+
+  <!-- Arrows to next layer -->
+  <path d="M225,550 L225,600" class="arrow-arch" />
+  <path d="M475,550 L475,600" class="arrow-arch" />
+  <path d="M725,550 L725,600" class="arrow-arch" />
+  <path d="M975,550 L975,600" class="arrow-arch" />
+
+  <!-- Liquidity Aggregation Layer -->
+  <rect x="50" y="600" width="1100" height="200" rx="10" class="layer-bg-arch" />
+  <text x="600" y="630" class="layer-title-arch">LIQUIDITY AGGREGATION LAYER</text>
+
+  <g transform="translate(100, 650)">
+    <rect x="0" y="0" width="480" height="130" rx="5" fill="#e2e8f0" stroke="#94a3b8" />
+    <text x="240" y="25" class="box-title-arch">DEX Aggregator Contracts</text>
+    <text x="240" y="60" class="box-text-arch">Uniswap V4 | Curve | Balancer</text>
+    <text x="240" y="90" class="box-text-arch">1inch | Paraswap | 0x Protocol</text>
+  </g>
+
+  <g transform="translate(620, 650)">
+    <rect x="0" y="0" width="480" height="130" rx="5" fill="#e2e8f0" stroke="#94a3b8" />
+    <text x="240" y="25" class="box-title-arch">WeUSD Self-Balancing Pool Matrix</text>
+    <text x="240" y="60" class="box-text-arch">Ethereum ↔ Arbitrum ↔ Optimism ↔ Polygon ↔ Base</text>
+    <text x="240" y="90" class="box-text-arch">Arbitrage Incentive Mechanism</text>
+  </g>
+
+  <!-- Arrows to next layer -->
+  <path d="M600,800 L600,850" class="arrow-arch" />
+
+  <!-- RWA Collateral Layer -->
+  <rect x="50" y="850" width="1100" height="130" rx="10" class="layer-bg-arch" />
+  <text x="600" y="880" class="layer-title-arch">RWA COLLATERAL LAYER</text>
+
+  <g transform="translate(100, 900)">
+    <rect x="0" y="0" width="1000" height="60" rx="5" fill="#e2e8f0" stroke="#94a3b8" />
+    <text x="500" y="25" class="box-title-arch">WeUSD Mint/Burn Engine &amp; Collateral Vaults</text>
+    <text x="500" y="45" class="box-text-arch">Concert Tickets | Real Estate | Commodities | Art | Carbon Credits | IP Rights</text>
+  </g>
+
+</svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transaction Flow -->
+    <section class="py-24 bg-slate-100">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold tracking-tight mb-6">核心工作流程</h2>
+                    <p class="text-lg text-slate-500 mb-8">
+                        例如：用户使用 Arbitrum 上的 ETH 购买 Ethereum 主网上的演唱会门票 RWA 代币。
+                    </p>
+                    <ol class="space-y-6">
+                        <li class="flex gap-4">
+                            <div class="flex-none w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold shadow-md">1</div>
+                            <div>
+                                <h3 class="font-bold text-lg">意图提交</h3>
+                                <p class="text-slate-600">用户在源链 (Arbitrum) 提交购买意图。</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="flex-none w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold shadow-md">2</div>
+                            <div>
+                                <h3 class="font-bold text-lg">路径解析与优化</h3>
+                                <p class="text-slate-600">Omni Relayer 解析意图，查询预言机价格，计算最优路径和风险评估。</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="flex-none w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold shadow-md">3</div>
+                            <div>
+                                <h3 class="font-bold text-lg">跨链执行</h3>
+                                <p class="text-slate-600">通过 Omni-Layer 自有的跨链设施发送跨链消息，在目标链 (Ethereum) 执行 RWA 购买。</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="flex-none w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold shadow-md">4</div>
+                            <div>
+                                <h3 class="font-bold text-lg">资产交付</h3>
+                                <p class="text-slate-600">用户在数秒内收到目标链上的 RWA 代币。</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 border border-slate-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" class="w-full h-auto object-contain">
+  <defs>
+    <marker id="arrow-flow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <style>
+    .node-flow { fill: #f8fafc; stroke: #334155; stroke-width: 2; rx: 5; }
+    .node-title-flow { font-family: sans-serif; font-weight: bold; font-size: 14px; fill: #1e293b; text-anchor: middle; }
+    .node-text-flow { font-family: sans-serif; font-size: 12px; fill: #475569; text-anchor: middle; }
+    .edge-flow { stroke: #64748b; stroke-width: 2; marker-end: url(#arrow-flow); fill: none; }
+    .edge-label-flow { font-family: sans-serif; font-size: 11px; fill: #64748b; background-color: white; }
+    .container-flow { fill: none; stroke: #cbd5e1; stroke-width: 1; stroke-dasharray: 4; }
+    .container-label-flow { font-family: sans-serif; font-size: 14px; font-weight: bold; fill: #94a3b8; }
+  </style>
+
+  <!-- User Arb -->
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="120" height="60" class="node-flow" />
+    <text x="60" y="25" class="node-title-flow">USER</text>
+    <text x="60" y="45" class="node-text-flow">(Arbitrum)</text>
+  </g>
+
+  <path d="M110,80 L200,80" class="edge-flow" />
+  <text x="130" y="70" class="edge-label-flow">Submit Intent</text>
+
+  <!-- Omni Relayer -->
+  <g transform="translate(200, 20)">
+    <rect x="0" y="0" width="300" height="120" class="node-flow" fill="#e0f2fe" stroke="#0284c7" />
+    <text x="150" y="25" class="node-title-flow">OMNI RELAYER</text>
+    <text x="150" y="50" class="node-text-flow">1. Parse Intent (Source/Target)</text>
+    <text x="150" y="70" class="node-text-flow">2. Query Oracle (Price)</text>
+    <text x="150" y="90" class="node-text-flow">3. Optmize Path</text>
+    <text x="150" y="110" class="node-text-flow">4. Risk Assessment</text>
+  </g>
+
+  <path d="M350,140 L350,180" class="edge-flow" />
+
+  <!-- Arbitrum Execution -->
+  <rect x="50" y="180" width="900" height="120" class="container-flow" />
+  <text x="70" y="200" class="container-label-flow">ARBITRUM EXECUTION</text>
+
+  <g transform="translate(100, 220)">
+    <rect x="0" y="0" width="100" height="50" class="node-flow" />
+    <text x="50" y="30" class="node-text-flow">User ETH</text>
+  </g>
+  <path d="M200,245 L250,245" class="edge-flow" />
+  <g transform="translate(250, 220)">
+    <rect x="0" y="0" width="120" height="50" class="node-flow" />
+    <text x="60" y="25" class="node-text-flow">DEX Agg</text>
+    <text x="60" y="40" class="node-text-flow">(Best Route)</text>
+  </g>
+  <path d="M370,245 L420,245" class="edge-flow" />
+  <g transform="translate(420, 220)">
+    <rect x="0" y="0" width="120" height="50" class="node-flow" />
+    <text x="60" y="25" class="node-text-flow">WeUSD Pool</text>
+    <text x="60" y="40" class="node-text-flow">(Arbitrum)</text>
+  </g>
+
+  <!-- Bridge -->
+  <path d="M480,270 L480,330" class="edge-flow" />
+  <text x="490" y="310" class="edge-label-flow">Omni-Layer Bridge</text>
+
+  <!-- Ethereum Mainnet Execution -->
+  <rect x="50" y="330" width="900" height="120" class="container-flow" />
+  <text x="70" y="350" class="container-label-flow">ETHEREUM MAINNET EXECUTION</text>
+
+  <g transform="translate(420, 370)">
+    <rect x="0" y="0" width="120" height="50" class="node-flow" />
+    <text x="60" y="25" class="node-text-flow">WeUSD Pool</text>
+    <text x="60" y="40" class="node-text-flow">(Ethereum)</text>
+  </g>
+  <path d="M540,395 L590,395" class="edge-flow" />
+  <g transform="translate(590, 370)">
+    <rect x="0" y="0" width="120" height="50" class="node-flow" />
+    <text x="60" y="25" class="node-text-flow">RWA Market</text>
+    <text x="60" y="40" class="node-text-flow">Contract</text>
+  </g>
+  <path d="M710,395 L760,395" class="edge-flow" />
+  <g transform="translate(760, 370)">
+    <rect x="0" y="0" width="120" height="50" class="node-flow" />
+    <text x="60" y="25" class="node-text-flow">RWA Token</text>
+    <text x="60" y="40" class="node-text-flow">Transfer</text>
+  </g>
+
+  <!-- Final User -->
+   <path d="M820,420 L820,500" class="edge-flow" />
+   <g transform="translate(760, 500)">
+    <rect x="0" y="0" width="120" height="60" class="node-flow" />
+    <text x="60" y="25" class="node-title-flow">USER</text>
+    <text x="60" y="45" class="node-text-flow">Receives RWA</text>
+  </g>
+
+</svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Self Balancing Mechanism -->
+    <section class="py-24">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight md:text-4xl">WeUSD 自平衡机制</h2>
+                <p class="text-slate-500 mt-4 max-w-2xl mx-auto">
+                    基于套利驱动的跨链流动性平衡，确保 WeUSD 在各链上的价格锚定。
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-white rounded-xl shadow-lg p-6 border border-slate-200 order-2 lg:order-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" class="w-full h-auto object-contain">
+  <defs>
+    <marker id="arrow-balance" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <style>
+    .pool-box-balance { fill: #fff; stroke: #cbd5e1; stroke-width: 2; rx: 8; }
+    .pool-title-balance { font-weight: bold; font-family: sans-serif; font-size: 14px; text-anchor: middle; fill: #334155; }
+    .pool-data-balance { font-family: monospace; font-size: 12px; text-anchor: middle; fill: #475569; }
+    .section-title-balance { font-weight: bold; font-family: sans-serif; font-size: 16px; fill: #0f172a; }
+    .step-box-balance { fill: #f0f9ff; stroke: #0ea5e9; stroke-width: 1; rx: 5; }
+    .arrow-balance { stroke: #64748b; stroke-width: 2; marker-end: url(#arrow-balance); fill: none; }
+    .highlight-balance { fill: #dcfce7; stroke: #22c55e; }
+    .alert-balance { fill: #fee2e2; stroke: #ef4444; }
+  </style>
+
+  <text x="50" y="30" class="section-title-balance">Initial State (Imbalanced)</text>
+
+  <!-- Ethereum Pool -->
+  <g transform="translate(50, 60)">
+    <rect x="0" y="0" width="150" height="100" class="pool-box-balance alert-balance" />
+    <text x="75" y="25" class="pool-title-balance">Ethereum Pool</text>
+    <text x="75" y="50" class="pool-data-balance">WeUSD/USDC</text>
+    <text x="75" y="70" class="pool-data-balance">1 : 1.02</text>
+    <text x="75" y="90" class="pool-data-balance" fill="#ef4444">(+2%)</text>
+  </g>
+
+  <!-- Arbitrum Pool -->
+  <g transform="translate(250, 60)">
+    <rect x="0" y="0" width="150" height="100" class="pool-box-balance alert-balance" />
+    <text x="75" y="25" class="pool-title-balance">Arbitrum Pool</text>
+    <text x="75" y="50" class="pool-data-balance">WeUSD/USDC</text>
+    <text x="75" y="70" class="pool-data-balance">1 : 0.98</text>
+    <text x="75" y="90" class="pool-data-balance" fill="#ef4444">(-2%)</text>
+  </g>
+
+  <!-- Optimism Pool -->
+  <g transform="translate(450, 60)">
+    <rect x="0" y="0" width="150" height="100" class="pool-box-balance" />
+    <text x="75" y="25" class="pool-title-balance">Optimism Pool</text>
+    <text x="75" y="50" class="pool-data-balance">WeUSD/USDC</text>
+    <text x="75" y="70" class="pool-data-balance">1 : 1.00</text>
+    <text x="75" y="90" class="pool-data-balance" fill="#22c55e">(Peg)</text>
+  </g>
+
+  <!-- Arbitrage Logic -->
+  <path d="M325,170 L325,200" class="arrow-balance" />
+  
+  <g transform="translate(150, 200)">
+    <rect x="0" y="0" width="350" height="120" class="step-box-balance" />
+    <text x="175" y="30" class="pool-title-balance">Arbitrage Opportunity Detected</text>
+    <text x="20" y="60" class="pool-data-balance" style="text-anchor:start">1. Buy WeUSD on Arbitrum @ 0.98 USDC</text>
+    <text x="20" y="80" class="pool-data-balance" style="text-anchor:start">2. Bridge to Ethereum</text>
+    <text x="20" y="100" class="pool-data-balance" style="text-anchor:start">3. Sell on Ethereum @ 1.02 USDC</text>
+  </g>
+
+  <path d="M325,330 L325,360" class="arrow-balance" />
+
+  <text x="50" y="390" class="section-title-balance">Final State (Balanced)</text>
+  
+  <!-- Final Pools -->
+   <g transform="translate(50, 420)">
+    <rect x="0" y="0" width="150" height="100" class="pool-box-balance highlight-balance" />
+    <text x="75" y="25" class="pool-title-balance">Ethereum Pool</text>
+    <text x="75" y="50" class="pool-data-balance">WeUSD/USDC</text>
+    <text x="75" y="70" class="pool-data-balance">1 : 1.001</text>
+  </g>
+
+  <g transform="translate(250, 420)">
+    <rect x="0" y="0" width="150" height="100" class="pool-box-balance highlight-balance" />
+    <text x="75" y="25" class="pool-title-balance">Arbitrum Pool</text>
+    <text x="75" y="50" class="pool-data-balance">WeUSD/USDC</text>
+    <text x="75" y="70" class="pool-data-balance">1 : 0.999</text>
+  </g>
+
+  <g transform="translate(450, 420)">
+    <rect x="0" y="0" width="150" height="100" class="pool-box-balance highlight-balance" />
+    <text x="75" y="25" class="pool-title-balance">Optimism Pool</text>
+    <text x="75" y="50" class="pool-data-balance">WeUSD/USDC</text>
+    <text x="75" y="70" class="pool-data-balance">1 : 1.000</text>
+  </g>
+
+</svg>
+                </div>
+                <div class="order-1 lg:order-2 space-y-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100">
+                        <h3 class="text-xl font-bold mb-2 flex items-center"><i data-lucide="search" class="w-5 h-5 mr-2 text-blue-500"></i>套利机会检测</h3>
+                        <p class="text-slate-600">
+                            当某一链上的 WeUSD 价格偏离锚定（如 Arbitrum 上 -2%）时，系统自动识别套利空间。
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100">
+                        <h3 class="text-xl font-bold mb-2 flex items-center"><i data-lucide="play" class="w-5 h-5 mr-2 text-blue-500"></i>Keeper 网络执行</h3>
+                        <p class="text-slate-600">
+                            Keeper 竞争执行套利：低价买入 -> 跨链 -> 高价卖出。
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100">
+                        <h3 class="text-xl font-bold mb-2 flex items-center"><i data-lucide="check-circle" class="w-5 h-5 mr-2 text-green-500"></i>结果：自动再平衡</h3>
+                        <p class="text-slate-600">
+                            套利行为自然地将各链资金池推回平衡状态，无需中心化干预。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tokenomics & Revenue -->
+    <section class="py-24">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight md:text-4xl">协议收入预测</h2>
+                <p class="text-slate-500 mt-4">可持续的协议收入与价值捕获</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="rounded-xl border border-slate-200 bg-white text-slate-950 shadow-lg">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <h3 class="font-semibold leading-none tracking-tight">协议收入预测 (at $500M TVL)</h3>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" class="w-full h-auto object-contain mb-6">
+  <style>
+    .bar-revenue { fill: #3b82f6; rx: 4; }
+    .bar-text-revenue { font-family: sans-serif; font-size: 14px; fill: #334155; font-weight: bold; text-anchor: start; }
+    .val-text-revenue { font-family: sans-serif; font-size: 14px; fill: #64748b; text-anchor: end; }
+    .axis-revenue { stroke: #cbd5e1; stroke-width: 1; }
+    .title-revenue { font-family: sans-serif; font-weight: bold; font-size: 18px; fill: #1e293b; }
+  </style>
+
+  <text x="50" y="40" class="title-revenue">Projected Annual Revenue Streams (at $500M TVL)</text>
+
+  <g transform="translate(50, 80)">
+    <!-- Swap Fees -->
+    <text x="0" y="25" class="bar-text-revenue">Cross-Chain Swap Fees</text>
+    <rect x="200" y="5" width="400" height="30" class="bar-revenue" />
+    <text x="650" y="25" class="val-text-revenue">$2.5M</text>
+
+    <!-- Mint/Burn -->
+    <text x="0" y="75" class="bar-text-revenue">Mint/Burn Fees</text>
+    <rect x="200" y="55" width="160" height="30" class="bar-revenue" fill="#8b5cf6" />
+    <text x="650" y="75" class="val-text-revenue">$1.0M</text>
+
+    <!-- Arbitrage -->
+    <text x="0" y="125" class="bar-text-revenue">Arbitrage Share</text>
+    <rect x="200" y="105" width="128" height="30" class="bar-revenue" fill="#f59e0b" />
+    <text x="650" y="125" class="val-text-revenue">$0.8M</text>
+
+    <!-- Listing -->
+    <text x="0" y="175" class="bar-text-revenue">RWA Listing Fees</text>
+    <rect x="200" y="155" width="32" height="30" class="bar-revenue" fill="#10b981" />
+    <text x="650" y="175" class="val-text-revenue">$0.2M</text>
+    
+    <!-- Total Line -->
+    <line x1="0" y1="210" x2="650" y2="210" class="axis-revenue" />
+    <text x="0" y="240" class="bar-text-revenue" style="font-size: 16px;">Total Projected Revenue</text>
+    <text x="650" y="240" class="val-text-revenue" style="font-size: 16px; font-weight:bold; fill: #0f172a;">$4.5M</text>
+  </g>
+</svg>
+                        <div class="space-y-3 text-sm text-slate-500">
+                            <div class="flex justify-between border-b border-slate-100 pb-2">
+                                <span>跨链交易费 (0.05%)</span>
+                                <span class="font-medium text-slate-900">主要收入来源</span>
+                            </div>
+                            <div class="flex justify-between border-b border-slate-100 pb-2">
+                                <span>Mint/Burn 费 (0.1%)</span>
+                                <span class="font-medium text-slate-900">稳定收入</span>
+                            </div>
+                            <div class="flex justify-between border-b border-slate-100 pb-2">
+                                <span>套利利润分成 (20%)</span>
+                                <span class="font-medium text-slate-900">协议增值</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="py-24 bg-slate-100">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight md:text-4xl">发展路线图</h2>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-8 border border-slate-200 max-w-5xl mx-auto overflow-x-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" class="min-w-[800px] w-full h-auto object-contain">
+  <defs>
+    <marker id="arrow-roadmap" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <style>
+    .q-box-roadmap { fill: #f8fafc; stroke: #3b82f6; stroke-width: 2; }
+    .q-header-roadmap { font-weight: bold; font-family: sans-serif; font-size: 16px; fill: #1e293b; text-anchor: middle; }
+    .q-item-roadmap { font-family: sans-serif; font-size: 13px; fill: #475569; }
+    .arrow-down-roadmap { stroke: #64748b; stroke-width: 2; marker-end: url(#arrow-roadmap); fill: none; }
+  </style>
+
+  <!-- Q4 2025 -->
+  <g transform="translate(50, 50)">
+    <text x="100" y="30" class="q-header-roadmap">2025 Q4</text>
+    <rect x="0" y="40" width="200" height="120" rx="8" class="q-box-roadmap" />
+    <text x="20" y="70" class="q-item-roadmap">📋 Core Protocol</text>
+    <text x="20" y="90" class="q-item-roadmap">📋 WeUSD Launch</text>
+    <text x="20" y="110" class="q-item-roadmap">📋 5 Chain Support</text>
+    <text x="20" y="130" class="q-item-roadmap">📋 Basic Arbitrage</text>
+  </g>
+
+  <!-- Q1 2026 -->
+  <g transform="translate(300, 50)">
+    <text x="100" y="30" class="q-header-roadmap">2026 Q1</text>
+    <rect x="0" y="40" width="200" height="120" rx="8" class="q-box-roadmap" stroke="#8b5cf6" />
+    <text x="20" y="70" class="q-item-roadmap">📋 zkSync &amp; Scroll</text>
+    <text x="20" y="90" class="q-item-roadmap">📋 Adv. Arbitrage</text>
+    <text x="20" y="110" class="q-item-roadmap">📋 Institutional API</text>
+    <text x="20" y="130" class="q-item-roadmap">📋 Governance Token</text>
+  </g>
+
+  <!-- Q2 2026 -->
+  <g transform="translate(550, 50)">
+    <text x="100" y="30" class="q-header-roadmap">2026 Q2</text>
+    <rect x="0" y="40" width="200" height="120" rx="8" class="q-box-roadmap" stroke="#f59e0b" />
+    <text x="20" y="70" class="q-item-roadmap">📋 Solana Bridge</text>
+    <text x="20" y="90" class="q-item-roadmap">📋 Advanced RWA</text>
+    <text x="20" y="110" class="q-item-roadmap">📋 Mobile SDK</text>
+    <text x="20" y="130" class="q-item-roadmap">📋 Insurance Module</text>
+  </g>
+
+  <!-- Q3-Q4 2026 -->
+  <g transform="translate(800, 50)">
+    <text x="100" y="30" class="q-header-roadmap">2026 Q3-Q4</text>
+    <rect x="0" y="40" width="200" height="120" rx="8" class="q-box-roadmap" stroke="#10b981" />
+    <text x="20" y="70" class="q-item-roadmap">📋 Cosmos IBC</text>
+    <text x="20" y="90" class="q-item-roadmap">📋 Full Decentralize</text>
+    <text x="20" y="110" class="q-item-roadmap">📋 DAO Transition</text>
+    <text x="20" y="130" class="q-item-roadmap">📋 $1B TVL Target</text>
+  </g>
+  
+  <!-- Connector Lines -->
+  <path d="M250,100 L300,100" class="arrow-down-roadmap" />
+  <path d="M500,100 L550,100" class="arrow-down-roadmap" />
+  <path d="M750,100 L800,100" class="arrow-down-roadmap" />
+
+</svg>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="py-8 bg-slate-950 text-slate-400 border-t border-slate-800">
+        <div class="container mx-auto px-4 text-center text-sm">
+            &copy; 2025 WeUSD Omni-Layer Protocol. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
