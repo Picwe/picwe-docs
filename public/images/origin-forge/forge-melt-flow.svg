@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8fafc" rx="10" ry="10"/>
+
+  <!-- Center: Reserve Pool -->
+  <rect x="300" y="150" width="200" height="100" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="400" y="190" font-family="sans-serif" font-size="16" font-weight="bold" fill="#0ea5e9" text-anchor="middle">Reserve Pool</text>
+  <text x="400" y="210" font-family="sans-serif" font-size="14" fill="#64748b" text-anchor="middle">($WEUSD Locked)</text>
+
+  <!-- Top: Forge Process -->
+  <g transform="translate(0, -20)">
+    <text x="400" y="60" font-family="sans-serif" font-size="20" font-weight="bold" fill="#10b981" text-anchor="middle">FORGE (Mint)</text>
+    
+    <!-- User Input -->
+    <path d="M150 100 L280 150" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="200" y="115" font-family="sans-serif" font-size="14" fill="#10b981">+ $WEUSD</text>
+
+    <!-- Token Output -->
+    <path d="M520 150 L650 100" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="560" y="115" font-family="sans-serif" font-size="14" fill="#10b981">+ RWA Tokens</text>
+  </g>
+
+  <!-- Bottom: Melt Process -->
+  <g transform="translate(0, 20)">
+    <text x="400" y="340" font-family="sans-serif" font-size="20" font-weight="bold" fill="#ef4444" text-anchor="middle">MELT (Burn)</text>
+    
+    <!-- Token Input -->
+    <path d="M650 300 L520 250" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="560" y="300" font-family="sans-serif" font-size="14" fill="#ef4444">- RWA Tokens</text>
+
+    <!-- WEUSD Output -->
+    <path d="M280 250 L150 300" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="200" y="300" font-family="sans-serif" font-size="14" fill="#ef4444">- $WEUSD</text>
+  </g>
+
+  <!-- User Labels -->
+  <text x="100" y="200" font-family="sans-serif" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">User Wallet</text>
+  <rect x="50" y="180" width="100" height="40" fill="none" stroke="#334155" stroke-width="1" rx="5"/>
+  
+  <text x="700" y="200" font-family="sans-serif" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">User Wallet</text>
+  <rect x="650" y="180" width="100" height="40" fill="none" stroke="#334155" stroke-width="1" rx="5"/>
+
+</svg>

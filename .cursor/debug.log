@@ -1,0 +1,380 @@
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723329037,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723329057,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723329332,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723329340,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723338126,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723338148,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723341350,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723341373,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723353845,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723353849,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723353863,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723353864,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723353890,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723353891,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723370283,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723370286,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723370299,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723370300,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723370326,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723370327,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723381019,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723381021,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723381028,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723381030,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723381043,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723381045,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723383138,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723383139,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723383147,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723383148,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723383169,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723383170,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723384324,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723384326,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723384332,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723384334,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723384345,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723384346,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723399061,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723399063,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723399069,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723399071,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723399086,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723399088,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723399095,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723399096,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723399107,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723399110,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723399115,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723399117,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723399135,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723399137,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723399143,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723399145,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723405836,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723405838,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723405852,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723405853,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723405874,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723405876,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723430989,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723430993,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723431005,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723431006,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723431038,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723431039,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723440582,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723440584,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723440593,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723440595,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723440609,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723440612,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723440817,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723440819,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723440827,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723440829,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723440862,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723440863,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723589732,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723589738,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723589753,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723589754,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723589787,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723589788,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723589810,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723589812,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723589817,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723589818,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723589829,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723589831,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723596756,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723596758,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723596764,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723596766,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723596786,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723596788,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723623614,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723623617,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723623617,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723623623,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723623635,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723623636,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723623636,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723623638,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723623671,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723623672,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723623680,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723623681,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723725568,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723725569,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723725582,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723725584,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723725612,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723725614,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723911900,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723911902,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723911921,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723911922,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723911946,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723911948,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723913481,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723913483,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723913492,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723913493,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723913517,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723913519,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723913789,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723913792,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723913802,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723913804,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723913826,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723913827,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723931047,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723931050,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723931070,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723931071,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723931101,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723931103,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723944213,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723944217,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723944238,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723944241,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723944269,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723944271,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723964454,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723964455,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723964465,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723964466,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723964486,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723964487,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723970370,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723970371,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723970379,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723970381,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723970396,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723970398,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723973721,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723973723,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723973732,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723973733,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723973755,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723973758,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723976609,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723976611,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723976619,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723976621,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723976637,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723976638,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723981590,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723981592,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723981600,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723981602,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723981618,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723981619,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723987156,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723987158,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723987166,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723987167,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723987183,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723987184,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766723991967,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723991969,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723991977,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723991979,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766723992000,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766723992002,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724027991,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724027993,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724028006,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724028009,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724028030,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724028031,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724040952,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724040954,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724040962,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724040963,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724040981,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724040982,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724048623,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724048625,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724048632,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724048634,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724048654,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724048658,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724053555,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724053557,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724053567,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724053569,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724053584,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724053586,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724055400,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724055402,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724055411,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724055413,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724055434,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724055436,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724057589,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724057591,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724057602,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724057603,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724057620,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724057621,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724060507,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724060509,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724060518,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724060519,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724060540,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724060542,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724067076,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724067078,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724067086,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724067087,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724067100,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724067102,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724072474,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724072476,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724072485,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724072486,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724072501,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724072502,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724074940,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724074942,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724074952,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724074953,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724074968,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724074969,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724076754,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724076756,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724076765,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724076767,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724076791,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724076793,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724079199,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724079201,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724079212,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724079213,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724079228,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724079229,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724082067,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724082069,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724082079,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724082081,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724082096,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724082097,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724084667,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724084668,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724084679,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724084680,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724084699,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724084701,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766724086767,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724086769,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724086778,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724086779,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766724086796,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766724086797,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766725812618,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725812622,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725812629,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725812630,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725812643,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725812644,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766725822757,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725822760,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725822770,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725822772,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725822785,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725822787,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766725824501,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725824505,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725824514,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725824516,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725824531,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725824533,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766725842958,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725842962,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725842971,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725842973,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725842986,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725842987,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766725878286,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725878288,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725878296,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725878297,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725878513,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725878514,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766725904333,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725904336,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725904343,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725904346,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725904464,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725904466,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766725923198,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page:error","message":"Page render failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725923200,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725923209,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725923210,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725923229,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata:error","message":"importPage failed","data":{"error":"TypeError: {(intermediate value)(intermediate value)}[lang] is not a function"},"timestamp":1766725923230,"sessionId":"debug-session","hypothesisId":"B"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766725936715,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725936735,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766725941958,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725941973,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766725958074,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725958086,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766725958200,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725958205,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766725961085,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725961098,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766725968181,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766725968201,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["what-is-weusd"]},"timestamp":1766725970933,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["what-is-weusd"]},"timestamp":1766725970944,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["minting-weusd"]},"timestamp":1766725973984,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["minting-weusd"]},"timestamp":1766725973994,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["bridge-weusd"]},"timestamp":1766725974875,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["bridge-weusd"]},"timestamp":1766725974887,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["picwe-rwa-platform"]},"timestamp":1766725976076,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["picwe-rwa-platform"]},"timestamp":1766725976088,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["picwe-rwa-platform","rwa-asset-types"]},"timestamp":1766725977043,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["picwe-rwa-platform","rwa-asset-types"]},"timestamp":1766725977055,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["picwe-rwa-platform","rwa-risk-grading-system"]},"timestamp":1766726010597,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["picwe-rwa-platform","rwa-risk-grading-system"]},"timestamp":1766726010607,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["picwe-rwa-platform","investor-profiles"]},"timestamp":1766726011816,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["picwe-rwa-platform","investor-profiles"]},"timestamp":1766726011828,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["core-features"]},"timestamp":1766726013655,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["core-features"]},"timestamp":1766726013670,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["invest-module"]},"timestamp":1766726014424,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["invest-module"]},"timestamp":1766726014437,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["iro-initial-rwa-offering"]},"timestamp":1766726014961,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["iro-initial-rwa-offering"]},"timestamp":1766726014996,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["platform-fee"]},"timestamp":1766726015540,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["platform-fee"]},"timestamp":1766726015550,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["omni-chain-swap"]},"timestamp":1766726017059,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["omni-chain-swap"]},"timestamp":1766726017076,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["omni-chain-swap","picwe-swap"]},"timestamp":1766726017590,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["omni-chain-swap","picwe-swap"]},"timestamp":1766726017599,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["omni-chain-swap","picwe-trade-api"]},"timestamp":1766726018221,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["omni-chain-swap","picwe-trade-api"]},"timestamp":1766726018230,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["governance-with-pic"]},"timestamp":1766726020315,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["governance-with-pic"]},"timestamp":1766726020330,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["earning-pic"]},"timestamp":1766726020849,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["earning-pic"]},"timestamp":1766726020856,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["picwe-protocol-api-contract-documentation"]},"timestamp":1766726021507,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["picwe-protocol-api-contract-documentation"]},"timestamp":1766726021560,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["security-and-bug-bounty"]},"timestamp":1766726022202,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["security-and-bug-bounty"]},"timestamp":1766726022212,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["picwe-protocol-api-contract-documentation"]},"timestamp":1766726023203,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["picwe-protocol-api-contract-documentation"]},"timestamp":1766726023246,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["security-and-bug-bounty"]},"timestamp":1766726037748,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["security-and-bug-bounty"]},"timestamp":1766726037756,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["faq"]},"timestamp":1766726038512,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["faq"]},"timestamp":1766726038522,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["customer-support"]},"timestamp":1766726042441,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["customer-support"]},"timestamp":1766726042450,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["connect-with-picwe"]},"timestamp":1766726044007,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["connect-with-picwe"]},"timestamp":1766726044017,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{"mdxPath":["power-ur-project-with-picwe"]},"timestamp":1766726044984,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{"mdxPath":["power-ur-project-with-picwe"]},"timestamp":1766726045003,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:Page","message":"Page render called","data":{},"timestamp":1766731392998,"sessionId":"debug-session","hypothesisId":"A"}
+{"location":"page.tsx:generateMetadata","message":"generateMetadata called","data":{},"timestamp":1766731393018,"sessionId":"debug-session","hypothesisId":"A"}

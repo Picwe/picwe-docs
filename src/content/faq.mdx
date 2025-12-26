@@ -1,19 +1,190 @@
 # FAQ
 
-**Q1: What does PicWe do?**\
-**A:** PicWe lets different blockchains trade directly with each other without using third-party bridges. Think of it as ships exchanging goods directly on the ocean instead of docking at a central port. This makes transactions faster, cheaper, and safer. Currently, PicWe is live on the Movement blockchain.
+<div style={{ color: 'rgb(110,110,100)', fontSize: '1.125rem', marginTop: '0.5rem' }}>
+Frequently asked questions about PicWe
+</div>
 
-**Q2: How can you trade across chains without a bridge?**\
-**A:** Normally, blockchains rely on bridges (like ferries) to move assets. PicWe uses smart contracts to let two blockchains trade assets directly, no bridge needed. It’s a bridge-less cross-chain solution for safer, faster trading.
+---
 
-**Q3: Do I need a new wallet to use PicWe?**\
-**A:** No. You can use your existing wallets like OKX, Pontem, Nightly, or Razor Wallet on the Movement chain.
+## General
 
-**Q4: Is direct trading safe?**\
-**A:** Yes! In fact, it’s safer than traditional cross-chain bridges because your assets stay on your own blockchain. There’s no centralized dock that can be hacked.
+### What is PicWe?
 
-**Q5: What’s wrong with cross-chain bridges?**\
-**A:** In 2023, 80% of cross-chain hacks targeted bridges. Bridges act like central docks where assets are stored. If hacked, all funds can be lost. PicWe avoids this risk by keeping assets on their original blockchain and enabling secure bridge-less trading.
+PicWe is a full-stack Real-World Asset (RWA) capital markets ecosystem. We provide infrastructure for RWA issuance, trading, and settlement through decentralized smart contracts and our native stablecoin $WEUSD.
 
-**Q6: What happens if my transaction fails?**\
-**A:** Your assets are always safe. If a transaction doesn’t go through, smart contracts automatically return your assets. Everything is transparent and verifiable on-chain, with no human intervention required.
+### What makes PicWe different?
+
+PicWe introduces **Origin Forge**, a revolutionary minting protocol that provides:
+- Infinite liquidity without LPs
+- Floor price protection (tokens can't go to zero)
+- True price discovery through algorithmic pricing
+
+### Is PicWe decentralized?
+
+Yes. All core operations are executed by smart contracts on public blockchains. No central authority controls fund movements or pricing.
+
+---
+
+## $WEUSD
+
+### What is $WEUSD?
+
+$WEUSD is PicWe's native stablecoin, pegged 1:1 to USDC. It's designed for cross-chain settlement and RWA transactions.
+
+### How do I get $WEUSD?
+
+Mint $WEUSD by depositing USDC through the [Mint & Redeem](/mint-and-redeem) function. 1 USDC = 1 $WEUSD.
+
+### Can I redeem $WEUSD for USDC?
+
+Yes, anytime. Redemption is instant and at 1:1 ratio.
+
+### Which chains support $WEUSD?
+
+- BSC Mainnet
+- Base Mainnet
+- Arbitrum One
+- HashKey Chain
+- Plume Chain
+- Movement
+
+### Are there fees for $WEUSD?
+
+No protocol fees for minting, redeeming, or cross-chain transfers. Only network gas fees apply.
+
+---
+
+## IRO (Initial RWA Offering)
+
+### What is an IRO?
+
+An Initial RWA Offering is PicWe's framework for launching tokenized real-world assets. It's like an "IPO for RWAs" but fully decentralized.
+
+### How do I participate in an IRO?
+
+1. Get $WEUSD
+2. Find an active IRO on PicWe
+3. Subscribe during whitelist (if eligible) or public phase
+4. Claim tokens after market initialization
+
+### Is there a minimum investment?
+
+Each IRO has its own minimum and maximum limits per wallet. Check the specific IRO details.
+
+### Can I get a refund if the IRO fails?
+
+If the soft cap isn't reached and unlock phase is triggered, you can withdraw your $WEUSD.
+
+---
+
+## Origin Forge
+
+### What is Origin Forge?
+
+Origin Forge is our primary market for RWA tokens. Unlike traditional DEXs where you buy from other users, Origin Forge mints new tokens when you "forge" and burns tokens when you "melt."
+
+### What's the difference between forge and buy?
+
+| Traditional Buy | Forge |
+|-----------------|-------|
+| Buy from liquidity pool | Mint new tokens |
+| Price from pool ratio | Price from algorithm |
+| Need LPs | No LPs needed |
+| No price floor | Guaranteed floor |
+
+### What is floor price?
+
+The floor price is the guaranteed minimum value of a token. It's calculated as:
+```
+Floor Price = Reserve ÷ (Supply + k)
+```
+The floor only increases, never decreases.
+
+### Can the price go to zero?
+
+No. Every token has a floor price backed by reserves. You can always melt at least at floor price.
+
+---
+
+## Invest Module
+
+### What is the Invest Module?
+
+A structured investment platform for low-to-medium risk RWAs with defined terms and APY.
+
+### How is it different from Origin Forge?
+
+| Origin Forge | Invest Module |
+|--------------|---------------|
+| Continuous trading | Fixed-term investment |
+| Variable price | Fixed APY |
+| Instant exit | Lock-up period |
+| Higher risk/reward | Lower risk, stable returns |
+
+### Can I withdraw before maturity?
+
+No. Investments are locked until the maturity date.
+
+### What are the risk levels?
+
+- **R1**: Very low risk (e.g., government bonds)
+- **R2**: Low risk (e.g., corporate bonds)
+- **R3**: Medium risk (e.g., real estate)
+- **R4**: High risk (e.g., growth equity)
+- **R5**: Very high risk (e.g., early-stage)
+
+---
+
+## Security
+
+### Are the contracts audited?
+
+Yes. Our contracts undergo third-party security audits. Reports are published upon completion.
+
+### What if there's a bug?
+
+We have a bug bounty program with rewards up to $50,000 for critical vulnerabilities. See [Security](/developers/security).
+
+### Is there a pause function?
+
+Yes. Critical contracts can be paused in emergencies to protect user funds.
+
+---
+
+## Technical
+
+### Which wallets are supported?
+
+Any Web3 wallet including:
+- MetaMask
+- OKX Wallet
+- Nightly
+- WalletConnect compatible wallets
+
+### What are the token decimals?
+
+| Token | Decimals |
+|-------|----------|
+| $WEUSD | 6 |
+| USDC (BSC) | 18 |
+| USDC (Base/Arb) | 6 |
+| RWA Tokens | 18 |
+
+### Where can I find contract addresses?
+
+See [Contract Addresses](/developers/contracts) for all deployed contracts.
+
+---
+
+## Support
+
+### How do I get help?
+
+- Check this FAQ
+- Visit [Support](/support)
+- Join our Telegram/Discord community
+- Email support@picwe.org
+
+### I found a bug. What should I do?
+
+For security issues, email security@picwe.org. For other bugs, contact support or submit via our community channels.

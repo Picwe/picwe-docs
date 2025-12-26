@@ -1,0 +1,212 @@
+# API Reference
+
+<div style={{ color: 'rgb(110,110,100)', fontSize: '1.125rem', marginTop: '0.5rem' }}>
+Smart contract function signatures and parameters
+</div>
+
+---
+
+## GenesisLaunchAuction (GLA) — IRO
+
+### `whitelistBuy(uint256 amount)`
+
+Purchase RWA tokens during whitelist phase.
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `amount` | uint256 | $WEUSD amount (6 decimals) |
+
+**Requirements:**
+- Wallet must be on whitelist
+- Must approve $WEUSD spending first
+- Must be in whitelist phase
+
+---
+
+### `publicOfferingBuy(uint256 amount)`
+
+Purchase RWA tokens during public offering phase.
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `amount` | uint256 | $WEUSD amount (6 decimals) |
+
+**Requirements:**
+- Must approve $WEUSD spending first
+- Must be in public offering phase
+
+---
+
+### `claim()`
+
+Claim purchased RWA tokens after market initialization.
+
+**Requirements:**
+- Market must be initialized (`initialized = true`)
+- Must have purchased tokens
+
+---
+
+### `withdraw()`
+
+Withdraw $WEUSD investment during unlock phase.
+
+**Requirements:**
+- Market must be in unlock phase
+- Soft cap must not be reached
+
+---
+
+## Market Contract — Origin Forge
+
+### `forge(address token, uint256 tokenWorth, uint256 desired) returns (uint256 amount, uint256 fee)`
+
+Forge (mint) RWA tokens by depositing stablecoins.
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `token` | address | Stablecoin address ($WEUSD or USDC) |
+| `tokenWorth` | uint256 | Amount of stablecoin to spend |
+| `desired` | uint256 | Minimum RWA tokens expected (slippage protection) |
+
+| Return | Type | Description |
+|--------|------|-------------|
+| `amount` | uint256 | Actual RWA tokens minted |
+| `fee` | uint256 | Fee paid |
+
+**Requirements:**
+- Market must be active
+- Contract must not be paused
+- Token must be in approved list
+- Must approve stablecoin spending
+
+---
+
+### `melt(address token, uint256 amount, uint256 desired) returns (uint256 worth, uint256 fee)`
+
+Melt (burn) RWA tokens to withdraw stablecoins.
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `token` | address | Stablecoin address to receive |
+| `amount` | uint256 | RWA tokens to melt |
+| `desired` | uint256 | Minimum stablecoin expected (slippage protection) |
+
+| Return | Type | Description |
+|--------|------|-------------|
+| `worth` | uint256 | Actual stablecoin received |
+| `fee` | uint256 | Fee paid |
+
+**Requirements:**
+- Market must be active
+- Contract must not be paused
+- Token must be in approved list
+- Must approve RWA token spending
+
+---
+
+## InvestmentManager — Invest Module
+
+### `invest(uint256 assetId, uint256 amount) returns (uint256 investmentId)`
+
+Invest in a structured RWA asset.
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `assetId` | uint256 | Asset identifier |
+| `amount` | uint256 | $WEUSD amount (6 decimals) |
+
+| Return | Type | Description |
+|--------|------|-------------|
+| `investmentId` | uint256 | Unique investment identifier |
+
+**Requirements:**
+- Must approve $WEUSD to InvestmentPool
+- Asset must be active
+- Amount must be within min/max limits
+
+---
+
+### `redeem(uint256 investmentId) returns (uint256 profit)`
+
+Redeem a matured investment.
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `investmentId` | uint256 | Investment identifier |
+
+| Return | Type | Description |
+|--------|------|-------------|
+| `profit` | uint256 | Profit amount received |
+
+**Requirements:**
+- Investment must be matured (`currentTime >= endTime`)
+- Investment status must be Active
+- Caller must be the investor
+
+---
+
+## View Functions
+
+### Market Contract
+
+| Function | Returns | Description |
+|----------|---------|-------------|
+| `getCurrentPrice()` | uint256 | Current forge/melt price |
+| `getFloorPrice()` | uint256 | Minimum guaranteed price |
+| `getReserve()` | uint256 | Total $WEUSD in forge |
+| `totalSupply()` | uint256 | Circulating RWA tokens |
+
+### InvestmentManager
+
+| Function | Returns | Description |
+|----------|---------|-------------|
+| `getInvestmentPoolAddress()` | address | Pool for approvals |
+| `getRedemptionPoolAddress()` | address | Pool for redemptions |
+| `getInvestment(uint256 id)` | Investment | Investment details |
+
+---
+
+## Important Notes
+
+### Token Decimals
+
+| Token | Decimals | Example |
+|-------|----------|---------|
+| $WEUSD | 6 | 1 WEUSD = 1000000 |
+| USDC (BSC) | 18 | 1 USDC = 1e18 |
+| USDC (Base/Arb) | 6 | 1 USDC = 1000000 |
+| RWA Tokens | 18 | 1 RWA = 1e18 |
+
+### Approval Pattern
+
+Always approve before calling state-changing functions:
+
+```solidity
+// Step 1: Approve
+IERC20(token).approve(spender, amount);
+
+// Step 2: Call function
+contract.functionName(params);
+```
+
+### Slippage Protection
+
+Use `desired` parameter to protect against price movements:
+
+```solidity
+// Allow 1% slippage
+uint256 desired = expectedAmount * 99 / 100;
+```
+
+### Error Handling
+
+Common revert reasons:
+- `Insufficient balance`
+- `Approval not granted`
+- `Slippage exceeded`
+- `Market not active`
+- `Contract paused`
+- `Not whitelisted`
+- `Investment not matured`
+

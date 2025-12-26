@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8fafc" rx="10" ry="10"/>
+
+  <!-- Top: Origin Forge -->
+  <rect x="250" y="40" width="300" height="100" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="400" y="70" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1d4ed8" text-anchor="middle">Origin Forge</text>
+  <text x="400" y="95" font-family="sans-serif" font-size="14" fill="#334155" text-anchor="middle">(Primary Market)</text>
+  <text x="400" y="115" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Tokens are minted here</text>
+
+  <!-- Flow Arrow -->
+  <path d="M400 140 L400 220" fill="none" stroke="#64748b" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="410" y="190" font-family="sans-serif" font-size="14" fill="#64748b">Tokens Flow Out</text>
+
+  <!-- Divider Line -->
+  <line x1="100" y1="220" x2="700" y2="220" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Bottom: Secondary Markets -->
+  <!-- CEX -->
+  <rect x="50" y="250" width="200" height="150" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="150" y="290" font-family="sans-serif" font-size="18" font-weight="bold" fill="#334155" text-anchor="middle">CEX</text>
+  <text x="150" y="320" font-family="sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Centralized</text>
+  <text x="150" y="340" font-family="sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Exchanges</text>
+  <text x="150" y="370" font-family="sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Trading, Liquidity</text>
+
+  <!-- DEX -->
+  <rect x="290" y="250" width="220" height="150" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="290" font-family="sans-serif" font-size="18" font-weight="bold" fill="#334155" text-anchor="middle">DEX</text>
+  <text x="400" y="320" font-family="sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Uniswap, Curve</text>
+  <text x="400" y="340" font-family="sans-serif" font-size="14" fill="#64748b" text-anchor="middle">etc.</text>
+  <text x="400" y="370" font-family="sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Swapping, LPs</text>
+
+  <!-- DeFi -->
+  <rect x="550" y="250" width="200" height="150" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="650" y="290" font-family="sans-serif" font-size="18" font-weight="bold" fill="#334155" text-anchor="middle">DeFi</text>
+  <text x="650" y="320" font-family="sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Lending</text>
+  <text x="650" y="340" font-family="sans-serif" font-size="14" fill="#64748b" text-anchor="middle">and Staking</text>
+  <text x="650" y="370" font-family="sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Yield Farming</text>
+
+  <!-- Label for Bottom -->
+  <text x="400" y="450" font-family="sans-serif" font-size="16" font-weight="bold" fill="#64748b" text-anchor="middle">Secondary Markets (Optional)</text>
+</svg>

@@ -1,0 +1,193 @@
+# 投资 API
+
+本文档提供与 PicWe RWA 投资系统集成的全面 API 文档。投资模块使用户能够使用 $WEUSD 投资代币化的真实世界资产。
+
+## 合约地址（BSC 主网）
+
+| 合约 | 地址 |
+|----------|---------|
+| InvestmentManager | `0x6Ec63400f33D8A5331dbaF2336ADcC1f455908a8` |
+| InvestmentPool | `0xF9Af57B0c505339cE06A6C9E9380fA9741f9aD32` |
+| AssetRegistry | `0x6dD8c376ae7e46D7d16794c3416b440f5C9a44Da` |
+| WeUSD | `0xdd73EA766B80417C0607A3f08E34A0C415D89D56` |
+
+---
+
+## 投资流程
+
+### 步骤 1：授权 WeUSD
+
+在投资前，用户必须授权 InvestmentPool 合约使用其 WeUSD 代币。
+
+```typescript
+const investmentManager = new ethers.Contract(
+  "0x6Ec63400f33D8A5331dbaF2336ADcC1f455908a8",
+  MANAGER_ABI,
+  signer
+);
+
+// 获取 InvestmentPool 地址
+const investmentPoolAddress = await investmentManager.getInvestmentPoolAddress();
+
+// 授权 WeUSD
+const weusd = new ethers.Contract(
+  "0xdd73EA766B80417C0607A3f08E34A0C415D89D56",
+  ERC20_ABI,
+  signer
+);
+
+const amount = ethers.parseUnits("100", 6); // 100 WeUSD（6 位精度）
+await weusd.approve(investmentPoolAddress, amount);
+```
+
+### 步骤 2：执行投资
+
+```typescript
+// 投资资产
+const assetId = 1; // 目标资产 ID
+const tx = await investmentManager.invest(assetId, amount);
+const receipt = await tx.wait();
+```
+
+---
+
+## 核心函数
+
+### invest
+
+在指定的 RWA 资产中创建新的投资头寸。
+
+```solidity
+function invest(
+    uint256 assetId,  // 目标资产 ID
+    uint256 amount    // WeUSD 金额（6 位精度）
+) external returns (uint256 investmentId)
+```
+
+**要求：**
+- 金额必须在 `minInvestment` 和 `maxInvestment` 之间
+- 资产状态必须是 `Active (1)`
+- 用户不能在黑名单中
+- 必须授予足够的额度
+
+### redeem
+
+在锁定期结束后赎回投资。
+
+```solidity
+function redeem(
+    uint256 investmentId
+) external returns (uint256 profit)
+```
+
+**要求：**
+- 当前时间 >= `endTime`
+- 投资状态必须是 `Active (1)`
+- 调用者必须是投资所有者
+
+### calculateProfit
+
+计算投资的当前收益。
+
+```solidity
+function calculateProfit(
+    uint256 investmentId
+) external view returns (uint256)
+```
+
+---
+
+## 查询函数
+
+### 获取资产列表
+
+```typescript
+const assetRegistry = new ethers.Contract(
+  "0x6dD8c376ae7e46D7d16794c3416b440f5C9a44Da",
+  REGISTRY_ABI,
+  provider
+);
+
+// 获取活跃资产总数
+const count = await assetRegistry.getActiveAssetsCount();
+
+// 分页获取活跃资产
+const assets = await assetRegistry.getActiveAssets(0, 10);
+```
+
+### 获取用户投资摘要
+
+```typescript
+const summary = await investmentManager.getUserInvestmentSummary(userAddress);
+
+// 返回：
+// - totalInvestment: 总投资金额
+// - totalActiveInvestment: 当前活跃投资金额
+// - totalProfit: 总收益
+// - totalClaimedProfit: 已领取收益
+// - activeInvestmentCount: 活跃投资数量
+// - totalInvestmentCount: 总投资数量
+```
+
+---
+
+## 数据结构
+
+### Asset（资产）
+
+```typescript
+interface Asset {
+  assetId: bigint;        // 唯一资产标识符
+  name: string;           // 资产名称
+  issuer: string;         // 发行人地址
+  description: string;    // 资产描述
+  apy: bigint;            // 年化收益率（基点，1000 = 10%）
+  maxAmount: bigint;      // 最大募资金额
+  currentAmount: bigint;  // 当前投资金额
+  status: number;         // 0=未激活, 1=活跃, 2=已完成, 3=已弃用
+  minInvestment: bigint;  // 每用户最小投资额
+  maxInvestment: bigint;  // 每用户最大投资额
+  period: bigint;         // 投资锁定期（秒）
+  addedTime: bigint;      // 资产创建时间戳
+}
+```
+
+### Investment（投资）
+
+```typescript
+interface Investment {
+  investmentId: bigint;   // 唯一投资标识符
+  investor: string;       // 投资者地址
+  assetId: bigint;        // 关联资产 ID
+  amount: bigint;         // 投资金额（6 位精度）
+  startTime: bigint;      // 投资开始时间戳
+  endTime: bigint;        // 投资结束时间戳
+  period: bigint;         // 锁定期（秒）
+  apy: bigint;            // 投资时的 APY
+  status: number;         // 0=无效, 1=活跃, 2=已完成, 3=已取消
+  profit: bigint;         // 计算收益
+  claimedProfit: bigint;  // 已领取收益
+}
+```
+
+---
+
+## 重要说明
+
+### 代币精度
+
+| 代币 | 精度 |
+|-------|----------|
+| WeUSD | 6 |
+| USDC | 18 |
+| RWA/prRWA | 18 |
+
+### APY 计算
+
+APY 值以基点表示，其中 10000 = 100%。
+
+```typescript
+// 示例：将 APY 转换为百分比
+const apyPercent = Number(asset.apy) / 100; // 1000 → 10%
+```
+

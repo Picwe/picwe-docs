@@ -2,6 +2,7 @@
 
 import { useTheme } from 'nextra-theme-docs'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 interface ThemeLogoProps {
   lightSrc: string
@@ -12,10 +13,16 @@ interface ThemeLogoProps {
 }
 
 const ThemeLogo = ({ lightSrc, darkSrc, alt, width = 100, height = 100 }: ThemeLogoProps) => {
-  const { theme, resolvedTheme } = useTheme()
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
-  const currentTheme = resolvedTheme || theme
-  const logoSrc = currentTheme === 'dark' ? darkSrc : lightSrc
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // During SSR and initial client render, use light theme to avoid hydration mismatch
+  // After mounting, use the resolved theme
+  const logoSrc = mounted && resolvedTheme === 'dark' ? darkSrc : lightSrc
 
   return <Image src={logoSrc} alt={alt} width={width} height={height} priority />
 }

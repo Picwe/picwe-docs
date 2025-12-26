@@ -1,0 +1,210 @@
+# Dynamic Pricing
+
+<div style={{ color: 'rgb(110,110,100)', fontSize: '1.125rem', marginTop: '0.5rem' }}>
+How Origin Forge calculates token prices algorithmically
+</div>
+
+---
+
+## Overview
+
+Prices in Origin Forge are not set by humans or market makers. They're calculated by a mathematical formula based on real-time supply and demand — all backed by real reserves.
+
+---
+
+## The Two Prices
+
+Origin Forge always displays two prices:
+
+| Price | What It Means | Behavior |
+|-------|---------------|----------|
+| **Current Price** | What you pay/receive now | Goes up with buying, down with selling |
+| **Floor Price** | Guaranteed minimum | Only goes up, never down |
+
+```
+Current Price = Floor Price + Market Premium
+```
+
+The **market premium** reflects current demand. When demand is high, premium is large. When demand is low, current price approaches floor.
+
+---
+
+## How Prices Move
+
+### Forging (Buying) → Price Goes Up
+
+When you forge tokens:
+
+1. Your $WEUSD enters the reserve pool
+2. New tokens are minted for you
+3. The reserve-to-supply ratio changes
+4. **Both current price and floor price tend to increase**
+
+```
+Before Forge:
+  Reserve: $100,000
+  Supply: 100,000 tokens
+  Current Price: $1.20
+
+You Forge with $10,000
+  → You receive ~7,500 tokens
+  → Reserve becomes: $110,000
+  → Supply becomes: 107,500 tokens
+
+After Forge:
+  Current Price: $1.28 (+6.7%)
+```
+
+### Melting (Selling) → Price Goes Down
+
+When you melt tokens:
+
+1. Your tokens are burned
+2. You receive $WEUSD from the reserve
+3. The reserve-to-supply ratio adjusts
+4. **Current price decreases, but floor stays protected**
+
+```
+Before Melt:
+  Reserve: $100,000
+  Supply: 100,000 tokens
+  Current Price: $1.20
+  Floor Price: $0.85
+
+You Melt 10,000 tokens
+  → You receive $11,500
+  → Reserve becomes: $88,500
+  → Supply becomes: 90,000 tokens
+
+After Melt:
+  Current Price: $1.15 (-4.2%)
+  Floor Price: $0.85 (unchanged!)
+```
+
+---
+
+## The Bonding Curve
+
+Origin Forge uses a **bonding curve** — a mathematical relationship where price increases as supply increases.
+
+![Bonding Curve Behavior](/images/origin-forge/price-behavior.svg)
+
+**Key insight:** The curve is designed so that:
+- **Buying** moves you **up** the curve (higher price)
+- **Selling** moves you **down** the curve (lower price)
+- **Floor** acts as a **bottom rail** that never drops
+
+---
+
+## Actual Transaction Price vs. Displayed Price
+
+⚠️ **Important:** The price you see is the **instantaneous** price. Your actual transaction price may differ.
+
+### Why?
+
+When you buy a significant amount, you're not just buying at one price point — you're buying along the curve:
+
+![Slippage and Price Impact](/images/origin-forge/bonding-curve-slippage.svg)
+
+### Slippage Protection
+
+To protect against unexpected price movements:
+- Set a **maximum slippage** when trading
+- Transaction reverts if price moves beyond your limit
+- Recommended: 1-3% for normal trades
+
+---
+
+## What Affects the Price?
+
+| Factor | Effect on Current Price | Effect on Floor |
+|--------|-------------------------|-----------------|
+| More forging | ↑ Increases | ↑ May increase |
+| More melting | ↓ Decreases | → Stays same |
+| Raise triggered | ↓ May decrease\* | ↑ Increases |
+| Fees collected | ↑ Increases | ↑ Increases |
+| APY distributed | ↑ Increases | ↑ Increases |
+
+\* **Note:** When a Raise happens, the current price might temporarily dip because value is transferred from price premium to floor support. However, this is a **feature** — you're getting more floor protection.
+
+---
+
+## Raise Events and Price Resets
+
+When buying activity reaches certain thresholds, a **Raise** event triggers:
+
+### Before Raise
+```
+Current Price: $2.00
+Floor Price: $1.00
+Premium: $1.00 (50% of price)
+```
+
+### After Raise
+```
+Current Price: $1.80 (may decrease!)
+Floor Price: $1.40 (permanently higher!)
+Premium: $0.40 (reduced)
+```
+
+**The trade-off:** Slightly lower current price for significantly higher guaranteed floor. This is **good** for holders because:
+- Your downside is now limited to $1.40 instead of $1.00
+- The floor can never go back down
+- Long-term value is locked in
+
+---
+
+## True Market Price Discovery
+
+### Why Origin Forge Pricing is Fair
+
+| Property | How It Works |
+|----------|--------------|
+| **Algorithmic** | No humans setting prices |
+| **Transparent** | Formula is open source |
+| **Immutable** | Parameters fixed at launch |
+| **Backed** | Every price point has real reserves |
+
+### Comparison: Origin Forge vs. Traditional Markets
+
+| Aspect | Order Books | AMM DEX | Origin Forge |
+|--------|-------------|---------|--------------|
+| Price Source | Bid/Ask | Pool ratio | Algorithm + reserve |
+| Manipulation | Possible | Possible | Very difficult |
+| Price Floor | None | None | Built-in |
+| Large Trades | Need liquidity | High slippage | Predictable impact |
+
+---
+
+## Checking Prices On-Chain
+
+You can always verify the current price through the smart contract:
+
+| Function | Returns |
+|----------|---------|
+| `getCurrentPrice()` | Current forge/melt price |
+| `getFloorPrice()` | Guaranteed minimum |
+| `getReserve()` | Total $WEUSD in pool |
+| `getTotalSupply()` | Circulating token supply |
+
+---
+
+## Summary
+
+| Concept | Description |
+|---------|-------------|
+| **Current Price** | Market-driven, can fluctuate |
+| **Floor Price** | Reserve-backed, only increases |
+| **Bonding Curve** | Mathematical price discovery |
+| **Raise Mechanism** | Locks value into floor |
+| **Transparency** | All calculations verifiable on-chain |
+
+Origin Forge pricing is designed to be **fair**, **predictable**, and **protective** — giving traders confidence that the market is honest and their downside is always limited.
+
+---
+
+## Next Steps
+
+- [Floor Price Protection](/origin-forge/floor-price) — Deep dive into floor mechanics
+- [Forge & Melt](/origin-forge/forge-and-melt) — Start trading
+

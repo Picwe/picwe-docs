@@ -1,0 +1,4 @@
+import { middleware } from 'nextra/locales'
+
+export default middleware('/en')
+

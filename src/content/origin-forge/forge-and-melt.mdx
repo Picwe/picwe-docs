@@ -1,0 +1,235 @@
+# Forge & Melt
+
+<div style={{ color: 'rgb(110,110,100)', fontSize: '1.125rem', marginTop: '0.5rem' }}>
+The two fundamental operations of Origin Forge
+</div>
+
+---
+
+## Overview
+
+Origin Forge has exactly two operations:
+
+| Operation | Action | Result |
+|-----------|--------|--------|
+| **Forge** | Deposit $WEUSD | Mint new RWA tokens |
+| **Melt** | Burn RWA tokens | Receive $WEUSD |
+
+Both operations execute at the current algorithmically-determined price.
+
+---
+
+## Forging Tokens
+
+### What Happens
+
+1. You send $WEUSD to Origin Forge
+2. Protocol calculates current price
+3. New RWA tokens are minted
+4. Tokens sent to your wallet
+5. $WEUSD added to protocol reserve
+
+### Visual Flow
+
+![Forge Process](/images/origin-forge/forge-process.svg)
+
+### Contract Interface
+
+```solidity
+function forge(
+    address token,      // Stablecoin address ($WEUSD)
+    uint256 tokenWorth, // Amount of $WEUSD to spend
+    uint256 desired     // Minimum RWA tokens expected
+) external returns (
+    uint256 amount,     // Actual tokens minted
+    uint256 fee         // Fee paid
+)
+```
+
+### Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `token` | address | Stablecoin to use ($WEUSD or USDC) |
+| `tokenWorth` | uint256 | Amount to spend (6 decimals) |
+| `desired` | uint256 | Minimum tokens expected (slippage protection) |
+
+### Returns
+
+| Return | Type | Description |
+|--------|------|-------------|
+| `amount` | uint256 | Actual RWA tokens minted |
+| `fee` | uint256 | Fee deducted |
+
+### Requirements
+
+- Market must be initialized (post-IRO)
+- Approve $WEUSD spending before calling
+- Amount must meet minimum thresholds
+
+---
+
+## Melting Tokens
+
+### What Happens
+
+1. You send RWA tokens to Origin Forge
+2. Protocol calculates current price
+3. Tokens are burned (destroyed)
+4. $WEUSD released from reserve
+5. $WEUSD sent to your wallet
+
+### Visual Flow
+
+![Melt Process](/images/origin-forge/melt-process.svg)
+
+### Contract Interface
+
+```solidity
+function melt(
+    address token,  // Stablecoin to receive
+    uint256 amount, // RWA tokens to melt
+    uint256 desired // Minimum stablecoin expected
+) external returns (
+    uint256 worth,  // Actual stablecoin received
+    uint256 fee     // Fee paid
+)
+```
+
+### Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `token` | address | Stablecoin to receive |
+| `amount` | uint256 | RWA tokens to melt (18 decimals) |
+| `desired` | uint256 | Minimum stablecoin expected |
+
+### Returns
+
+| Return | Type | Description |
+|--------|------|-------------|
+| `worth` | uint256 | Actual stablecoin received |
+| `fee` | uint256 | Fee deducted |
+
+### Requirements
+
+- Market must be active
+- Approve RWA token spending before calling
+- Receive at least floor price value
+
+---
+
+## Price Impact
+
+### Forging Increases Price
+
+```
+More forging → More reserve → Higher current price → Possible Raise → Higher floor
+```
+
+When you forge:
+- Reserve grows (your $WEUSD enters the pool)
+- Supply grows (new tokens minted)
+- Current price increases
+- **If threshold reached:** Raise triggers, floor increases permanently
+
+### Melting Decreases Price
+
+```
+More melting → Less reserve → Lower current price → Floor unchanged
+```
+
+When you melt:
+- Reserve decreases (proportionally)
+- Supply decreases (tokens burned)
+- Current price may decrease
+- **Floor price never decreases** — your downside is always protected
+
+### The Raise Effect
+
+When buying activity is strong enough:
+1. Protocol detects the threshold is reached
+2. **Raise** automatically triggers
+3. Value is locked from price premium into floor support
+4. Floor price permanently increases
+
+This means: **Active markets = Rising floor = Better protection for all holders**
+
+---
+
+## Slippage Protection
+
+The `desired` parameter protects against unfavorable price movements:
+
+### For Forging
+
+Set `desired` to the minimum tokens you'll accept:
+- If price moves against you, transaction reverts
+- Protects against front-running
+- Recommended: 0.5-1% below expected amount
+
+### For Melting
+
+Set `desired` to the minimum $WEUSD you'll accept:
+- Guarantees at least floor price
+- Protects against rapid price drops
+- Recommended: 0.5-1% below expected amount
+
+---
+
+## Fees
+
+| Operation | Fee | Destination |
+|-----------|-----|-------------|
+| Forge | ~0.3-1% | Treasury + Protocol |
+| Melt | ~0.3-1% | Treasury + Protocol |
+
+Fees contribute to:
+- Treasury growth (supports floor price)
+- Protocol sustainability
+- Development funding
+
+---
+
+## Example Scenarios
+
+### Scenario 1: Bullish Market
+
+1. Many users forge tokens
+2. Supply increases
+3. Price rises
+4. Floor price rises (permanently)
+5. Early forgers profit
+
+### Scenario 2: Bearish Market
+
+1. Users melt tokens
+2. Supply decreases
+3. Price falls
+4. **Floor price remains unchanged**
+5. Holders protected at floor
+
+### Scenario 3: Stable Market
+
+1. Balanced forge/melt activity
+2. Supply stable
+3. Price stable
+4. Floor price gradually rises from fees
+
+---
+
+## Best Practices
+
+1. **Check Current Price** — Review before forging/melting
+2. **Set Slippage** — Use `desired` parameter appropriately
+3. **Approve First** — Approve token spending before transactions
+4. **Gas Timing** — Consider network congestion for gas costs
+5. **Floor Awareness** — Know the floor price for melt operations
+
+---
+
+## Next Steps
+
+- [Dynamic Pricing](/origin-forge/dynamic-pricing) — Understand how prices are calculated
+- [Floor Price](/origin-forge/floor-price) — Learn about the protection mechanism
+

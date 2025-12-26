@@ -1,0 +1,190 @@
+# IRO Launch Guide
+
+<div style={{ color: 'rgb(110,110,100)', fontSize: '1.125rem', marginTop: '0.5rem' }}>
+Step-by-step guide to launching your RWA on PicWe
+</div>
+
+---
+
+## Prerequisites
+
+Before launching an IRO, ensure you have:
+
+- ✅ Web3 wallet (MetaMask, OKX, etc.)
+- ✅ $WEUSD for initial setup fees
+- ✅ Asset documentation and details
+- ✅ Understanding of tokenization parameters
+
+---
+
+## Step 1: Connect Wallet
+
+Connect your Web3 wallet to PicWe:
+
+1. Visit the PicWe platform
+2. Click "Connect Wallet"
+3. Select your wallet provider
+4. Approve the connection
+5. Ensure you're on the correct network (BSC or Base)
+
+---
+
+## Step 2: Create RWA Asset
+
+Provide essential asset information:
+
+| Field | Description | Example |
+|-------|-------------|---------|
+| **Asset Name** | Official name | "Alpha Energy Fund" |
+| **Ticker Symbol** | Trading symbol | "AEF" |
+| **Description** | Detailed info | Asset details, use case, value proposition |
+| **Website** | Project URL | https://example.com |
+| **Social Links** | X, Telegram, etc. | Community channels |
+
+---
+
+## Step 3: Configure Parameters
+
+Set the economic parameters for your IRO:
+
+### Token Parameters
+
+| Parameter | Description | Considerations |
+|-----------|-------------|----------------|
+| **Total Supply** | Maximum tokens | Consider market cap goals |
+| **Team Allocation** | Reserved tokens | Typically 10-20% |
+| **Unlock Schedule** | Vesting timeline | Builds investor confidence |
+
+### Offering Parameters
+
+| Parameter | Description | Considerations |
+|-----------|-------------|----------------|
+| **Funding Cap** | Maximum raise | Match your capital needs |
+| **Min Investment** | Per-wallet minimum | Balance accessibility vs. admin |
+| **Max Investment** | Per-wallet maximum | Ensure fair distribution |
+
+### Return Parameters
+
+| Parameter | Description | Considerations |
+|-----------|-------------|----------------|
+| **APY** | Annual percentage yield | Based on asset returns |
+| **Reward Interval** | Distribution frequency | Weekly, monthly, etc. |
+
+---
+
+## Step 4: Deploy Contracts
+
+The IRO platform automatically deploys:
+
+### GenesisLaunchAuction (GLA)
+Handles the initial offering:
+- Whitelist management
+- Public subscription
+- Fund collection
+
+### Market Contract
+Manages post-launch trading:
+- Origin Forge operations
+- Price calculations
+- Fee distribution
+
+### Treasury Contract
+Manages asset backing:
+- Reserve management
+- Floor price calculations
+- Value accrual
+
+---
+
+## Step 5: Launch
+
+After deployment:
+
+1. **Whitelist Phase Begins**
+   - Add addresses to whitelist
+   - Whitelisted users can subscribe
+
+2. **Public Offering Opens**
+   - All users can participate
+   - Subscriptions collected
+
+3. **Market Initialization**
+   - Funding period ends
+   - Market contract activated
+   - Tokens become claimable
+
+4. **Trading Begins**
+   - Origin Forge live
+   - Continuous forge/melt operations
+
+---
+
+## Post-Launch Management
+
+### Monitor Performance
+
+- Track subscription progress
+- Monitor treasury balance
+- Review trading activity
+
+### Distribute Returns
+
+- APY payments automated
+- Returns from treasury
+- Transparent on-chain records
+
+### Communicate
+
+- Update investors on asset performance
+- Announce milestones
+- Maintain community engagement
+
+---
+
+## Contract Addresses
+
+import { Table } from 'nextra/components'
+
+### RWA Launchpad (Factory)
+
+<Table>
+  <thead>
+    <Table.Tr>
+      <Table.Th>Network</Table.Th>
+      <Table.Th>Contract Address</Table.Th>
+    </Table.Tr>
+  </thead>
+  <tbody>
+    <Table.Tr>
+      <Table.Td>BSC Mainnet</Table.Td>
+      <Table.Td>`0x67cadc696424d88dd9108c0ca178dcd0f2216ca9`</Table.Td>
+    </Table.Tr>
+    <Table.Tr>
+      <Table.Td>Base Mainnet</Table.Td>
+      <Table.Td>`0x29Ef43797B278F3abD0C5A4D9E3CA21649889834`</Table.Td>
+    </Table.Tr>
+  </tbody>
+</Table>
+
+---
+
+## Important Notes
+
+### Current Review Process
+
+IROs currently undergo review before launch to ensure quality and compliance. We're working toward fully permissionless issuance.
+
+### Regulatory Responsibility
+
+Issuers are responsible for:
+- Compliance with local regulations
+- Accurate asset representation
+- Investor communications
+
+### Best Practices
+
+- **Transparency** — Provide complete asset information
+- **Communication** — Maintain active investor relations
+- **Delivery** — Ensure APY promises are sustainable
+- **Community** — Build and engage your investor base
+

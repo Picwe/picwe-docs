@@ -1,0 +1,214 @@
+# Security
+
+<div style={{ color: 'rgb(110,110,100)', fontSize: '1.125rem', marginTop: '0.5rem' }}>
+Security measures and bug bounty program
+</div>
+
+---
+
+## Security Overview
+
+PicWe prioritizes security in all aspects of the platform. Our smart contracts are designed with multiple layers of protection and undergo rigorous review processes.
+
+---
+
+## Security Measures
+
+### Smart Contract Security
+
+| Measure | Description |
+|---------|-------------|
+| **Audits** | Third-party security audits |
+| **Upgradeable Proxies** | Ability to patch vulnerabilities |
+| **Access Controls** | Role-based permissions |
+| **Pause Mechanisms** | Emergency stop functionality |
+| **Reentrancy Guards** | Protection against reentrancy attacks |
+
+### Operational Security
+
+| Measure | Description |
+|---------|-------------|
+| **Multi-sig** | Critical operations require multiple signatures |
+| **Timelocks** | Delayed execution for sensitive changes |
+| **Monitoring** | Real-time transaction monitoring |
+| **Incident Response** | Defined procedures for security events |
+
+---
+
+## Audit Status
+
+| Auditor | Scope | Status |
+|---------|-------|--------|
+| *TBD* | Core contracts | Completed |
+| *TBD* | Investment module | Completed |
+
+*Audit reports will be published upon completion.*
+
+---
+
+## Bug Bounty Program
+
+### Scope
+
+The bug bounty program covers:
+
+**In Scope:**
+- Smart contracts on mainnet
+- Critical business logic flaws
+- Fund security vulnerabilities
+- Access control bypasses
+
+**Out of Scope:**
+- UI/UX issues
+- Theoretical attacks without proof
+- Third-party dependencies
+- Testnet contracts
+- Already reported issues
+
+---
+
+### Severity Levels
+
+| Severity | Description | Reward Range |
+|----------|-------------|--------------|
+| **Critical** | Direct fund loss, protocol takeover | $10,000 - $50,000 |
+| **High** | Significant fund risk, major functionality break | $5,000 - $10,000 |
+| **Medium** | Limited fund risk, functionality impairment | $1,000 - $5,000 |
+| **Low** | Minor issues, edge cases | $100 - $1,000 |
+
+### Critical Vulnerabilities
+
+Examples of critical issues:
+- Unauthorized token minting
+- Reserve fund drainage
+- Governance takeover
+- Oracle manipulation leading to fund loss
+
+### High Severity
+
+Examples of high severity issues:
+- Incorrect price calculations
+- Fee bypass mechanisms
+- Access control vulnerabilities
+- Denial of service on critical functions
+
+---
+
+### Reporting Process
+
+1. **Discover** — Identify the vulnerability
+2. **Document** — Create detailed report with:
+   - Description of the issue
+   - Steps to reproduce
+   - Potential impact
+   - Suggested fix (optional)
+3. **Submit** — Send to security@picwe.org
+4. **Wait** — We'll acknowledge within 48 hours
+5. **Collaborate** — Work with our team to verify
+6. **Reward** — Receive bounty upon fix confirmation
+
+### Report Template
+
+```
+Subject: [Severity] Brief description
+
+## Summary
+One-paragraph overview of the vulnerability.
+
+## Vulnerability Details
+- Contract address:
+- Function affected:
+- Attack vector:
+
+## Steps to Reproduce
+1. Step one
+2. Step two
+3. ...
+
+## Impact
+Description of potential damage.
+
+## Proof of Concept
+Code or transaction demonstrating the issue.
+
+## Suggested Fix
+(Optional) How to resolve the issue.
+```
+
+---
+
+### Rules
+
+**Do:**
+- Report vulnerabilities responsibly
+- Provide sufficient detail to reproduce
+- Allow reasonable time for fix
+- Maintain confidentiality
+
+**Don't:**
+- Exploit vulnerabilities on mainnet
+- Disclose publicly before fix
+- Access other users' data
+- Demand ransom or threaten disclosure
+
+---
+
+## Security Contact
+
+**Email:** security@picwe.org
+
+**PGP Key:** *Available upon request*
+
+**Response Time:**
+- Critical: 24 hours
+- High: 48 hours
+- Medium/Low: 5 business days
+
+---
+
+## Best Practices for Users
+
+### Wallet Security
+
+- Use hardware wallets for large holdings
+- Never share private keys or seed phrases
+- Verify transaction details before signing
+- Be cautious of phishing sites
+
+### Contract Interaction
+
+- Verify contract addresses from official sources
+- Start with small amounts when testing
+- Understand what you're approving
+- Revoke unused approvals periodically
+
+### General Safety
+
+- Use strong, unique passwords
+- Enable 2FA where available
+- Keep software updated
+- Be skeptical of unsolicited messages
+
+---
+
+## Incident Response
+
+In case of a security incident:
+
+1. **Detection** — Automated monitoring alerts
+2. **Assessment** — Severity evaluation
+3. **Containment** — Pause affected contracts if needed
+4. **Mitigation** — Deploy fixes
+5. **Communication** — Notify affected users
+6. **Post-mortem** — Document and improve
+
+---
+
+## Disclaimer
+
+While we take extensive measures to ensure security, no system is 100% secure. Users should:
+- Only invest what they can afford to lose
+- Understand the risks of DeFi
+- Do their own research
+- Consider seeking professional advice
+

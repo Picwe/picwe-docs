@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400">
+  <!-- Background -->
+  <rect width="700" height="400" fill="#f8fafc" rx="10" ry="10"/>
+
+  <!-- Title -->
+  <text x="350" y="40" font-family="sans-serif" font-size="18" font-weight="bold" fill="#334155" text-anchor="middle">Reserve Pool Structure</text>
+
+  <!-- Pool Container -->
+  <rect x="150" y="80" width="300" height="280" fill="#ffffff" stroke="#94a3b8" stroke-width="2" rx="5"/>
+
+  <!-- FSF (Floor Support Fund) -->
+  <rect x="155" y="180" width="290" height="175" fill="#d1fae5" stroke="#10b981" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="300" y="250" font-family="sans-serif" font-size="16" font-weight="bold" fill="#047857" text-anchor="middle">Floor Support Fund (FSF)</text>
+  <text x="300" y="275" font-family="sans-serif" font-size="12" fill="#047857" text-anchor="middle">Backs the Floor Price</text>
+  <text x="300" y="295" font-family="sans-serif" font-size="12" fill="#047857" text-anchor="middle">(Guaranteed Minimum)</text>
+
+  <!-- PSF (Price Support Fund) -->
+  <rect x="155" y="85" width="290" height="90" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="300" y="125" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1d4ed8" text-anchor="middle">Price Support Fund (PSF)</text>
+  <text x="300" y="150" font-family="sans-serif" font-size="12" fill="#1d4ed8" text-anchor="middle">Supports Market Premium</text>
+
+  <!-- Bracket for Floor Price -->
+  <path d="M460 355 L480 355 L480 180 L460 180" fill="none" stroke="#64748b" stroke-width="2"/>
+  <text x="490" y="270" font-family="sans-serif" font-size="14" fill="#64748b">Floor Price = FSF / Supply</text>
+
+  <!-- Total Reserve Label -->
+  <text x="300" y="385" font-family="sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Total Reserve = FSF + PSF</text>
+</svg>

@@ -18,6 +18,20 @@ export const metadata: Metadata = {
 const navbar = <Navbar logo={<ThemeLogo lightSrc="/logo-light-use.png" darkSrc="/logo-dark-use.png" alt="Logo" width={100} height={100} />} />
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  let pageMap
+  try {
+    pageMap = await getPageMap()
+  } catch (error) {
+    console.error('Error getting pageMap:', error)
+    pageMap = []
+  }
+  
+  // Ensure pageMap is an array
+  if (!Array.isArray(pageMap)) {
+    console.warn('pageMap is not an array, defaulting to empty array')
+    pageMap = []
+  }
+  
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <Head
@@ -29,7 +43,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <Layout
           // banner={banner}
           navbar={navbar}
-          pageMap={await getPageMap()}
+          pageMap={pageMap}
           docsRepositoryBase="https://github.com/Picwe/picwe-docs/tree/main"
           // footer={footer}
           // ... Your additional layout options
