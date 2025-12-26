@@ -5,9 +5,6 @@
     </marker>
   </defs>
 
-  <!-- Background -->
-  <rect width="600" height="600" fill="#f8fafc" rx="10" ry="10"/>
-
   <!-- Layer 1: Issuance Layer -->
   <g transform="translate(100, 50)">
     <rect width="400" height="80" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>

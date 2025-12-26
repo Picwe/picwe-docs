@@ -13,9 +13,6 @@
     </marker>
   </defs>
 
-  <!-- Background -->
-  <rect width="800" height="380" fill="#f8fafc" rx="10" ry="10"/>
-
   <!-- Title -->
   <text x="400" y="30" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Forge Impact on Price</text>
 

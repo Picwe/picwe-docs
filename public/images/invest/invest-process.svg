@@ -5,9 +5,6 @@
     </marker>
   </defs>
 
-  <!-- Background -->
-  <rect width="700" height="200" fill="#f8fafc" rx="10" ry="10"/>
-
   <!-- Step 1: Deposit -->
   <g transform="translate(50, 75)">
     <rect width="160" height="80" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
