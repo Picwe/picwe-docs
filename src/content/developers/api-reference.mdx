@@ -61,7 +61,7 @@ Withdraw WEUSD investment during unlock phase.
 
 ### `forge(address token, uint256 tokenWorth, uint256 desired) returns (uint256 amount, uint256 fee)`
 
-Forge (mint) RWA tokens by depositing stablecoins.
+Mint RWA tokens by depositing stablecoins.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
@@ -84,7 +84,7 @@ Forge (mint) RWA tokens by depositing stablecoins.
 
 ### `melt(address token, uint256 amount, uint256 desired) returns (uint256 worth, uint256 fee)`
 
-Melt (burn) RWA tokens to withdraw stablecoins.
+Burn RWA tokens to withdraw stablecoins.
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
@@ -150,20 +150,19 @@ Redeem a matured investment.
 
 ### Market Contract
 
-| Function | Returns | Description |
-|----------|---------|-------------|
-| `getCurrentPrice()` | uint256 | Current forge/melt price |
-| `getFloorPrice()` | uint256 | Minimum guaranteed price |
-| `getReserve()` | uint256 | Total WEUSD in forge |
-| `totalSupply()` | uint256 | Circulating RWA tokens |
-
-### InvestmentManager
-
-| Function | Returns | Description |
-|----------|---------|-------------|
-| `getInvestmentPoolAddress()` | address | Pool for approvals |
-| `getRedemptionPoolAddress()` | address | Pool for redemptions |
-| `getInvestment(uint256 id)` | Investment | Investment details |
+| Function/Variable | Returns | Description |
+|-------------------|---------|-------------|
+| `c` | uint256 | Current RWA price |
+| `f` | uint256 | Floor RWA price (minimum guaranteed price) |
+| `w` | uint256 | Total worth (total stablecoins in forge) |
+| `k` | uint256 | Slope of the price function |
+| `target` | uint32 | Target funding ratio |
+| `targetAdjusted` | uint32 | Target adjusted funding ratio |
+| `RWA.totalSupply()` | uint256 | Circulating RWA tokens |
+| `currentFundingRatio()` | (uint256, uint256) | Current funding ratio (numerator, denominator) |
+| `estimateBuy(address token, uint256 tokenWorth)` | (uint256, uint256, uint256, uint256) | Estimate RWA amount, fee, worth, and new price for buy |
+| `estimateSell(uint256 amount, address token)` | (uint256, uint256, uint256, uint256) | Estimate fee, worth, and new price for sell |
+| `estimateRaisePrice()` | (bool, uint256, uint256, uint256, uint256) | Estimate next raise price parameters |
 
 ---
 
