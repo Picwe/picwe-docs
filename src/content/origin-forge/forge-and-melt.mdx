@@ -33,40 +33,6 @@ Both operations execute at the current algorithmically-determined price.
 
 ![Forge Process](/images/origin-forge/forge-process.svg)
 
-### Contract Interface
-
-```solidity
-function forge(
-    address token,      // Stablecoin address (WEUSD)
-    uint256 tokenWorth, // Amount of WEUSD to spend
-    uint256 desired     // Minimum RWA tokens expected
-) external returns (
-    uint256 amount,     // Actual tokens minted
-    uint256 fee         // Fee paid
-)
-```
-
-### Parameters
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `token` | address | Stablecoin to use (WEUSD or USDC) |
-| `tokenWorth` | uint256 | Amount to spend (6 decimals) |
-| `desired` | uint256 | Minimum tokens expected (slippage protection) |
-
-### Returns
-
-| Return | Type | Description |
-|--------|------|-------------|
-| `amount` | uint256 | Actual RWA tokens minted |
-| `fee` | uint256 | Fee deducted |
-
-### Requirements
-
-- Market must be initialized (post-IRO)
-- Approve WEUSD spending before calling
-- Amount must meet minimum thresholds
-
 ---
 
 ## Melting Tokens
@@ -82,40 +48,6 @@ function forge(
 ### Visual Flow
 
 ![Melt Process](/images/origin-forge/melt-process.svg)
-
-### Contract Interface
-
-```solidity
-function melt(
-    address token,  // Stablecoin to receive
-    uint256 amount, // RWA tokens to melt
-    uint256 desired // Minimum stablecoin expected
-) external returns (
-    uint256 worth,  // Actual stablecoin received
-    uint256 fee     // Fee paid
-)
-```
-
-### Parameters
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `token` | address | Stablecoin to receive |
-| `amount` | uint256 | RWA tokens to melt (18 decimals) |
-| `desired` | uint256 | Minimum stablecoin expected |
-
-### Returns
-
-| Return | Type | Description |
-|--------|------|-------------|
-| `worth` | uint256 | Actual stablecoin received |
-| `fee` | uint256 | Fee deducted |
-
-### Requirements
-
-- Market must be active
-- Approve RWA token spending before calling
-- Receive at least floor price value
 
 ---
 
