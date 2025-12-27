@@ -40,6 +40,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           navbar={navbar}
           pageMap={pageMap}
           docsRepositoryBase="https://github.com/Picwe/picwe-docs/tree/main"
+          sidebar={{
+            defaultMenuCollapseLevel: 1, // 只展开第一级，子目录默认收起
+          }}
           // footer={footer}
           // ... Your additional layout options
         >
