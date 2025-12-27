@@ -30,7 +30,7 @@
   <line x1="560" y1="50" x2="560" y2="340" stroke="#cbd5e1" stroke-width="1"/>
 
   <!-- Row Height = 50px -->
-  
+
   <!-- R1 (y=115 center) -->
   <g transform="translate(0, 115)">
     <text x="125" y="5" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">R1</text>
@@ -74,7 +74,7 @@
     <rect x="400" y="-10" width="150" height="20" fill="url(#returnGradient)" rx="3"/>
     <text x="655" y="5" font-size="12" fill="#475569" text-anchor="middle">Very High Risk, Max Return</text>
   </g>
-  
+
   <!-- Outer Border -->
   <rect x="50" y="50" width="700" height="290" fill="none" stroke="#cbd5e1" stroke-width="1" rx="4"/>
 
