@@ -13,70 +13,76 @@
   <!-- Title -->
   <text x="400" y="30" font-size="20" font-weight="bold" fill="#1e293b" text-anchor="middle">Risk vs Return Profile</text>
 
+  <!-- Table Header Background -->
+  <rect x="50" y="50" width="700" height="40" fill="#f8fafc" rx="4" />
+
   <!-- Headers -->
-  <text x="100" y="70" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Risk Level</text>
-  <text x="300" y="70" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Capital Risk</text>
-  <text x="500" y="70" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Expected Return</text>
-  <text x="700" y="70" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Description</text>
+  <!-- Adjusted X positions for better spacing -->
+  <text x="125" y="75" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Risk Level</text>
+  <text x="290" y="75" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Capital Risk</text>
+  <text x="470" y="75" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Expected Return</text>
+  <text x="655" y="75" font-size="14" font-weight="bold" fill="#1e293b" text-anchor="middle">Description</text>
 
-  <!-- Divider Lines -->
-  <line x1="200" y1="80" x2="200" y2="360" stroke="#cbd5e1" stroke-width="1"/>
-  <line x1="400" y1="80" x2="400" y2="360" stroke="#cbd5e1" stroke-width="1"/>
-  <line x1="600" y1="80" x2="600" y2="360" stroke="#cbd5e1" stroke-width="1"/>
+  <!-- Vertical Divider Lines -->
+  <!-- Adjusted X positions: 200, 380, 560 -->
+  <line x1="200" y1="50" x2="200" y2="340" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="380" y1="50" x2="380" y2="340" stroke="#cbd5e1" stroke-width="1"/>
+  <line x1="560" y1="50" x2="560" y2="340" stroke="#cbd5e1" stroke-width="1"/>
 
-  <!-- R1 -->
-  <g transform="translate(0, 100)">
-    <text x="100" y="0" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">R1</text>
-    <rect x="220" y="-12" width="60" height="24" fill="url(#riskGradient)" rx="3"/>
-    <rect x="420" y="-12" width="40" height="24" fill="url(#returnGradient)" rx="3"/>
-    <text x="700" y="0" font-size="12" fill="#475569" text-anchor="middle">Very Low Risk, Low Return</text>
+  <!-- Row Height = 50px -->
+  
+  <!-- R1 (y=115 center) -->
+  <g transform="translate(0, 115)">
+    <text x="125" y="5" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">R1</text>
+    <rect x="220" y="-10" width="60" height="20" fill="url(#riskGradient)" rx="3"/>
+    <rect x="400" y="-10" width="40" height="20" fill="url(#returnGradient)" rx="3"/>
+    <text x="655" y="5" font-size="12" fill="#475569" text-anchor="middle">Very Low Risk, Low Return</text>
   </g>
+  <line x1="50" y1="140" x2="750" y2="140" stroke="#e2e8f0" stroke-width="1"/>
 
-  <!-- R2 -->
-  <g transform="translate(0, 140)">
-    <line x1="0" y1="0" x2="800" y2="0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 2"/>
-    <text x="100" y="0" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">R2</text>
-    <rect x="220" y="-12" width="100" height="24" fill="url(#riskGradient)" rx="3"/>
-    <rect x="420" y="-12" width="80" height="24" fill="url(#returnGradient)" rx="3"/>
-    <text x="700" y="0" font-size="12" fill="#475569" text-anchor="middle">Low Risk, Modest Return</text>
+  <!-- R2 (y=165 center) -->
+  <g transform="translate(0, 165)">
+    <text x="125" y="5" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">R2</text>
+    <rect x="220" y="-10" width="100" height="20" fill="url(#riskGradient)" rx="3"/>
+    <rect x="400" y="-10" width="80" height="20" fill="url(#returnGradient)" rx="3"/>
+    <text x="655" y="5" font-size="12" fill="#475569" text-anchor="middle">Low Risk, Modest Return</text>
   </g>
+  <line x1="50" y1="190" x2="750" y2="190" stroke="#e2e8f0" stroke-width="1"/>
 
-  <!-- R3 -->
-  <g transform="translate(0, 180)">
-    <line x1="0" y1="0" x2="800" y2="0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 2"/>
-    <text x="100" y="0" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">R3</text>
-    <rect x="220" y="-12" width="140" height="24" fill="url(#riskGradient)" rx="3"/>
-    <rect x="420" y="-12" width="120" height="24" fill="url(#returnGradient)" rx="3"/>
-    <text x="700" y="0" font-size="12" fill="#475569" text-anchor="middle">Medium Risk, Balanced Return</text>
+  <!-- R3 (y=215 center) -->
+  <g transform="translate(0, 215)">
+    <text x="125" y="5" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">R3</text>
+    <rect x="220" y="-10" width="140" height="20" fill="url(#riskGradient)" rx="3"/>
+    <rect x="400" y="-10" width="120" height="20" fill="url(#returnGradient)" rx="3"/>
+    <text x="655" y="5" font-size="12" fill="#475569" text-anchor="middle">Medium Risk, Balanced Return</text>
   </g>
+  <line x1="50" y1="240" x2="750" y2="240" stroke="#e2e8f0" stroke-width="1"/>
 
-  <!-- R4 -->
-  <g transform="translate(0, 220)">
-    <line x1="0" y1="0" x2="800" y2="0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 2"/>
-    <text x="100" y="0" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">R4</text>
-    <rect x="220" y="-12" width="160" height="24" fill="url(#riskGradient)" rx="3"/>
-    <rect x="420" y="-12" width="160" height="24" fill="url(#returnGradient)" rx="3"/>
-    <text x="700" y="0" font-size="12" fill="#475569" text-anchor="middle">High Risk, High Return</text>
+  <!-- R4 (y=265 center) -->
+  <g transform="translate(0, 265)">
+    <text x="125" y="5" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">R4</text>
+    <rect x="220" y="-10" width="150" height="20" fill="url(#riskGradient)" rx="3"/>
+    <rect x="400" y="-10" width="150" height="20" fill="url(#returnGradient)" rx="3"/>
+    <text x="655" y="5" font-size="12" fill="#475569" text-anchor="middle">High Risk, High Return</text>
   </g>
+  <line x1="50" y1="290" x2="750" y2="290" stroke="#e2e8f0" stroke-width="1"/>
 
-  <!-- R5 -->
-  <g transform="translate(0, 260)">
-    <line x1="0" y1="0" x2="800" y2="0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 2"/>
-    <text x="100" y="0" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">R5</text>
-    <rect x="220" y="-12" width="180" height="24" fill="url(#riskGradient)" rx="3"/>
-    <rect x="420" y="-12" width="180" height="24" fill="url(#returnGradient)" rx="3"/>
-    <text x="700" y="0" font-size="12" fill="#475569" text-anchor="middle">Very High Risk, Max Return</text>
+  <!-- R5 (y=315 center) -->
+  <g transform="translate(0, 315)">
+    <text x="125" y="5" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">R5</text>
+    <rect x="220" y="-10" width="150" height="20" fill="url(#riskGradient)" rx="3"/>
+    <rect x="400" y="-10" width="150" height="20" fill="url(#returnGradient)" rx="3"/>
+    <text x="655" y="5" font-size="12" fill="#475569" text-anchor="middle">Very High Risk, Max Return</text>
   </g>
-
-  <!-- Bottom line -->
-  <line x1="0" y1="280" x2="800" y2="280" stroke="#cbd5e1" stroke-width="1"/>
+  
+  <!-- Outer Border -->
+  <rect x="50" y="50" width="700" height="290" fill="none" stroke="#cbd5e1" stroke-width="1" rx="4"/>
 
   <!-- Legend -->
-  <g transform="translate(400, 320)">
-    <rect x="-100" y="-15" width="30" height="20" fill="url(#riskGradient)" rx="3"/>
-    <text x="-60" y="0" font-size="12" fill="#475569">Capital Risk</text>
-    <rect x="20" y="-15" width="30" height="20" fill="url(#returnGradient)" rx="3"/>
-    <text x="60" y="0" font-size="12" fill="#475569">Expected Return</text>
+  <g transform="translate(400, 370)">
+    <rect x="-100" y="-10" width="20" height="14" fill="url(#riskGradient)" rx="2"/>
+    <text x="-70" y="2" font-size="12" fill="#475569">Capital Risk</text>
+    <rect x="30" y="-10" width="20" height="14" fill="url(#returnGradient)" rx="2"/>
+    <text x="60" y="2" font-size="12" fill="#475569">Expected Return</text>
   </g>
 </svg>
-
