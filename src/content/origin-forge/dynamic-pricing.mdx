@@ -21,9 +21,9 @@ Origin Forge always displays two prices:
 | **Current Price** | What you pay/receive now | Goes up with buying, down with selling |
 | **Floor Price** | Guaranteed minimum | Only goes up, never down |
 
-```
-Current Price = Floor Price + Market Premium
-```
+<div style={{ textAlign: 'center', padding: '1rem', background: 'var(--nextra-code-bg, #f6f8fa)', borderRadius: '8px', margin: '1rem 0', fontWeight: 'bold' }}>
+  Current Price = Floor Price + Market Premium
+</div>
 
 The **market premium** reflects current demand. When demand is high, premium is large. When demand is low, current price approaches floor.
 
@@ -106,18 +106,10 @@ To protect against unexpected price movements:
 When buying activity reaches certain thresholds, a **Raise** event triggers:
 
 ### Before Raise
-```
-Current Price: $2.00
-Floor Price: $1.00
-Premium: $1.00 (50% of price)
-```
+![Before Raise](/images/origin-forge/raise-before.svg)
 
 ### After Raise
-```
-Current Price: $1.80 (may decrease!)
-Floor Price: $1.40 (permanently higher!)
-Premium: $0.40 (reduced)
-```
+![After Raise](/images/origin-forge/raise-after.svg)
 
 **The trade-off:** Slightly lower current price for significantly higher guaranteed floor. This is **good** for holders because:
 - Your downside is now limited to $1.40 instead of $1.00
