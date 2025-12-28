@@ -91,28 +91,6 @@ Investment periods range from short to long term:
 2. **Deposit WEUSD** — Commit funds for the term
 3. **Lock-up Period** — Funds invested in underlying RWA
 4. **Receive Returns** — Principal + APY at maturity
-
-### Contract Interface
-
-**Invest:**
-```solidity
-function invest(
-    uint256 assetId, // Asset identifier
-    uint256 amount   // WEUSD amount (6 decimals)
-) external returns (
-    uint256 investmentId // Unique investment ID
-)
-```
-
-**Redeem:**
-```solidity
-function redeem(
-    uint256 investmentId // Investment to redeem
-) external returns (
-    uint256 profit // Profit received
-)
-```
-
 ---
 
 ## Investment Parameters
@@ -125,62 +103,6 @@ function redeem(
 | **APY** | Annual percentage yield |
 | **Term** | Lock-up duration |
 | **Status** | Active, Paused, or Closed |
-
----
-
-## Contract Addresses
-
-import { Table } from 'nextra/components'
-
-### BSC Mainnet
-
-<Table>
-  <thead>
-    <Table.Tr>
-      <Table.Th>Contract</Table.Th>
-      <Table.Th>Address</Table.Th>
-    </Table.Tr>
-  </thead>
-  <tbody>
-    <Table.Tr>
-      <Table.Td>InvestmentManager</Table.Td>
-      <Table.Td>`0x50076593F9E66b37fC4Bc4342E92A033b28da0a6`</Table.Td>
-    </Table.Tr>
-    <Table.Tr>
-      <Table.Td>InvestmentPool</Table.Td>
-      <Table.Td>`0x50076593F9E66b37fC4Bc4342E92A033b28da0a6`</Table.Td>
-    </Table.Tr>
-    <Table.Tr>
-      <Table.Td>RedemptionPool</Table.Td>
-      <Table.Td>`0x50076593F9E66b37fC4Bc4342E92A033b28da0a6`</Table.Td>
-    </Table.Tr>
-  </tbody>
-</Table>
-
-### Base Mainnet
-
-<Table>
-  <thead>
-    <Table.Tr>
-      <Table.Th>Contract</Table.Th>
-      <Table.Th>Address</Table.Th>
-    </Table.Tr>
-  </thead>
-  <tbody>
-    <Table.Tr>
-      <Table.Td>InvestmentManager</Table.Td>
-      <Table.Td>`0x6Ec63400f33D8A5331dbaF2336ADcC1f455908a8`</Table.Td>
-    </Table.Tr>
-    <Table.Tr>
-      <Table.Td>InvestmentPool</Table.Td>
-      <Table.Td>`0xF9Af57B0c505339cE06A6C9E9380fA9741f9aD32`</Table.Td>
-    </Table.Tr>
-    <Table.Tr>
-      <Table.Td>RedemptionPool</Table.Td>
-      <Table.Td>`0x8851F650A3a43158b8F9cD6416580B37075C4D69`</Table.Td>
-    </Table.Tr>
-  </tbody>
-</Table>
 
 ---
 

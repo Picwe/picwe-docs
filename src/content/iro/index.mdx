@@ -100,30 +100,6 @@ This mechanism guarantees a minimum value for RWA tokens:
 3. **Subscribe** — During whitelist (if eligible) or public phase
 4. **Claim** — After market initialization
 5. **Hold or Trade** — Receive APY or trade on Origin Forge
-
-### Contract Functions
-
-**During Whitelist Phase:**
-```solidity
-function whitelistBuy(uint256 amount) external
-```
-- Requires wallet on whitelist
-- Approve WEUSD first
-
-**During Public Offering:**
-```solidity
-function publicOfferingBuy(uint256 amount) external
-```
-- Open to all
-- Approve WEUSD first
-
-**After Market Launch:**
-```solidity
-function claim() external
-```
-- Transfers your RWA tokens
-- Call once market is initialized
-
 ---
 
 ## For Issuers

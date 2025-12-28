@@ -1,124 +1,136 @@
 # Mint & Redeem
 
 <div style={{ color: 'rgb(110,110,100)', fontSize: '1.125rem', marginTop: '0.5rem' }}>
-Convert between USDC and WEUSD at 1:1 ratio
+USDC in, WEUSD out. Today. RWA collateral tomorrow.
 </div>
 
 ---
 
 ## Overview
 
-WEUSD can be minted and redeemed at a fixed 1:1 ratio with USDC. This ensures price stability and full collateralization.
+WEUSD is the settlement currency for the entire RWA economy. Right now, every WEUSD is backed 1:1 by USDC—the most trusted digital dollar. But this is just Phase 1.
+
+As the ecosystem grows, WEUSD collateral expands to include **tokenized treasuries, real estate yields, commodity reserves, and revenue-generating RWA**. Same stability. Deeper, more diversified backing. Real assets you can verify on-chain.
 
 ---
 
-## Minting WEUSD
+## Mint WEUSD
 
-### Process
+Turn your USDC into WEUSD. Simple as that.
 
-1. **Connect Wallet** — Use MetaMask, OKX Wallet, or any Web3 wallet
-2. **Select Network** — Choose your preferred chain (BSC, Base, etc.)
-3. **Approve USDC** — Authorize the Mint contract to spend your USDC
-4. **Mint** — Specify amount and confirm transaction
-5. **Receive WEUSD** — Tokens arrive in your wallet
+### How It Works
 
-### What Happens On-Chain
+1. **Connect** — MetaMask, OKX Wallet, any Web3 wallet
+2. **Pick Network** — BSC, Base, Arbitrum, wherever you are
+3. **Approve** — One-time USDC approval
+4. **Mint** — Enter amount, confirm, done
+5. **Receive** — WEUSD lands in your wallet
 
-```
-You: Send USDC → Mint Contract
-Mint Contract: Lock USDC in reserve
-Mint Contract: Mint equal WEUSD → You
-```
+### On-Chain Flow
+
+| Step | What Happens |
+|------|--------------|
+| 1 | You send USDC to Mint Contract |
+| 2 | Contract locks USDC in reserve |
+| 3 | Contract mints equal WEUSD to you |
+
+**Result:** 100 USDC in → 100 WEUSD out. Always.
 
 ### Requirements
 
-- USDC balance on the selected network
-- Gas fees for the transaction
-- Wallet connected to supported network
+- USDC on your chosen network
+- Gas for the transaction
+- That's it
 
 ---
 
-## Redeeming WEUSD
+## Redeem WEUSD
 
-### Process
+Need your USDC back? Burn WEUSD, get USDC. No questions asked.
 
-1. **Connect Wallet**
-2. **Select Network** — Must have WEUSD on this network
-3. **Approve WEUSD** — Authorize the Mint contract
-4. **Redeem** — Specify amount and confirm
-5. **Receive USDC** — Tokens arrive in your wallet
+### How It Works
 
-### What Happens On-Chain
+1. **Connect** — Same wallet
+2. **Pick Network** — Where your WEUSD lives
+3. **Approve** — One-time WEUSD approval
+4. **Redeem** — Enter amount, confirm
+5. **Receive** — USDC back in your wallet
 
-```
-You: Send WEUSD → Mint Contract
-Mint Contract: Burn WEUSD
-Mint Contract: Release USDC from reserve → You
-```
+### On-Chain Flow
 
----
+| Step | What Happens |
+|------|--------------|
+| 1 | You send WEUSD to Mint Contract |
+| 2 | Contract burns WEUSD permanently |
+| 3 | Contract releases USDC to you |
 
-## Contract Addresses
-
-import { Table } from 'nextra/components'
-
-### Mint/Redeem Contracts
-
-<Table>
-  <thead>
-    <Table.Tr>
-      <Table.Th>Network</Table.Th>
-      <Table.Th>Contract Address</Table.Th>
-    </Table.Tr>
-  </thead>
-  <tbody>
-    <Table.Tr>
-      <Table.Td>BSC Mainnet</Table.Td>
-      <Table.Td>`0x5D54f1092FD1750A3ab96972dc1867c5B23eF22C`</Table.Td>
-    </Table.Tr>
-    <Table.Tr>
-      <Table.Td>Base Mainnet</Table.Td>
-      <Table.Td>`0x5D54f1092FD1750A3ab96972dc1867c5B23eF22C`</Table.Td>
-    </Table.Tr>
-    <Table.Tr>
-      <Table.Td>Arbitrum One</Table.Td>
-      <Table.Td>`0x5D54f1092FD1750A3ab96972dc1867c5B23eF22C`</Table.Td>
-    </Table.Tr>
-    <Table.Tr>
-      <Table.Td>HashKey Chain</Table.Td>
-      <Table.Td>`0x5D54f1092FD1750A3ab96972dc1867c5B23eF22C`</Table.Td>
-    </Table.Tr>
-    <Table.Tr>
-      <Table.Td>Plume Chain</Table.Td>
-      <Table.Td>`0x5D54f1092FD1750A3ab96972dc1867c5B23eF22C`</Table.Td>
-    </Table.Tr>
-  </tbody>
-</Table>
+**Result:** 100 WEUSD in → 99 USDC out (after 1% redemption fee).
 
 ---
 
-## Fees
+## Fee Structure
 
-| Operation | Fee |
-|-----------|-----|
-| Mint | 0% |
-| Redeem | 0% |
+| Operation | Fee | Why |
+|-----------|-----|-----|
+| **Mint** | 0% | We want you in the ecosystem |
+| **Redeem** | 1% | Supports protocol operations & Keeper rewards |
 
-Only network gas fees apply. PicWe does not charge for minting or redeeming WEUSD.
+Gas fees are separate—that's between you and the network.
 
 ---
 
-## Important Notes
+## Why This Matters
 
-- **1:1 Ratio** — Always mint/redeem at exactly 1 USDC = 1 WEUSD
-- **No Slippage** — Fixed rate, no price impact
-- **Instant** — Transactions complete in seconds
-- **Reversible** — Redeem anytime, no lock-up period
+| Feature | What It Means |
+|---------|---------------|
+| **1:1 Backing** | Every WEUSD backed by real value—USDC now, diversified RWA later |
+| **No Slippage** | Fixed rate. Mint 1M, still 1:1 |
+| **Instant** | Seconds, not minutes |
+| **No Lock-up** | Redeem whenever you want |
+| **Multi-Chain** | Mint on any supported network |
+
+---
+
+## The Roadmap
+
+### Phase 1: USDC Foundation (Now)
+
+Simple, secure, battle-tested:
+- 100% USDC backing
+- Instant mint/redeem
+- Trust the most liquid stablecoin
+
+### Phase 2: RWA Collateral Expansion (Coming)
+
+WEUSD becomes backed by a diversified basket:
+
+| Collateral Type | Why It Matters |
+|-----------------|----------------|
+| **Tokenized Treasuries** | US government backing—doesn't get safer |
+| **Real Estate Yields** | Stable cash flows from property |
+| **Commodity Reserves** | Gold, silver—hard asset foundation |
+| **Revenue RWA** | Tickets, royalties, carbon credits—yield potential |
+
+**The upgrade:** When WEUSD is backed by yield-bearing RWA, holders can earn passive returns. Same stability. More upside.
+
+---
+
+## The Bigger Picture
+
+WEUSD isn't a stablecoin. It's the reserve currency of tokenized finance.
+
+- **Cross-Chain** — Move WEUSD anywhere in seconds
+- **RWA Gateway** — Buy real-world assets on any chain  
+- **Yield Layer** — Earn from RWA collateral (coming)
+- **Settlement Standard** — The dollar of the RWA economy
+
+The 1% redemption fee funds the Keeper network that keeps liquidity balanced across all chains. You're not paying a fee—you're powering the infrastructure that makes omni-chain RWA possible.
 
 ---
 
 ## Next Steps
 
-- [Cross-Chain Transfer](/cross-chain-transfer) — Move WEUSD to other networks
-- [IRO](/iro) — Use WEUSD to participate in RWA offerings
+- [Cross-Chain Transfer](/cross-chain-transfer) — Move WEUSD across networks
+- [IRO](/iro) — Participate in RWA initial offerings
+- [Invest](/invest) — Put your WEUSD to work
 

@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="water-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.5" />
+    </linearGradient>
+    <linearGradient id="flow-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0" />
+      <stop offset="50%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:0" />
+    </linearGradient>
+    
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+
+    <!-- Pump Icon Definition -->
+    <g id="pump-icon">
+      <circle r="12" fill="#fff" stroke="#64748b" stroke-width="2" />
+      <path d="M-6,0 L6,0 M0,-6 L0,6" stroke="#64748b" stroke-width="2" />
+      <circle r="4" fill="#10b981" />
+    </g>
+  </defs>
+
+  <!-- Connection Pipes (Behind) -->
+  <g stroke="#cbd5e1" stroke-width="8" stroke-linecap="round" fill="none">
+    <!-- ETH (400, 80) connections -->
+    <path d="M400,120 L200,200" /> <!-- to ARB -->
+    <path d="M400,120 L600,200" /> <!-- to OP -->
+    <path d="M400,120 L280,380" /> <!-- to BASE -->
+    <path d="M400,120 L520,380" /> <!-- to BSC -->
+    
+    <!-- L2 Horizontal -->
+    <path d="M250,200 L550,200" opacity="0.5" /> <!-- ARB to OP -->
+    
+    <!-- Vertical Sides -->
+    <path d="M200,250 L280,330" opacity="0.5" /> <!-- ARB to BASE -->
+    <path d="M600,250 L520,330" opacity="0.5" /> <!-- OP to BSC -->
+    
+    <!-- Bottom Horizontal -->
+    <path d="M330,380 L470,380" opacity="0.5" /> <!-- BASE to BSC -->
+  </g>
+
+  <!-- Flow Animations (Inside Pipes) -->
+  <g stroke="url(#flow-grad)" stroke-width="4" stroke-linecap="round" fill="none">
+    <!-- Flow: ARB -> ETH (Arbitrage) -->
+    <path d="M200,200 L400,120">
+      <animate attributeName="stroke-dasharray" values="0,200;200,0" dur="2s" repeatCount="indefinite" />
+    </path>
+    <!-- Flow: ETH -> BASE (Balancing) -->
+    <path d="M400,120 L280,380">
+      <animate attributeName="stroke-dasharray" values="0,300;300,0" dur="2.5s" repeatCount="indefinite" />
+    </path>
+    <!-- Flow: ARB -> BASE (Direct) -->
+    <path d="M200,250 L280,330">
+      <animate attributeName="stroke-dasharray" values="0,150;150,0" dur="3s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Keepers (Pumps) on Pipes -->
+  <use href="#pump-icon" x="300" y="160" /> <!-- ARB-ETH Pump -->
+  <use href="#pump-icon" x="340" y="250" /> <!-- ETH-BASE Pump -->
+  <use href="#pump-icon" x="460" y="250" /> <!-- ETH-BSC Pump -->
+  <use href="#pump-icon" x="500" y="160" /> <!-- OP-ETH Pump -->
+  <use href="#pump-icon" x="240" y="290" /> <!-- ARB-BASE Pump -->
+  <use href="#pump-icon" x="560" y="290" /> <!-- OP-BSC Pump -->
+
+  <!-- Node 1: Ethereum (Top Center) -->
+  <g transform="translate(350, 20)" filter="url(#shadow)">
+    <rect x="0" y="0" width="100" height="100" rx="8" fill="#fff" stroke="#627eea" stroke-width="2" />
+    <!-- Water Medium -->
+    <rect x="2" y="40" width="96" height="58" rx="6" fill="url(#water-grad)" opacity="0.7" />
+    <text x="50" y="20" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="12" fill="#627eea">Ethereum</text>
+    <text x="50" y="70" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="14" fill="#fff">$1.00</text>
+  </g>
+
+  <!-- Node 2: Arbitrum (Left Top) -->
+  <g transform="translate(150, 150)" filter="url(#shadow)">
+    <rect x="0" y="0" width="100" height="100" rx="8" fill="#fff" stroke="#28a0f0" stroke-width="2" />
+    <!-- Water High - Adjusted to avoid overlap -->
+    <rect x="2" y="35" width="96" height="63" rx="6" fill="url(#water-grad)" opacity="0.9" />
+    <text x="50" y="20" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="12" fill="#28a0f0">Arbitrum</text>
+    <text x="50" y="70" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="14" fill="#fff">$0.98</text>
+  </g>
+
+  <!-- Node 3: Optimism (Right Top) -->
+  <g transform="translate(550, 150)" filter="url(#shadow)">
+    <rect x="0" y="0" width="100" height="100" rx="8" fill="#fff" stroke="#ff0420" stroke-width="2" />
+    <!-- Water Medium -->
+    <rect x="2" y="40" width="96" height="58" rx="6" fill="url(#water-grad)" opacity="0.7" />
+    <text x="50" y="20" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="12" fill="#ff0420">Optimism</text>
+    <text x="50" y="70" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="14" fill="#fff">$1.00</text>
+  </g>
+
+  <!-- Node 4: Base (Left Bottom) -->
+  <g transform="translate(230, 330)" filter="url(#shadow)">
+    <rect x="0" y="0" width="100" height="100" rx="8" fill="#fff" stroke="#0052ff" stroke-width="2" />
+    <!-- Water Low -->
+    <rect x="2" y="60" width="96" height="38" rx="6" fill="url(#water-grad)" opacity="0.5" />
+    <text x="50" y="20" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="12" fill="#0052ff">Base</text>
+    <text x="50" y="80" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="14" fill="#334155">$1.02</text>
+  </g>
+
+  <!-- Node 5: BSC (Right Bottom) -->
+  <g transform="translate(470, 330)" filter="url(#shadow)">
+    <rect x="0" y="0" width="100" height="100" rx="8" fill="#fff" stroke="#f0b90b" stroke-width="2" />
+    <!-- Water Medium -->
+    <rect x="2" y="40" width="96" height="58" rx="6" fill="url(#water-grad)" opacity="0.7" />
+    <text x="50" y="20" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="12" fill="#d97706">BNB Chain</text>
+    <text x="50" y="70" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="14" fill="#fff">$1.00</text>
+  </g>
+
+  <!-- Legend / Explanation -->
+  <g transform="translate(50, 450)">
+    <rect x="0" y="0" width="700" height="40" rx="20" fill="#f8fafc" stroke="#e2e8f0" />
+    <circle r="6" cx="30" cy="20" fill="#fff" stroke="#64748b" stroke-width="2" />
+    <circle r="2" cx="30" cy="20" fill="#10b981" />
+    <text x="45" y="25" font-family="sans-serif" font-size="12" fill="#475569">Keeper (Pump)</text>
+    
+    <path d="M150,20 L200,20" stroke="url(#flow-grad)" stroke-width="4" stroke-linecap="round" />
+    <text x="210" y="25" font-family="sans-serif" font-size="12" fill="#475569">Liquidity Flow</text>
+
+    <text x="400" y="25" font-family="sans-serif" font-size="12" fill="#64748b" font-style="italic">"Funds naturally flow to maintain level balance across network"</text>
+  </g>
+
+</svg>
