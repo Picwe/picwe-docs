@@ -12,6 +12,12 @@ const meta = {
       breadcrumb: false,
     },
   },
+  roadmap: {
+    title: 'Roadmap',
+    theme: {
+      breadcrumb: false,
+    },
+  },
 
   // ========== WEUSD ==========
   _weusd: {
